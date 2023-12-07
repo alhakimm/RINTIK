@@ -23,17 +23,14 @@ function submitForm() {
     var address = document.getElementById('address').value;
     var issueDescription = document.getElementById('issueDescription').value;
 
-    // Validate if fields are not empty
     if (name.trim() === '' || icNumber.trim() === '' || telephone.trim() === '' || address.trim() === '' || issueDescription.trim() === '') {
         alert('Please fill in all the fields');
         return;
     }
 
-    // Display the submitted data (you can modify this part as needed)
     var submissionResult = `Name: ${name}\nIC Number: ${icNumber}\nTelephone: ${telephone}\nAddress: ${address}\nIssue Description: ${issueDescription}`;
     alert(submissionResult);
 
-    // Optionally, you can reset the form
     document.getElementById('reportForm').reset();
 
     saveMessage(name, icNumber, telephone, address, issueDescription);
