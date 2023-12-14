@@ -6,6 +6,8 @@ const firebase = require('firebase/compat/app');
 const auth = require('firebase/compat/auth');
 firebase.initializeApp(firebaseConfig);
 
+const {reduceUserDetails} = require('../util/validators');
+
 exports.signup = (req, res) => {
     const newUser = {
         email: req.body.email,
@@ -13,6 +15,8 @@ exports.signup = (req, res) => {
         confirmPassword: req.body.confirmPassword,
         username: req.body.username
     };
+
+    const noImage = 'noImage.png'
 
     // validate data
     let token, userId;
@@ -43,6 +47,7 @@ exports.signup = (req, res) => {
                 username: newUser.username,
                 email: newUser.email,
                 createdAt: new Date(),
+                imageUrl: `https://firebasestorage.googleapis.com/v0/b/${firebaseConfig.storageBucket}/o/${noImage}?alt=media`,
                 userId: userId
             };
             return db.doc(`/users/${newUser.username}`).set(userCredentials);
@@ -57,7 +62,7 @@ exports.signup = (req, res) => {
                 return res.status(400).json({email: 'email is taken'})
             }
             else{
-                return res.status(500).json({error: err.code});
+                return res.status(500).json({general: 'something went wrong, try again'});
             }    
         });
     }
@@ -84,50 +89,106 @@ exports.login = (req,res) => {
         })
         .catch(err => {
             console.error(err);
-            if (err.code == 'auth/invalid-credential'){
-                return res.status(403).json({general: 'wrong email or password'});
-            } else {
-                return res.status(500).json({error: err.code});
-            }
+            // if (err.code == 'auth/invalid-credential'){
+            return res.status(403).json({general: 'wrong email or password'});
+            // } else {
+            //     return res.status(500).json({error: err.code});
+            // }
         })
 }
 
-// exports.uploadImage = (req,res) => {
-//     const BusBoy = require('busboy');
-//     const path = require('path');
-//     const os = require('os');
-//     const fs = require('fs');
+//add user detail
+exports.addUserDetails = (req, res) => {
+    let userDetails = reduceUserDetails(req.body);
 
-//     const busboy = new BusBoy({headers: req.headers});
+    db.doc(`/users/${req.user.username}`).update(userDetails)
+        .then(() => {
+            return res.json({message: 'user profile updated'});
+        })
+        .catch(err => {
+            console.error();
+            return res.status(500).json({error: err.code});
+        })
+}
 
-//     let imageFileName;
-//     let image;
+//get user profile
+exports.getUserProfile = (req, res) => {
+    let userData = {};
 
-//     busboy.on('file', (fieldname, file, filename, encoding, mimetype) => {
-//         console.log(fieldname);
-//         console.log(filename);
-//         console.log(mimetype);
+    db.doc(`/users/${req.user.username}`).get()
+        .then(doc => {
+            if (doc.exists){
+                userData.credentials = doc.data();
+                return db.collection('likes').where('username', '==', req.user.username).get();
+            }
+        })
+        .then(data => {
+            userData.likes = [];
+            data.forEach(doc => {
+                let formattedDate = doc.data();
+                if(formattedDate.createdAt){
+                    formattedDate.createdAt = formattedDate.createdAt.toDate().toLocaleString();
+                }
+                //////////////////////////////////////date still raw (kiv)
+                userData.likes.push(formattedDate);
+            });
+            return res.json(userData);
+        })
+        .catch(err => {
+            console.error(err);
+            return res.status(500).json({error: err.code});
+        })
+}
 
-//         const imageExtension = filename.split('.')[filename.split('.').length - 1];
+//upload profile image
+exports.uploadImage = (req,res) => {
+    const busboy = require('busboy');
+    const path = require('path');
+    const os = require('os');
+    const fs = require('fs');
 
-//         imageFileName = `${Math.round(Math.random()*10000)}.${imageExtension}`;
-//         const filePath = path.join(os.tmpdir(), imageFileName);
-//         image = {filePath, mimetype};
-//         file.pipe(fs.createWriteStream(filePath));
+    const bb = busboy({ headers: req.headers });
 
-//     });
-//     busboy.on('finish', () => {
-//         admin.storage().bucket().upload(image.filePath, {
-//             resumable: false,
-//             metadata: {
-//                 metadata: {
-//                     contentType: image.mimetype
-//                 }
-//             }
-//         })
-//         .then(() => {
-//             const imageUrl = `https://firebasestorage.googleapis.com/v0/b/${firebaseConfig.storageBucket}/o/${imageFileName}?alt=media`;
-//             return db.doc(`/users/${}`)
-//         })
-//     })
-// }
+    let imageFileName;
+    let image;
+
+    bb.on('file', (fieldname, file, filename, mimetype) => {
+        console.log(fieldname);
+        console.log(filename);
+        console.log(mimetype);
+        
+        const stringName = filename.filename.toString();
+        console.log(stringName);
+
+        const imageExtension = stringName.split('.')[stringName.split('.').length - 1];
+        console.log(imageExtension);
+
+        imageFileName = `${Math.round(Math.random()*10000000000000)}.${imageExtension}`;
+        const filePath = path.join(os.tmpdir(), imageFileName);
+        image = {filePath, mimetype};
+        file.pipe(fs.createWriteStream(filePath));
+
+    });
+    bb.on('finish', () => {
+        admin.storage().bucket().upload(image.filePath, {
+            resumable: false,
+            metadata: {
+                metadata: {
+                    contentType: image.mimetype
+                }
+            }
+        })
+        .then(() => {
+            const imageUrl = `https://firebasestorage.googleapis.com/v0/b/${firebaseConfig.storageBucket}/o/${imageFileName}?alt=media`;
+            return db.doc(`/users/${req.user.username}`).update({imageUrl: imageUrl});
+        })
+        .then(() => {
+            return res.json({message: 'image uploaded'});
+        })
+        .catch(err => {
+            console.error(err);
+            return res.status(500).json({error: err.code});
+        });
+    });
+    bb.end(req.rawBody);
+}
