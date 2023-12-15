@@ -19,12 +19,19 @@ export class PostCommunity extends Component {
     }
   render() {
     let postFinder = this.state.posts ? (
-        this.state.posts.map(posts => <p>{posts.body}</p>)
-    ) : <p>loading...</p>
+        this.state.posts.map(posts => <div key={posts.id} className="posts-box">
+          <p> {posts.body}</p>
+          <p> {posts.username}</p>
+          <p> {posts.createdAt}</p>
+          <p> {posts.comments}</p>
+          <p> {posts.upvote}</p>
+      </div>
+    )) : <p>loading...</p>
 
     return (
       <div>
         <h1>hello this is postcommunity</h1>
+        
         {postFinder}
       </div>
     )
