@@ -105,7 +105,7 @@ exports.commentOnPost = (req, res) => {
         })
 }
 
-exports.likePost =  (req, res) => {
+exports.upvotePost =  (req, res) => {
     const likeDoc = db.collection('likes').where('username', '==', req.user.username)
         .where('postId', '==', req.params.postId).limit(1);
 
@@ -147,7 +147,7 @@ exports.likePost =  (req, res) => {
         });
 }
 
-exports.unlikePost = (req, res) => {
+exports.unUpvotePost = (req, res) => {
     const likeDoc = db.collection('likes').where('username', '==', req.user.username)
         .where('postId', '==', req.params.postId).limit(1);
 
