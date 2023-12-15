@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import { IoPersonCircleSharp } from "react-icons/io5"
 import logo from '../assets/logo.png';
+import PostCommunity from './PostCommunity';
 
 const Community = () => {
 
@@ -44,7 +45,7 @@ const Community = () => {
           <div className='h-2/4 bg-green-200 my-2'>joined group</div>
         </div>
         <div className='w-2/4 bg-green-300'>
-          <div>post</div>
+          <div><PostCommunity/></div>
           <div>comunity</div>
         </div>
         <div className='w-1/4 '>
