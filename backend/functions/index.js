@@ -1,4 +1,3 @@
-
 const functions = require("firebase-functions/v2");
 
 const express = require('express');
@@ -8,6 +7,8 @@ const FBAuth = require('./util/FBAuth');
 
 const {getAllPosts, writePost, getPost, commentOnPost, upvotePost, unUpvotePost, deletePost} = require('./handlers/posts');
 const {signup, login, uploadImage, addUserDetails/*, getUserProfile, getUserDetails*/} = require('./handlers/users');
+const {getPlumbers, /*regPlumbers*/} = require('./handlers/plumber');
+const {getReports, addReports} = require('./handlers/report')
 
 
 
@@ -29,5 +30,12 @@ app.post('/user', FBAuth, addUserDetails);
 // app.get('/user', FBAuth, getUserProfile);
 // app.get('/user/:username', getUserDetails);
 
+//plumbers route
+//app.get('/plumbers', getPlumbers);
+
+//reports route
 
 exports.api = functions.https.onRequest(app);
+exports.getPlumbers = functions.https.onRequest(getPlumbers);
+exports.getReports = functions.https.onRequest(getReports);
+exports.addReports = functions.https.onRequest(addReports);
