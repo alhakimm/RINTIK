@@ -1,53 +1,41 @@
-const firebaseConfig = {
-    apiKey: "AIzaSyB5TsZ35N9HbmNXeZPssfcD8fBpYCB2RYw",
-    authDomain: "testingfirebase-3e0f7.firebaseapp.com",
-    databaseURL: "https://testingfirebase-3e0f7-default-rtdb.firebaseio.com",
-    projectId: "testingfirebase-3e0f7",
-    storageBucket: "testingfirebase-3e0f7.appspot.com",
-    messagingSenderId: "1085692725313",
-    appId: "1:1085692725313:web:66300a4eefb6da48055ec0",
-    measurementId: "G-ZT6XN0H2H1"
-  };
+const functions = require("firebase-functions/v2");
+const { db } = require('../util/admin');
+const firebaseConfig = require('../util/firebaseConfig');
+const firebase = require('firebase/compat/app');
 
 firebase.initializeApp(firebaseConfig);
 
-var reportFormDB = firebase.database().ref('reportForm');
+exports.getReports = functions.https.onRequest((req, res) => {
+    db
+        .collection('reports')
+        .get()    
+        .then(data => {
+            let reports = []
+            data.forEach(doc => {
+                reports.push(doc.data());
+            });
+            return res.json(reports);
+        })
+        .catch(err => console.error(err));
+});
 
-document.getElementById('reportForm').addEventListener('submit', submitForm)
+exports.addReports = functions.https.onRequest((req, res) => {
+    const newReports = {
+        name : req.body.name,
+        location : req.body.location,
+        description : req.body.description,
+        category : req.body.category,
+        priority : req.body.priority
+    };
 
-
-function submitForm() {
-    var name = document.getElementById('name').value;
-    var icNumber = document.getElementById('icNumber').value;
-    var telephone = document.getElementById('telephone').value;
-    var address = document.getElementById('address').value;
-    var issueDescription = document.getElementById('issueDescription').value;
-
-    if (name.trim() === '' || icNumber.trim() === '' || telephone.trim() === '' || address.trim() === '' || issueDescription.trim() === '') {
-        alert('Please fill in all the fields');
-        return;
-    }
-
-    var submissionResult = `Name: ${name}\nIC Number: ${icNumber}\nTelephone: ${telephone}\nAddress: ${address}\nIssue Description: ${issueDescription}`;
-    alert(submissionResult);
-
-    document.getElementById('reportForm').reset();
-
-    saveMessage(name, icNumber, telephone, address, issueDescription);
-}
-
-const saveMessage = (name, icNumber, telephone, address, issueDescription) => {
-    var newReportForm = reportFormDB.push();
-    
-    newReportForm.set({
-        name : name,
-        icNumber : icNumber,
-        telephone : telephone,
-        address : address,
-        issueDescription : issueDescription,
-    })
-}
-
-// const getElementVal = (id) => {
-//     return document.getElementById(id).value;
-// }
+    db
+        .collection('reports')
+        .add(newReports)
+        .then(doc => {
+            res.json({message: `report ${doc.id} sent successfully`});
+        })
+        .catch(err => {
+            res.status(500).json ({error: `something went wrong`});
+            console.error(err);
+        })
+});
