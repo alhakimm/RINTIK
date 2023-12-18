@@ -25,20 +25,6 @@ const Community = () => {
 
   return (
     <div>
-      <nav className='bg-white flex items-center justify-between px-20 py-2'>
-      <img className='w-[10%] h-full' src={logo} alt="logo" />
-        <div className='flex items-center'>
-          <ul className='pr-4'>
-            <a className='pr-4' href="#Community">Community</a>
-            <a className='pr-4' href="#Education">Education</a>
-            <a className='pr-4' href="#Plumber">Plumber</a>
-            <a className='pr-4' href="#Map">Map</a>
-          </ul>
-          <button className='rounded-lg mr-6 px-3 py-1 bg-[#BA1200] text-white'>Report</button>
-          <a href="#profile"><IoPersonCircleSharp size={30} /></a>
-        </div>
-      </nav>
-
       <div className='bg-gradient-to-r from-[#0A2236] to-[#15436E] w-full flex px-20 justify-between h-screen gap-2'>
         <div className='w-1/4'>
           <div className='h-1/4 bg-red-200'>weather</div>

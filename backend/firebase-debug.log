@@ -1,0 +1,69 @@
+[debug] [2023-12-18T16:01:37.955Z] ----------------------------------------------------------------------
+[debug] [2023-12-18T16:01:37.963Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2023-12-18T16:01:37.965Z] CLI Version:   13.0.2
+[debug] [2023-12-18T16:01:37.965Z] Platform:      win32
+[debug] [2023-12-18T16:01:37.966Z] Node Version:  v21.1.0
+[debug] [2023-12-18T16:01:37.967Z] Time:          Tue Dec 19 2023 00:01:37 GMT+0800 (Malaysia Time)
+[debug] [2023-12-18T16:01:37.967Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-12-18T16:01:38.303Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-12-18T16:01:38.304Z] > authorizing via signed-in user (danishirfan.tech@gmail.com)
+[debug] [2023-12-18T16:01:38.304Z] [iam] checking project testingfirebase-3e0f7 for permissions ["firebase.projects.get"]
+[debug] [2023-12-18T16:01:38.310Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/testingfirebase-3e0f7:testIamPermissions [none]
+[debug] [2023-12-18T16:01:38.310Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/testingfirebase-3e0f7:testIamPermissions x-goog-quota-user=projects/testingfirebase-3e0f7
+[debug] [2023-12-18T16:01:38.311Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/testingfirebase-3e0f7:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-12-18T16:01:39.619Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/testingfirebase-3e0f7:testIamPermissions 200
+[debug] [2023-12-18T16:01:39.620Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/testingfirebase-3e0f7:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-12-18T16:01:39.621Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/testingfirebase-3e0f7 [none]
+[debug] [2023-12-18T16:01:40.310Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/testingfirebase-3e0f7 200
+[debug] [2023-12-18T16:01:40.310Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/testingfirebase-3e0f7 {"projectId":"testingfirebase-3e0f7","projectNumber":"1085692725313","displayName":"Rintik","name":"projects/testingfirebase-3e0f7","resources":{"hostingSite":"testingfirebase-3e0f7","realtimeDatabaseInstance":"testingfirebase-3e0f7-default-rtdb","storageBucket":"testingfirebase-3e0f7.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_3f188af5-02ab-4474-bd57-44a0fd832944"}
+[info] 
+[info] === Serving from 'C:\Users\Danish Irfan\OneDrive\Desktop\RINTIK\backend'...
+[info] 
+[debug] [2023-12-18T16:01:40.330Z] defaultcredentials: writing to file C:\Users\Danish Irfan\AppData\Roaming\firebase\danishirfan_tech_gmail.com_application_default_credentials.json
+[debug] [2023-12-18T16:01:40.335Z] Setting GAC to C:\Users\Danish Irfan\AppData\Roaming\firebase\danishirfan_tech_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\Danish Irfan\\AppData\\Roaming\\firebase\\danishirfan_tech_gmail.com_application_default_credentials.json"}}
+[debug] [2023-12-18T16:01:40.337Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/testingfirebase-3e0f7/adminSdkConfig [none]
+[debug] [2023-12-18T16:01:40.832Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/testingfirebase-3e0f7/adminSdkConfig 200
+[debug] [2023-12-18T16:01:40.832Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/testingfirebase-3e0f7/adminSdkConfig {"projectId":"testingfirebase-3e0f7","databaseURL":"https://testingfirebase-3e0f7-default-rtdb.firebaseio.com","storageBucket":"testingfirebase-3e0f7.appspot.com","locationId":"us-central"}
+[info] i  functions: Watching "C:\Users\Danish Irfan\OneDrive\Desktop\RINTIK\backend\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\" for Cloud Functions..."}}
+[debug] [2023-12-18T16:01:40.883Z] Validating nodejs source
+[debug] [2023-12-18T16:01:45.578Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log",
+    "build": "webpack"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "busboy": "^1.6.0",
+    "express": "^4.18.2",
+    "firebase": "^10.7.0",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-12-18T16:01:45.580Z] Building nodejs source
+[debug] [2023-12-18T16:01:45.581Z] Failed to find version of module node: reached end of search path C:\Users\Danish Irfan\OneDrive\Desktop\RINTIK\backend\functions\node_modules
+[warn] !  functions: Your requested "node" version "18" doesn't match your global version "21". Using node@21 from host. 
+[debug] [2023-12-18T16:01:45.591Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-12-18T16:01:45.618Z] Found firebase-functions binary at 'C:\Users\Danish Irfan\OneDrive\Desktop\RINTIK\backend\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8426
+
+[debug] [2023-12-18T16:01:48.659Z] Got response from /__/functions.yaml {"endpoints":{"api":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"api"},"getPlumbers":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"getPlumbers"},"getReports":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"getReports"},"addReports":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"addReports"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] +  functions: Loaded functions definitions from source: api, getPlumbers, getReports, addReports. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api, getPlumbers, getReports, addReports."}}
+[info] +  functions[us-central1-api]: http function initialized (http://localhost:5000/testingfirebase-3e0f7/us-central1/api). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://localhost:5000/testingfirebase-3e0f7/us-central1/api)."}}
+[info] +  functions[us-central1-getPlumbers]: http function initialized (http://localhost:5000/testingfirebase-3e0f7/us-central1/getPlumbers). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://localhost:5000/testingfirebase-3e0f7/us-central1/getPlumbers)."}}
+[info] +  functions[us-central1-getReports]: http function initialized (http://localhost:5000/testingfirebase-3e0f7/us-central1/getReports). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://localhost:5000/testingfirebase-3e0f7/us-central1/getReports)."}}
+[info] +  functions[us-central1-addReports]: http function initialized (http://localhost:5000/testingfirebase-3e0f7/us-central1/addReports). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://localhost:5000/testingfirebase-3e0f7/us-central1/addReports)."}}
