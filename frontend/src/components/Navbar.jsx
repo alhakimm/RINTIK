@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import { IoPersonCircleSharp } from "react-icons/io5"
 import logo from '../assets/logo.png';
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () =>{
 

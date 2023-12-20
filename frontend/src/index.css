@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities{
+    .custom-article-section-width{
+        width: 66.5%;
+    }
+    .custom-article-section-margin-left{
+        margin-left: 25%;
+    }
+
+    .custom-search-bar-width{
+        width: 22.5%;
+    }
+}
