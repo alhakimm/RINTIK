@@ -9,8 +9,7 @@ const {getAllPosts, writePost, getPost, commentOnPost, upvotePost, unUpvotePost,
 const {signup, login, uploadImage, addUserDetails/*, getUserProfile, getUserDetails*/} = require('./handlers/users');
 const {getPlumbers, /*regPlumbers*/} = require('./handlers/plumber');
 const {getReports, addReports} = require('./handlers/report')
-
-
+const {initializeArticles, getArticles} = require('./handlers/articles');
 
 // posts route
 app.get('/posts', getAllPosts);
@@ -30,6 +29,10 @@ app.post('/user', FBAuth, addUserDetails);
 // app.get('/user', FBAuth, getUserProfile);
 // app.get('/user/:username', getUserDetails);
 
+//Articles for Education Page
+app.get('/articles', getArticles);  //fetch articles
+app.post('/articles', initializeArticles);  //initialise articles
+
 //plumbers route
 //app.get('/plumbers', getPlumbers);
 
@@ -39,3 +42,5 @@ exports.api = functions.https.onRequest(app);
 exports.getPlumbers = functions.https.onRequest(getPlumbers);
 exports.getReports = functions.https.onRequest(getReports);
 exports.addReports = functions.https.onRequest(addReports);
+exports.initializeArticles = functions.https.onRequest(initializeArticles);
+exports.getArticles = functions.https.onRequest(getArticles);

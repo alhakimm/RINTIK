@@ -689,3 +689,1066 @@
 [debug] [2023-12-18T17:19:48.005Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
 [debug] [2023-12-18T17:19:48.005Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
 [debug] [2023-12-18T17:19:48.006Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-12-20T09:58:23.323Z] ----------------------------------------------------------------------
+[debug] [2023-12-20T09:58:23.358Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2023-12-20T09:58:23.360Z] CLI Version:   13.0.2
+[debug] [2023-12-20T09:58:23.360Z] Platform:      win32
+[debug] [2023-12-20T09:58:23.361Z] Node Version:  v21.1.0
+[debug] [2023-12-20T09:58:23.362Z] Time:          Wed Dec 20 2023 17:58:23 GMT+0800 (Malaysia Time)
+[debug] [2023-12-20T09:58:23.363Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-12-20T09:58:23.374Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2023-12-20T09:58:23.914Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-12-20T09:58:23.915Z] > authorizing via signed-in user (danishirfan.tech@gmail.com)
+[debug] [2023-12-20T09:58:23.916Z] [iam] checking project testingfirebase-3e0f7 for permissions ["firebase.projects.get"]
+[debug] [2023-12-20T09:58:23.919Z] > refreshing access token with scopes: []
+[debug] [2023-12-20T09:58:23.922Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-12-20T09:58:23.922Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-12-20T09:58:24.369Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-12-20T09:58:24.370Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-12-20T09:58:24.399Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/testingfirebase-3e0f7:testIamPermissions [none]
+[debug] [2023-12-20T09:58:24.399Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/testingfirebase-3e0f7:testIamPermissions x-goog-quota-user=projects/testingfirebase-3e0f7
+[debug] [2023-12-20T09:58:24.400Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/testingfirebase-3e0f7:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-12-20T09:58:24.738Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2023-12-20T09:58:24.739Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2023-12-20T09:58:25.944Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/testingfirebase-3e0f7:testIamPermissions 200
+[debug] [2023-12-20T09:58:25.944Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/testingfirebase-3e0f7:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-12-20T09:58:25.945Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/testingfirebase-3e0f7 [none]
+[debug] [2023-12-20T09:58:27.050Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/testingfirebase-3e0f7 200
+[debug] [2023-12-20T09:58:27.050Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/testingfirebase-3e0f7 {"projectId":"testingfirebase-3e0f7","projectNumber":"1085692725313","displayName":"Rintik","name":"projects/testingfirebase-3e0f7","resources":{"hostingSite":"testingfirebase-3e0f7","realtimeDatabaseInstance":"testingfirebase-3e0f7-default-rtdb","storageBucket":"testingfirebase-3e0f7.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_3f188af5-02ab-4474-bd57-44a0fd832944"}
+[info] 
+[info] === Serving from 'C:\Users\Danish Irfan\OneDrive\Desktop\RINTIK\backend'...
+[info] 
+[debug] [2023-12-20T09:58:27.063Z] defaultcredentials: writing to file C:\Users\Danish Irfan\AppData\Roaming\firebase\danishirfan_tech_gmail.com_application_default_credentials.json
+[debug] [2023-12-20T09:58:27.068Z] Setting GAC to C:\Users\Danish Irfan\AppData\Roaming\firebase\danishirfan_tech_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\Danish Irfan\\AppData\\Roaming\\firebase\\danishirfan_tech_gmail.com_application_default_credentials.json"}}
+[debug] [2023-12-20T09:58:27.071Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/testingfirebase-3e0f7/adminSdkConfig [none]
+[debug] [2023-12-20T09:58:27.690Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/testingfirebase-3e0f7/adminSdkConfig 200
+[debug] [2023-12-20T09:58:27.690Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/testingfirebase-3e0f7/adminSdkConfig {"projectId":"testingfirebase-3e0f7","databaseURL":"https://testingfirebase-3e0f7-default-rtdb.firebaseio.com","storageBucket":"testingfirebase-3e0f7.appspot.com","locationId":"us-central"}
+[info] i  functions: Watching "C:\Users\Danish Irfan\OneDrive\Desktop\RINTIK\backend\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\" for Cloud Functions..."}}
+[debug] [2023-12-20T09:58:27.742Z] Validating nodejs source
+[debug] [2023-12-20T09:58:32.486Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log",
+    "build": "webpack"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "busboy": "^1.6.0",
+    "express": "^4.18.2",
+    "firebase": "^10.7.0",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-12-20T09:58:32.488Z] Building nodejs source
+[debug] [2023-12-20T09:58:32.489Z] Failed to find version of module node: reached end of search path C:\Users\Danish Irfan\OneDrive\Desktop\RINTIK\backend\functions\node_modules
+[warn] !  functions: Your requested "node" version "18" doesn't match your global version "21". Using node@21 from host. 
+[debug] [2023-12-20T09:58:32.504Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-12-20T09:58:32.548Z] Found firebase-functions binary at 'C:\Users\Danish Irfan\OneDrive\Desktop\RINTIK\backend\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8769
+
+[debug] [2023-12-20T09:58:36.470Z] Got response from /__/functions.yaml {"endpoints":{"api":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"api"},"getPlumbers":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"getPlumbers"},"getReports":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"getReports"},"addReports":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"addReports"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] +  functions: Loaded functions definitions from source: api, getPlumbers, getReports, addReports. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api, getPlumbers, getReports, addReports."}}
+[info] +  functions[us-central1-api]: http function initialized (http://localhost:5000/testingfirebase-3e0f7/us-central1/api). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://localhost:5000/testingfirebase-3e0f7/us-central1/api)."}}
+[info] +  functions[us-central1-getPlumbers]: http function initialized (http://localhost:5000/testingfirebase-3e0f7/us-central1/getPlumbers). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://localhost:5000/testingfirebase-3e0f7/us-central1/getPlumbers)."}}
+[info] +  functions[us-central1-getReports]: http function initialized (http://localhost:5000/testingfirebase-3e0f7/us-central1/getReports). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://localhost:5000/testingfirebase-3e0f7/us-central1/getReports)."}}
+[info] +  functions[us-central1-addReports]: http function initialized (http://localhost:5000/testingfirebase-3e0f7/us-central1/addReports). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://localhost:5000/testingfirebase-3e0f7/us-central1/addReports)."}}
+[debug] [2023-12-20T09:59:51.095Z] [work-queue] {"queuedWork":["/testingfirebase-3e0f7/us-central1/api/posts-2023-12-20T09:59:51.095Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-12-20T09:59:51.098Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/testingfirebase-3e0f7/us-central1/api/posts-2023-12-20T09:59:51.095Z"],"workRunningCount":1}
+[debug] [2023-12-20T09:59:51.100Z] Accepted request GET /testingfirebase-3e0f7/us-central1/api/posts --> us-central1-api
+[debug] [2023-12-20T09:59:51.110Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-12-20T09:59:51.112Z] [functions] Got req.url=/testingfirebase-3e0f7/us-central1/api/posts, mapping to path=/posts {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/testingfirebase-3e0f7/us-central1/api/posts, mapping to path=/posts"}}
+[debug] [2023-12-20T09:59:51.170Z] [worker-pool] addWorker(us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-api)"}}
+[debug] [2023-12-20T09:59:51.174Z] [worker-pool] Adding worker with key us-central1-api, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-api, total=1"}}
+[info] >  (node:11744) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead. {"user":"(node:11744) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m (node:11744) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead."}}
+[info] >  (Use `node --trace-deprecation ...` to show where the warning was created) {"user":"(Use `node --trace-deprecation ...` to show where the warning was created)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m (Use `node --trace-deprecation ...` to show where the warning was created)"}}
+[debug] [2023-12-20T09:59:57.801Z] [runtime-status] [11744] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.11.0","resolution":"C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [11744] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.11.0\",\"resolution\":\"C:\\\\Users\\\\Danish Irfan\\\\OneDrive\\\\Desktop\\\\RINTIK\\\\backend\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2023-12-20T09:59:57.802Z] [runtime-status] [11744] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.5.0","resolution":"C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [11744] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.5.0\",\"resolution\":\"C:\\\\Users\\\\Danish Irfan\\\\OneDrive\\\\Desktop\\\\RINTIK\\\\backend\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-12-20T09:59:57.803Z] [runtime-status] [11744] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [11744] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2023-12-20T09:59:57.803Z] [runtime-status] [11744] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.5.0","resolution":"C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [11744] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.5.0\",\"resolution\":\"C:\\\\Users\\\\Danish Irfan\\\\OneDrive\\\\Desktop\\\\RINTIK\\\\backend\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-12-20T09:59:59.503Z] [runtime-status] [11744] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [11744] Checked functions.config() {\"config\":{}}"}}
+[debug] [2023-12-20T09:59:59.506Z] [runtime-status] [11744] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"4.5.0","resolution":"C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [11744] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"4.5.0\",\"resolution\":\"C:\\\\Users\\\\Danish Irfan\\\\OneDrive\\\\Desktop\\\\RINTIK\\\\backend\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}}"}}
+[debug] [2023-12-20T09:59:59.509Z] [runtime-status] [11744] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.5.0","resolution":"C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [11744] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.5.0\",\"resolution\":\"C:\\\\Users\\\\Danish Irfan\\\\OneDrive\\\\Desktop\\\\RINTIK\\\\backend\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-12-20T09:59:59.529Z] [runtime-status] [11744] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.11.0","resolution":"C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [11744] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.11.0\",\"resolution\":\"C:\\\\Users\\\\Danish Irfan\\\\OneDrive\\\\Desktop\\\\RINTIK\\\\backend\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2023-12-20T09:59:59.548Z] [runtime-status] [11744] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.5.0","resolution":"C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [11744] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.5.0\",\"resolution\":\"C:\\\\Users\\\\Danish Irfan\\\\OneDrive\\\\Desktop\\\\RINTIK\\\\backend\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-12-20T09:59:59.551Z] [runtime-status] [11744] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"11.11.0","resolution":"C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [11744] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"11.11.0\",\"resolution\":\"C:\\\\Users\\\\Danish Irfan\\\\OneDrive\\\\Desktop\\\\RINTIK\\\\backend\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}}"}}
+[debug] [2023-12-20T10:00:00.596Z] [runtime-status] [11744] initializeApp(DEFAULT) {"storageBucket":"testingfirebase-3e0f7.appspot.com","databaseURL":"https://testingfirebase-3e0f7-default-rtdb.firebaseio.com","projectId":"testingfirebase-3e0f7"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [11744] initializeApp(DEFAULT) {\"storageBucket\":\"testingfirebase-3e0f7.appspot.com\",\"databaseURL\":\"https://testingfirebase-3e0f7-default-rtdb.firebaseio.com\",\"projectId\":\"testingfirebase-3e0f7\"}"}}
+[debug] [2023-12-20T10:00:01.127Z] [runtime-status] [11744] Functions runtime initialized. {"cwd":"C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions","node_version":"21.1.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [11744] Functions runtime initialized. {\"cwd\":\"C:\\\\Users\\\\Danish Irfan\\\\OneDrive\\\\Desktop\\\\RINTIK\\\\backend\\\\functions\",\"node_version\":\"21.1.0\"}"}}
+[debug] [2023-12-20T10:00:01.130Z] [runtime-status] [11744] Listening to port: \\?\pipe\fire_emu_f4f89cb5a9b7ef48 {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [11744] Listening to port: \\\\?\\pipe\\fire_emu_f4f89cb5a9b7ef48"}}
+[debug] [2023-12-20T10:00:01.172Z] [worker-us-central1-api-52da1a3b-9460-4f61-a07d-31535610f7c8]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-52da1a3b-9460-4f61-a07d-31535610f7c8]: IDLE"}}
+[debug] [2023-12-20T10:00:01.174Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2023-12-20T10:00:01.178Z] [worker-us-central1-api-52da1a3b-9460-4f61-a07d-31535610f7c8]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-52da1a3b-9460-4f61-a07d-31535610f7c8]: BUSY"}}
+[warn] !  Google API requested!
+   - URL: "https://oauth2.googleapis.com/token"
+   - Be careful, this may be a production service. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Google API requested!\n   - URL: \"https://oauth2.googleapis.com/token\"\n   - Be careful, this may be a production service."}}
+[debug] [2023-12-20T10:00:03.924Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 2746.7868ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 2746.7868ms"}}
+[debug] [2023-12-20T10:00:03.934Z] [worker-us-central1-api-52da1a3b-9460-4f61-a07d-31535610f7c8]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-52da1a3b-9460-4f61-a07d-31535610f7c8]: IDLE"}}
+[debug] [2023-12-20T10:00:03.935Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-12-20T10:00:03.936Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-12-20T10:00:03.936Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-12-20T10:00:03.939Z] [work-queue] {"queuedWork":["/testingfirebase-3e0f7/us-central1/api/posts-2023-12-20T10:00:03.939Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-12-20T10:00:03.939Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/testingfirebase-3e0f7/us-central1/api/posts-2023-12-20T10:00:03.939Z"],"workRunningCount":1}
+[debug] [2023-12-20T10:00:03.939Z] Accepted request GET /testingfirebase-3e0f7/us-central1/api/posts --> us-central1-api
+[debug] [2023-12-20T10:00:03.945Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-12-20T10:00:03.945Z] [functions] Got req.url=/testingfirebase-3e0f7/us-central1/api/posts, mapping to path=/posts {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/testingfirebase-3e0f7/us-central1/api/posts, mapping to path=/posts"}}
+[debug] [2023-12-20T10:00:03.946Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2023-12-20T10:00:03.953Z] [worker-us-central1-api-52da1a3b-9460-4f61-a07d-31535610f7c8]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-52da1a3b-9460-4f61-a07d-31535610f7c8]: BUSY"}}
+[debug] [2023-12-20T10:00:04.941Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 988.8547ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 988.8547ms"}}
+[debug] [2023-12-20T10:00:04.945Z] [worker-us-central1-api-52da1a3b-9460-4f61-a07d-31535610f7c8]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-52da1a3b-9460-4f61-a07d-31535610f7c8]: IDLE"}}
+[debug] [2023-12-20T10:00:04.946Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-12-20T10:00:04.946Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-12-20T10:00:04.946Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-12-20T10:29:59.764Z] [work-queue] {"queuedWork":["/testingfirebase-3e0f7/us-central1/api/posts-2023-12-20T10:29:59.762Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-12-20T10:29:59.769Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/testingfirebase-3e0f7/us-central1/api/posts-2023-12-20T10:29:59.762Z"],"workRunningCount":1}
+[debug] [2023-12-20T10:29:59.771Z] Accepted request GET /testingfirebase-3e0f7/us-central1/api/posts --> us-central1-api
+[debug] [2023-12-20T10:29:59.831Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-12-20T10:29:59.837Z] [functions] Got req.url=/testingfirebase-3e0f7/us-central1/api/posts, mapping to path=/posts {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/testingfirebase-3e0f7/us-central1/api/posts, mapping to path=/posts"}}
+[debug] [2023-12-20T10:29:59.838Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2023-12-20T10:29:59.849Z] [worker-us-central1-api-52da1a3b-9460-4f61-a07d-31535610f7c8]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-52da1a3b-9460-4f61-a07d-31535610f7c8]: BUSY"}}
+[debug] [2023-12-20T10:30:01.865Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 2016.8883ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 2016.8883ms"}}
+[debug] [2023-12-20T10:30:01.866Z] [worker-us-central1-api-52da1a3b-9460-4f61-a07d-31535610f7c8]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-52da1a3b-9460-4f61-a07d-31535610f7c8]: IDLE"}}
+[debug] [2023-12-20T10:30:01.867Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-12-20T10:30:01.867Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-12-20T10:30:01.868Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-12-20T10:30:01.876Z] [work-queue] {"queuedWork":["/testingfirebase-3e0f7/us-central1/api/posts-2023-12-20T10:30:01.875Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-12-20T10:30:01.876Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/testingfirebase-3e0f7/us-central1/api/posts-2023-12-20T10:30:01.875Z"],"workRunningCount":1}
+[debug] [2023-12-20T10:30:01.877Z] Accepted request GET /testingfirebase-3e0f7/us-central1/api/posts --> us-central1-api
+[debug] [2023-12-20T10:30:01.879Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-12-20T10:30:01.879Z] [functions] Got req.url=/testingfirebase-3e0f7/us-central1/api/posts, mapping to path=/posts {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/testingfirebase-3e0f7/us-central1/api/posts, mapping to path=/posts"}}
+[debug] [2023-12-20T10:30:01.880Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2023-12-20T10:30:01.882Z] [worker-us-central1-api-52da1a3b-9460-4f61-a07d-31535610f7c8]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-52da1a3b-9460-4f61-a07d-31535610f7c8]: BUSY"}}
+[debug] [2023-12-20T10:30:02.241Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 359.3893ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 359.3893ms"}}
+[debug] [2023-12-20T10:30:02.244Z] [worker-us-central1-api-52da1a3b-9460-4f61-a07d-31535610f7c8]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-52da1a3b-9460-4f61-a07d-31535610f7c8]: IDLE"}}
+[debug] [2023-12-20T10:30:02.244Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-12-20T10:30:02.244Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-12-20T10:30:02.245Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-12-20T10:30:32.712Z] [work-queue] {"queuedWork":["/testingfirebase-3e0f7/us-central1/api/posts-2023-12-20T10:30:32.712Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-12-20T10:30:32.713Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/testingfirebase-3e0f7/us-central1/api/posts-2023-12-20T10:30:32.712Z"],"workRunningCount":1}
+[debug] [2023-12-20T10:30:32.713Z] Accepted request GET /testingfirebase-3e0f7/us-central1/api/posts --> us-central1-api
+[debug] [2023-12-20T10:30:32.760Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-12-20T10:30:32.761Z] [functions] Got req.url=/testingfirebase-3e0f7/us-central1/api/posts, mapping to path=/posts {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/testingfirebase-3e0f7/us-central1/api/posts, mapping to path=/posts"}}
+[debug] [2023-12-20T10:30:32.762Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2023-12-20T10:30:32.795Z] [worker-us-central1-api-52da1a3b-9460-4f61-a07d-31535610f7c8]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-52da1a3b-9460-4f61-a07d-31535610f7c8]: BUSY"}}
+[debug] [2023-12-20T10:30:33.233Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 439.4752ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 439.4752ms"}}
+[debug] [2023-12-20T10:30:33.240Z] [worker-us-central1-api-52da1a3b-9460-4f61-a07d-31535610f7c8]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-52da1a3b-9460-4f61-a07d-31535610f7c8]: IDLE"}}
+[debug] [2023-12-20T10:30:33.240Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-12-20T10:30:33.241Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-12-20T10:30:33.241Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-12-20T10:30:33.284Z] [work-queue] {"queuedWork":["/testingfirebase-3e0f7/us-central1/api/posts-2023-12-20T10:30:33.284Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-12-20T10:30:33.285Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/testingfirebase-3e0f7/us-central1/api/posts-2023-12-20T10:30:33.284Z"],"workRunningCount":1}
+[debug] [2023-12-20T10:30:33.286Z] Accepted request GET /testingfirebase-3e0f7/us-central1/api/posts --> us-central1-api
+[debug] [2023-12-20T10:30:33.289Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-12-20T10:30:33.290Z] [functions] Got req.url=/testingfirebase-3e0f7/us-central1/api/posts, mapping to path=/posts {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/testingfirebase-3e0f7/us-central1/api/posts, mapping to path=/posts"}}
+[debug] [2023-12-20T10:30:33.290Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2023-12-20T10:30:33.293Z] [worker-us-central1-api-52da1a3b-9460-4f61-a07d-31535610f7c8]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-52da1a3b-9460-4f61-a07d-31535610f7c8]: BUSY"}}
+[debug] [2023-12-20T10:30:34.201Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 908.0971ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 908.0971ms"}}
+[debug] [2023-12-20T10:30:34.211Z] [worker-us-central1-api-52da1a3b-9460-4f61-a07d-31535610f7c8]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-52da1a3b-9460-4f61-a07d-31535610f7c8]: IDLE"}}
+[debug] [2023-12-20T10:30:34.211Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-12-20T10:30:34.211Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-12-20T10:30:34.212Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-12-20T10:31:20.454Z] [work-queue] {"queuedWork":["/testingfirebase-3e0f7/us-central1/api/posts-2023-12-20T10:31:20.454Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-12-20T10:31:20.454Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/testingfirebase-3e0f7/us-central1/api/posts-2023-12-20T10:31:20.454Z"],"workRunningCount":1}
+[debug] [2023-12-20T10:31:20.455Z] Accepted request GET /testingfirebase-3e0f7/us-central1/api/posts --> us-central1-api
+[debug] [2023-12-20T10:31:20.467Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-12-20T10:31:20.468Z] [functions] Got req.url=/testingfirebase-3e0f7/us-central1/api/posts, mapping to path=/posts {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/testingfirebase-3e0f7/us-central1/api/posts, mapping to path=/posts"}}
+[debug] [2023-12-20T10:31:20.469Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2023-12-20T10:31:20.487Z] [worker-us-central1-api-52da1a3b-9460-4f61-a07d-31535610f7c8]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-52da1a3b-9460-4f61-a07d-31535610f7c8]: BUSY"}}
+[debug] [2023-12-20T10:31:20.837Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 350.8337ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 350.8337ms"}}
+[debug] [2023-12-20T10:31:20.840Z] [worker-us-central1-api-52da1a3b-9460-4f61-a07d-31535610f7c8]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-52da1a3b-9460-4f61-a07d-31535610f7c8]: IDLE"}}
+[debug] [2023-12-20T10:31:20.841Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-12-20T10:31:20.841Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-12-20T10:31:20.842Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-12-20T10:31:20.845Z] [work-queue] {"queuedWork":["/testingfirebase-3e0f7/us-central1/api/posts-2023-12-20T10:31:20.845Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-12-20T10:31:20.845Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/testingfirebase-3e0f7/us-central1/api/posts-2023-12-20T10:31:20.845Z"],"workRunningCount":1}
+[debug] [2023-12-20T10:31:20.846Z] Accepted request GET /testingfirebase-3e0f7/us-central1/api/posts --> us-central1-api
+[debug] [2023-12-20T10:31:20.847Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-12-20T10:31:20.848Z] [functions] Got req.url=/testingfirebase-3e0f7/us-central1/api/posts, mapping to path=/posts {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/testingfirebase-3e0f7/us-central1/api/posts, mapping to path=/posts"}}
+[debug] [2023-12-20T10:31:20.850Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2023-12-20T10:31:20.877Z] [worker-us-central1-api-52da1a3b-9460-4f61-a07d-31535610f7c8]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-52da1a3b-9460-4f61-a07d-31535610f7c8]: BUSY"}}
+[debug] [2023-12-20T10:31:21.879Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 1004.203ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 1004.203ms"}}
+[debug] [2023-12-20T10:31:21.916Z] [worker-us-central1-api-52da1a3b-9460-4f61-a07d-31535610f7c8]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-52da1a3b-9460-4f61-a07d-31535610f7c8]: IDLE"}}
+[debug] [2023-12-20T10:31:21.917Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-12-20T10:31:21.917Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-12-20T10:31:21.917Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-12-20T10:35:39.520Z] [work-queue] {"queuedWork":["/testingfirebase-3e0f7/us-central1/api/posts-2023-12-20T10:35:39.519Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-12-20T10:35:39.528Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/testingfirebase-3e0f7/us-central1/api/posts-2023-12-20T10:35:39.519Z"],"workRunningCount":1}
+[debug] [2023-12-20T10:35:39.529Z] Accepted request GET /testingfirebase-3e0f7/us-central1/api/posts --> us-central1-api
+[debug] [2023-12-20T10:35:39.547Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-12-20T10:35:39.552Z] [functions] Got req.url=/testingfirebase-3e0f7/us-central1/api/posts, mapping to path=/posts {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/testingfirebase-3e0f7/us-central1/api/posts, mapping to path=/posts"}}
+[debug] [2023-12-20T10:35:39.553Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2023-12-20T10:35:39.556Z] [worker-us-central1-api-52da1a3b-9460-4f61-a07d-31535610f7c8]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-52da1a3b-9460-4f61-a07d-31535610f7c8]: BUSY"}}
+[debug] [2023-12-20T10:35:41.276Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 1721.2894999999999ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 1721.2894999999999ms"}}
+[debug] [2023-12-20T10:35:41.282Z] [worker-us-central1-api-52da1a3b-9460-4f61-a07d-31535610f7c8]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-52da1a3b-9460-4f61-a07d-31535610f7c8]: IDLE"}}
+[debug] [2023-12-20T10:35:41.282Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-12-20T10:35:41.286Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-12-20T10:35:41.296Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-12-20T10:35:41.323Z] [work-queue] {"queuedWork":["/testingfirebase-3e0f7/us-central1/api/posts-2023-12-20T10:35:41.320Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-12-20T10:35:41.324Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/testingfirebase-3e0f7/us-central1/api/posts-2023-12-20T10:35:41.320Z"],"workRunningCount":1}
+[debug] [2023-12-20T10:35:41.327Z] Accepted request GET /testingfirebase-3e0f7/us-central1/api/posts --> us-central1-api
+[debug] [2023-12-20T10:35:41.332Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-12-20T10:35:41.339Z] [functions] Got req.url=/testingfirebase-3e0f7/us-central1/api/posts, mapping to path=/posts {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/testingfirebase-3e0f7/us-central1/api/posts, mapping to path=/posts"}}
+[debug] [2023-12-20T10:35:41.343Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2023-12-20T10:35:41.347Z] [worker-us-central1-api-52da1a3b-9460-4f61-a07d-31535610f7c8]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-52da1a3b-9460-4f61-a07d-31535610f7c8]: BUSY"}}
+[debug] [2023-12-20T10:35:41.710Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 363.8939ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 363.8939ms"}}
+[debug] [2023-12-20T10:35:41.764Z] [worker-us-central1-api-52da1a3b-9460-4f61-a07d-31535610f7c8]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-52da1a3b-9460-4f61-a07d-31535610f7c8]: IDLE"}}
+[debug] [2023-12-20T10:35:41.764Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-12-20T10:35:41.764Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-12-20T10:35:41.764Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-12-20T11:03:11.939Z] [work-queue] {"queuedWork":["/testingfirebase-3e0f7/us-central1/api/posts-2023-12-20T11:03:11.931Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-12-20T11:03:11.973Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/testingfirebase-3e0f7/us-central1/api/posts-2023-12-20T11:03:11.931Z"],"workRunningCount":1}
+[debug] [2023-12-20T11:03:11.974Z] Accepted request GET /testingfirebase-3e0f7/us-central1/api/posts --> us-central1-api
+[debug] [2023-12-20T11:03:12.073Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-12-20T11:03:12.077Z] [functions] Got req.url=/testingfirebase-3e0f7/us-central1/api/posts, mapping to path=/posts {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/testingfirebase-3e0f7/us-central1/api/posts, mapping to path=/posts"}}
+[debug] [2023-12-20T11:03:12.080Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2023-12-20T11:03:12.104Z] [worker-us-central1-api-52da1a3b-9460-4f61-a07d-31535610f7c8]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-52da1a3b-9460-4f61-a07d-31535610f7c8]: BUSY"}}
+[debug] [2023-12-20T11:03:14.364Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 2262.1478ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 2262.1478ms"}}
+[debug] [2023-12-20T11:03:14.472Z] [worker-us-central1-api-52da1a3b-9460-4f61-a07d-31535610f7c8]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-52da1a3b-9460-4f61-a07d-31535610f7c8]: IDLE"}}
+[debug] [2023-12-20T11:03:14.473Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-12-20T11:03:14.473Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-12-20T11:03:14.473Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-12-20T11:03:14.478Z] [work-queue] {"queuedWork":["/testingfirebase-3e0f7/us-central1/api/posts-2023-12-20T11:03:14.478Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-12-20T11:03:14.478Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/testingfirebase-3e0f7/us-central1/api/posts-2023-12-20T11:03:14.478Z"],"workRunningCount":1}
+[debug] [2023-12-20T11:03:14.479Z] Accepted request GET /testingfirebase-3e0f7/us-central1/api/posts --> us-central1-api
+[debug] [2023-12-20T11:03:14.481Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-12-20T11:03:14.481Z] [functions] Got req.url=/testingfirebase-3e0f7/us-central1/api/posts, mapping to path=/posts {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/testingfirebase-3e0f7/us-central1/api/posts, mapping to path=/posts"}}
+[debug] [2023-12-20T11:03:14.482Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2023-12-20T11:03:14.504Z] [worker-us-central1-api-52da1a3b-9460-4f61-a07d-31535610f7c8]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-52da1a3b-9460-4f61-a07d-31535610f7c8]: BUSY"}}
+[debug] [2023-12-20T11:03:14.939Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 435.0895ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 435.0895ms"}}
+[debug] [2023-12-20T11:03:14.954Z] [worker-us-central1-api-52da1a3b-9460-4f61-a07d-31535610f7c8]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-52da1a3b-9460-4f61-a07d-31535610f7c8]: IDLE"}}
+[debug] [2023-12-20T11:03:14.955Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-12-20T11:03:14.955Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-12-20T11:03:14.956Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-12-20T12:20:42.531Z] File C:\Users\Danish Irfan\OneDrive\Desktop\RINTIK\backend\functions\handlers\articles.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\\handlers\\articles.js changed, reloading triggers"}}
+[debug] [2023-12-20T12:20:43.762Z] Validating nodejs source
+[debug] [2023-12-20T12:20:54.365Z] checkFunctionsSDKVersion was unable to fetch information from NPM Error: spawnSync C:\WINDOWS\system32\cmd.exe ETIMEDOUT
+    at Object.spawnSync (node:internal/child_process:1124:20)
+    at Object.spawnSync (node:child_process:876:24)
+    at Function.spawnSync [as sync] (C:\Program Files\nodejs\node_modules\firebase-tools\node_modules\cross-spawn\index.js:26:23)
+    at Object.getLatestSDKVersion (C:\Program Files\nodejs\node_modules\firebase-tools\lib\deploy\functions\runtimes\node\versioning.js:54:25)
+    at Object.checkFunctionsSDKVersion (C:\Program Files\nodejs\node_modules\firebase-tools\lib\deploy\functions\runtimes\node\versioning.js:74:32)
+    at Delegate.validate (C:\Program Files\nodejs\node_modules\firebase-tools\lib\deploy\functions\runtimes\node\index.js:84:20)
+    at FunctionsEmulator.discoverTriggers (C:\Program Files\nodejs\node_modules\firebase-tools\lib\emulator\functionsEmulator.js:296:35)
+    at async FunctionsEmulator.loadTriggers (C:\Program Files\nodejs\node_modules\firebase-tools\lib\emulator\functionsEmulator.js:325:34)
+[debug] [2023-12-20T12:20:54.374Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log",
+    "build": "webpack"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "busboy": "^1.6.0",
+    "express": "^4.18.2",
+    "firebase": "^10.7.0",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-12-20T12:20:54.374Z] Building nodejs source
+[debug] [2023-12-20T12:20:54.375Z] Failed to find version of module node: reached end of search path C:\Users\Danish Irfan\OneDrive\Desktop\RINTIK\backend\functions\node_modules
+[warn] !  functions: Your requested "node" version "18" doesn't match your global version "21". Using node@21 from host. 
+[debug] [2023-12-20T12:20:54.409Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-12-20T12:20:54.480Z] Found firebase-functions binary at 'C:\Users\Danish Irfan\OneDrive\Desktop\RINTIK\backend\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8272
+
+[error] !!  functions: Failed to load function definition from source: FirebaseError: User code failed to load. Cannot determine backend specification {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: User code failed to load. Cannot determine backend specification"}}
+[debug] [2023-12-20T12:31:10.177Z] File C:\Users\Danish Irfan\OneDrive\Desktop\RINTIK\backend\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\\index.js changed, reloading triggers"}}
+[debug] [2023-12-20T12:31:11.189Z] Validating nodejs source
+[debug] [2023-12-20T12:31:21.461Z] checkFunctionsSDKVersion was unable to fetch information from NPM Error: spawnSync C:\WINDOWS\system32\cmd.exe ETIMEDOUT
+    at Object.spawnSync (node:internal/child_process:1124:20)
+    at Object.spawnSync (node:child_process:876:24)
+    at Function.spawnSync [as sync] (C:\Program Files\nodejs\node_modules\firebase-tools\node_modules\cross-spawn\index.js:26:23)
+    at Object.getLatestSDKVersion (C:\Program Files\nodejs\node_modules\firebase-tools\lib\deploy\functions\runtimes\node\versioning.js:54:25)
+    at Object.checkFunctionsSDKVersion (C:\Program Files\nodejs\node_modules\firebase-tools\lib\deploy\functions\runtimes\node\versioning.js:74:32)
+    at Delegate.validate (C:\Program Files\nodejs\node_modules\firebase-tools\lib\deploy\functions\runtimes\node\index.js:84:20)
+    at FunctionsEmulator.discoverTriggers (C:\Program Files\nodejs\node_modules\firebase-tools\lib\emulator\functionsEmulator.js:296:35)
+    at async FunctionsEmulator.loadTriggers (C:\Program Files\nodejs\node_modules\firebase-tools\lib\emulator\functionsEmulator.js:325:34)
+[debug] [2023-12-20T12:31:21.471Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log",
+    "build": "webpack"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "busboy": "^1.6.0",
+    "express": "^4.18.2",
+    "firebase": "^10.7.0",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-12-20T12:31:21.472Z] Building nodejs source
+[debug] [2023-12-20T12:31:21.472Z] Failed to find version of module node: reached end of search path C:\Users\Danish Irfan\OneDrive\Desktop\RINTIK\backend\functions\node_modules
+[warn] !  functions: Your requested "node" version "18" doesn't match your global version "21". Using node@21 from host. 
+[debug] [2023-12-20T12:31:21.611Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-12-20T12:31:21.766Z] Found firebase-functions binary at 'C:\Users\Danish Irfan\OneDrive\Desktop\RINTIK\backend\functions\node_modules\.bin\firebase-functions'
+[debug] [2023-12-20T12:31:31.894Z] Failed to call quitquitquit. This often means the server failed to start request to http://localhost:8410/__/quitquitquit failed, reason:  {"message":"request to http://localhost:8410/__/quitquitquit failed, reason: ","type":"system","errno":"ECONNREFUSED","code":"ECONNREFUSED"}
+[info] Serving at port 8410
+
+[error] !!  functions: Failed to load function definition from source: FirebaseError: User code failed to load. Cannot determine backend specification {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: User code failed to load. Cannot determine backend specification"}}
+[debug] [2023-12-20T12:33:36.013Z] [work-queue] {"queuedWork":["/testingfirebase-3e0f7/us-central1/api/posts-2023-12-20T12:33:36.013Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-12-20T12:33:36.014Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/testingfirebase-3e0f7/us-central1/api/posts-2023-12-20T12:33:36.013Z"],"workRunningCount":1}
+[debug] [2023-12-20T12:33:36.014Z] Accepted request GET /testingfirebase-3e0f7/us-central1/api/posts --> us-central1-api
+[debug] [2023-12-20T12:33:36.038Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-12-20T12:33:36.039Z] [functions] Got req.url=/testingfirebase-3e0f7/us-central1/api/posts, mapping to path=/posts {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/testingfirebase-3e0f7/us-central1/api/posts, mapping to path=/posts"}}
+[debug] [2023-12-20T12:33:36.040Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2023-12-20T12:33:36.048Z] [worker-us-central1-api-52da1a3b-9460-4f61-a07d-31535610f7c8]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-52da1a3b-9460-4f61-a07d-31535610f7c8]: BUSY"}}
+[debug] [2023-12-20T12:33:38.781Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 2734.7253ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 2734.7253ms"}}
+[debug] [2023-12-20T12:33:38.804Z] [worker-us-central1-api-52da1a3b-9460-4f61-a07d-31535610f7c8]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-52da1a3b-9460-4f61-a07d-31535610f7c8]: IDLE"}}
+[debug] [2023-12-20T12:33:38.805Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-12-20T12:33:38.807Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-12-20T12:33:38.808Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-12-20T12:33:38.809Z] [work-queue] {"queuedWork":["/testingfirebase-3e0f7/us-central1/api/posts-2023-12-20T12:33:38.809Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-12-20T12:33:38.811Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/testingfirebase-3e0f7/us-central1/api/posts-2023-12-20T12:33:38.809Z"],"workRunningCount":1}
+[debug] [2023-12-20T12:33:38.811Z] Accepted request GET /testingfirebase-3e0f7/us-central1/api/posts --> us-central1-api
+[debug] [2023-12-20T12:33:38.814Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-12-20T12:33:38.815Z] [functions] Got req.url=/testingfirebase-3e0f7/us-central1/api/posts, mapping to path=/posts {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/testingfirebase-3e0f7/us-central1/api/posts, mapping to path=/posts"}}
+[debug] [2023-12-20T12:33:38.816Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2023-12-20T12:33:38.850Z] [worker-us-central1-api-52da1a3b-9460-4f61-a07d-31535610f7c8]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-52da1a3b-9460-4f61-a07d-31535610f7c8]: BUSY"}}
+[debug] [2023-12-20T12:33:39.233Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 384.0202ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 384.0202ms"}}
+[debug] [2023-12-20T12:33:39.235Z] [worker-us-central1-api-52da1a3b-9460-4f61-a07d-31535610f7c8]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-52da1a3b-9460-4f61-a07d-31535610f7c8]: IDLE"}}
+[debug] [2023-12-20T12:33:39.236Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-12-20T12:33:39.236Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-12-20T12:33:39.236Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-12-20T12:33:44.946Z] [work-queue] {"queuedWork":["/testingfirebase-3e0f7/us-central1/api/posts-2023-12-20T12:33:44.946Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-12-20T12:33:44.947Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/testingfirebase-3e0f7/us-central1/api/posts-2023-12-20T12:33:44.946Z"],"workRunningCount":1}
+[debug] [2023-12-20T12:33:44.947Z] Accepted request GET /testingfirebase-3e0f7/us-central1/api/posts --> us-central1-api
+[debug] [2023-12-20T12:33:44.951Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-12-20T12:33:44.952Z] [functions] Got req.url=/testingfirebase-3e0f7/us-central1/api/posts, mapping to path=/posts {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/testingfirebase-3e0f7/us-central1/api/posts, mapping to path=/posts"}}
+[debug] [2023-12-20T12:33:44.952Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2023-12-20T12:33:44.953Z] [worker-us-central1-api-52da1a3b-9460-4f61-a07d-31535610f7c8]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-52da1a3b-9460-4f61-a07d-31535610f7c8]: BUSY"}}
+[debug] [2023-12-20T12:33:45.319Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 366.0661ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 366.0661ms"}}
+[debug] [2023-12-20T12:33:45.328Z] [worker-us-central1-api-52da1a3b-9460-4f61-a07d-31535610f7c8]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-52da1a3b-9460-4f61-a07d-31535610f7c8]: IDLE"}}
+[debug] [2023-12-20T12:33:45.329Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-12-20T12:33:45.329Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-12-20T12:33:45.330Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-12-20T12:33:45.342Z] [work-queue] {"queuedWork":["/testingfirebase-3e0f7/us-central1/api/posts-2023-12-20T12:33:45.342Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-12-20T12:33:45.342Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/testingfirebase-3e0f7/us-central1/api/posts-2023-12-20T12:33:45.342Z"],"workRunningCount":1}
+[debug] [2023-12-20T12:33:45.342Z] Accepted request GET /testingfirebase-3e0f7/us-central1/api/posts --> us-central1-api
+[debug] [2023-12-20T12:33:45.346Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-12-20T12:33:45.347Z] [functions] Got req.url=/testingfirebase-3e0f7/us-central1/api/posts, mapping to path=/posts {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/testingfirebase-3e0f7/us-central1/api/posts, mapping to path=/posts"}}
+[debug] [2023-12-20T12:33:45.347Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2023-12-20T12:33:45.357Z] [worker-us-central1-api-52da1a3b-9460-4f61-a07d-31535610f7c8]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-52da1a3b-9460-4f61-a07d-31535610f7c8]: BUSY"}}
+[debug] [2023-12-20T12:33:46.393Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 1035.902ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 1035.902ms"}}
+[debug] [2023-12-20T12:33:46.401Z] [worker-us-central1-api-52da1a3b-9460-4f61-a07d-31535610f7c8]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-52da1a3b-9460-4f61-a07d-31535610f7c8]: IDLE"}}
+[debug] [2023-12-20T12:33:46.402Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-12-20T12:33:46.402Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-12-20T12:33:46.402Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-12-20T12:36:38.912Z] ----------------------------------------------------------------------
+[debug] [2023-12-20T12:36:38.919Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2023-12-20T12:36:38.920Z] CLI Version:   13.0.2
+[debug] [2023-12-20T12:36:38.921Z] Platform:      win32
+[debug] [2023-12-20T12:36:38.921Z] Node Version:  v21.1.0
+[debug] [2023-12-20T12:36:38.922Z] Time:          Wed Dec 20 2023 20:36:38 GMT+0800 (Malaysia Time)
+[debug] [2023-12-20T12:36:38.922Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-12-20T12:36:39.247Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-12-20T12:36:39.248Z] > authorizing via signed-in user (danishirfan.tech@gmail.com)
+[debug] [2023-12-20T12:36:39.248Z] [iam] checking project testingfirebase-3e0f7 for permissions ["firebase.projects.get"]
+[debug] [2023-12-20T12:36:39.252Z] > refreshing access token with scopes: []
+[debug] [2023-12-20T12:36:39.260Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-12-20T12:36:39.261Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-12-20T12:36:39.780Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-12-20T12:36:39.781Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-12-20T12:36:39.800Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/testingfirebase-3e0f7:testIamPermissions [none]
+[debug] [2023-12-20T12:36:39.800Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/testingfirebase-3e0f7:testIamPermissions x-goog-quota-user=projects/testingfirebase-3e0f7
+[debug] [2023-12-20T12:36:39.800Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/testingfirebase-3e0f7:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-12-20T12:36:41.157Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/testingfirebase-3e0f7:testIamPermissions 200
+[debug] [2023-12-20T12:36:41.157Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/testingfirebase-3e0f7:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-12-20T12:36:41.158Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/testingfirebase-3e0f7 [none]
+[debug] [2023-12-20T12:36:41.959Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/testingfirebase-3e0f7 200
+[debug] [2023-12-20T12:36:41.959Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/testingfirebase-3e0f7 {"projectId":"testingfirebase-3e0f7","projectNumber":"1085692725313","displayName":"Rintik","name":"projects/testingfirebase-3e0f7","resources":{"hostingSite":"testingfirebase-3e0f7","realtimeDatabaseInstance":"testingfirebase-3e0f7-default-rtdb","storageBucket":"testingfirebase-3e0f7.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_3f188af5-02ab-4474-bd57-44a0fd832944"}
+[info] 
+[info] === Serving from 'C:\Users\Danish Irfan\OneDrive\Desktop\RINTIK\backend'...
+[info] 
+[debug] [2023-12-20T12:36:41.971Z] defaultcredentials: writing to file C:\Users\Danish Irfan\AppData\Roaming\firebase\danishirfan_tech_gmail.com_application_default_credentials.json
+[debug] [2023-12-20T12:36:41.977Z] Setting GAC to C:\Users\Danish Irfan\AppData\Roaming\firebase\danishirfan_tech_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\Danish Irfan\\AppData\\Roaming\\firebase\\danishirfan_tech_gmail.com_application_default_credentials.json"}}
+[debug] [2023-12-20T12:36:41.979Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/testingfirebase-3e0f7/adminSdkConfig [none]
+[debug] [2023-12-20T12:36:43.258Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/testingfirebase-3e0f7/adminSdkConfig 200
+[debug] [2023-12-20T12:36:43.258Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/testingfirebase-3e0f7/adminSdkConfig {"projectId":"testingfirebase-3e0f7","databaseURL":"https://testingfirebase-3e0f7-default-rtdb.firebaseio.com","storageBucket":"testingfirebase-3e0f7.appspot.com","locationId":"us-central"}
+[info] i  functions: Watching "C:\Users\Danish Irfan\OneDrive\Desktop\RINTIK\backend\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\" for Cloud Functions..."}}
+[debug] [2023-12-20T12:36:43.303Z] Validating nodejs source
+[debug] [2023-12-20T12:36:48.368Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log",
+    "build": "webpack"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "busboy": "^1.6.0",
+    "express": "^4.18.2",
+    "firebase": "^10.7.0",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-12-20T12:36:48.369Z] Building nodejs source
+[debug] [2023-12-20T12:36:48.370Z] Failed to find version of module node: reached end of search path C:\Users\Danish Irfan\OneDrive\Desktop\RINTIK\backend\functions\node_modules
+[warn] !  functions: Your requested "node" version "18" doesn't match your global version "21". Using node@21 from host. 
+[debug] [2023-12-20T12:36:48.380Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-12-20T12:36:48.416Z] Found firebase-functions binary at 'C:\Users\Danish Irfan\OneDrive\Desktop\RINTIK\backend\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8405
+
+[error] Error: Cannot find module '.handlers/articles'
+Require stack:
+- C:\Users\Danish Irfan\OneDrive\Desktop\RINTIK\backend\functions\index.js
+- C:\Users\Danish Irfan\OneDrive\Desktop\RINTIK\backend\functions\node_modules\firebase-functions\lib\runtime\loader.js
+- C:\Users\Danish Irfan\OneDrive\Desktop\RINTIK\backend\functions\node_modules\firebase-functions\lib\bin\firebase-functions.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1144:15)
+    at Module._load (node:internal/modules/cjs/loader:985:27)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (C:\Users\Danish Irfan\OneDrive\Desktop\RINTIK\backend\functions\index.js:12:43)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\\index.js',
+    'C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\\node_modules\\firebase-functions\\lib\\runtime\\loader.js',
+    'C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\\node_modules\\firebase-functions\\lib\\bin\\firebase-functions.js'
+  ]
+}
+
+[debug] [2023-12-20T12:36:51.106Z] Got response code 400; body Failed to generate manifest from function source: Error: Cannot find module '.handlers/articles'
+Require stack:
+- C:\Users\Danish Irfan\OneDrive\Desktop\RINTIK\backend\functions\index.js
+- C:\Users\Danish Irfan\OneDrive\Desktop\RINTIK\backend\functions\node_modules\firebase-functions\lib\runtime\loader.js
+- C:\Users\Danish Irfan\OneDrive\Desktop\RINTIK\backend\functions\node_modules\firebase-functions\lib\bin\firebase-functions.js
+[error] !!  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2023-12-20T12:37:17.202Z] File C:\Users\Danish Irfan\OneDrive\Desktop\RINTIK\backend\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\\index.js changed, reloading triggers"}}
+[debug] [2023-12-20T12:37:18.214Z] Validating nodejs source
+[debug] [2023-12-20T12:37:27.026Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log",
+    "build": "webpack"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "busboy": "^1.6.0",
+    "express": "^4.18.2",
+    "firebase": "^10.7.0",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-12-20T12:37:27.027Z] Building nodejs source
+[debug] [2023-12-20T12:37:27.028Z] Failed to find version of module node: reached end of search path C:\Users\Danish Irfan\OneDrive\Desktop\RINTIK\backend\functions\node_modules
+[warn] !  functions: Your requested "node" version "18" doesn't match your global version "21". Using node@21 from host. 
+[debug] [2023-12-20T12:37:27.038Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-12-20T12:37:27.075Z] Found firebase-functions binary at 'C:\Users\Danish Irfan\OneDrive\Desktop\RINTIK\backend\functions\node_modules\.bin\firebase-functions'
+[debug] [2023-12-20T12:37:27.194Z] File C:\Users\Danish Irfan\OneDrive\Desktop\RINTIK\backend\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\\index.js changed, reloading triggers"}}
+[debug] [2023-12-20T12:37:28.208Z] Validating nodejs source
+[debug] [2023-12-20T12:37:37.213Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log",
+    "build": "webpack"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "busboy": "^1.6.0",
+    "express": "^4.18.2",
+    "firebase": "^10.7.0",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-12-20T12:37:37.214Z] Building nodejs source
+[debug] [2023-12-20T12:37:37.214Z] Failed to find version of module node: reached end of search path C:\Users\Danish Irfan\OneDrive\Desktop\RINTIK\backend\functions\node_modules
+[warn] !  functions: Your requested "node" version "18" doesn't match your global version "21". Using node@21 from host. 
+[debug] [2023-12-20T12:37:37.222Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-12-20T12:37:37.250Z] Found firebase-functions binary at 'C:\Users\Danish Irfan\OneDrive\Desktop\RINTIK\backend\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8134
+
+[info] Serving at port 8266
+
+[debug] [2023-12-20T12:37:40.891Z] Got response from /__/functions.yaml {"endpoints":{"api":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"api"},"getPlumbers":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"getPlumbers"},"getReports":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"getReports"},"addReports":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"addReports"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[error] !!  functions: Failed to load function definition from source: FirebaseError: User code failed to load. Cannot determine backend specification {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: User code failed to load. Cannot determine backend specification"}}
+[info] +  functions: Loaded functions definitions from source: api, getPlumbers, getReports, addReports. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api, getPlumbers, getReports, addReports."}}
+[info] +  functions[us-central1-api]: http function initialized (http://localhost:5000/testingfirebase-3e0f7/us-central1/api). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://localhost:5000/testingfirebase-3e0f7/us-central1/api)."}}
+[info] +  functions[us-central1-getPlumbers]: http function initialized (http://localhost:5000/testingfirebase-3e0f7/us-central1/getPlumbers). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://localhost:5000/testingfirebase-3e0f7/us-central1/getPlumbers)."}}
+[info] +  functions[us-central1-getReports]: http function initialized (http://localhost:5000/testingfirebase-3e0f7/us-central1/getReports). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://localhost:5000/testingfirebase-3e0f7/us-central1/getReports)."}}
+[info] +  functions[us-central1-addReports]: http function initialized (http://localhost:5000/testingfirebase-3e0f7/us-central1/addReports). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://localhost:5000/testingfirebase-3e0f7/us-central1/addReports)."}}
+[debug] [2023-12-20T12:38:35.679Z] ----------------------------------------------------------------------
+[debug] [2023-12-20T12:38:35.686Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2023-12-20T12:38:35.687Z] CLI Version:   13.0.2
+[debug] [2023-12-20T12:38:35.688Z] Platform:      win32
+[debug] [2023-12-20T12:38:35.689Z] Node Version:  v21.1.0
+[debug] [2023-12-20T12:38:35.689Z] Time:          Wed Dec 20 2023 20:38:35 GMT+0800 (Malaysia Time)
+[debug] [2023-12-20T12:38:35.690Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-12-20T12:38:36.006Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-12-20T12:38:36.007Z] > authorizing via signed-in user (danishirfan.tech@gmail.com)
+[debug] [2023-12-20T12:38:36.007Z] [iam] checking project testingfirebase-3e0f7 for permissions ["firebase.projects.get"]
+[debug] [2023-12-20T12:38:36.013Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/testingfirebase-3e0f7:testIamPermissions [none]
+[debug] [2023-12-20T12:38:36.014Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/testingfirebase-3e0f7:testIamPermissions x-goog-quota-user=projects/testingfirebase-3e0f7
+[debug] [2023-12-20T12:38:36.014Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/testingfirebase-3e0f7:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-12-20T12:38:37.624Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/testingfirebase-3e0f7:testIamPermissions 200
+[debug] [2023-12-20T12:38:37.625Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/testingfirebase-3e0f7:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-12-20T12:38:37.626Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/testingfirebase-3e0f7 [none]
+[debug] [2023-12-20T12:38:38.464Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/testingfirebase-3e0f7 200
+[debug] [2023-12-20T12:38:38.464Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/testingfirebase-3e0f7 {"projectId":"testingfirebase-3e0f7","projectNumber":"1085692725313","displayName":"Rintik","name":"projects/testingfirebase-3e0f7","resources":{"hostingSite":"testingfirebase-3e0f7","realtimeDatabaseInstance":"testingfirebase-3e0f7-default-rtdb","storageBucket":"testingfirebase-3e0f7.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_3f188af5-02ab-4474-bd57-44a0fd832944"}
+[info] 
+[info] === Serving from 'C:\Users\Danish Irfan\OneDrive\Desktop\RINTIK\backend'...
+[info] 
+[debug] [2023-12-20T12:38:38.476Z] defaultcredentials: writing to file C:\Users\Danish Irfan\AppData\Roaming\firebase\danishirfan_tech_gmail.com_application_default_credentials.json
+[debug] [2023-12-20T12:38:38.484Z] Setting GAC to C:\Users\Danish Irfan\AppData\Roaming\firebase\danishirfan_tech_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\Danish Irfan\\AppData\\Roaming\\firebase\\danishirfan_tech_gmail.com_application_default_credentials.json"}}
+[debug] [2023-12-20T12:38:38.486Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/testingfirebase-3e0f7/adminSdkConfig [none]
+[debug] [2023-12-20T12:38:39.506Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/testingfirebase-3e0f7/adminSdkConfig 200
+[debug] [2023-12-20T12:38:39.507Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/testingfirebase-3e0f7/adminSdkConfig {"projectId":"testingfirebase-3e0f7","databaseURL":"https://testingfirebase-3e0f7-default-rtdb.firebaseio.com","storageBucket":"testingfirebase-3e0f7.appspot.com","locationId":"us-central"}
+[info] i  functions: Watching "C:\Users\Danish Irfan\OneDrive\Desktop\RINTIK\backend\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\" for Cloud Functions..."}}
+[debug] [2023-12-20T12:38:39.559Z] Validating nodejs source
+[debug] [2023-12-20T12:38:43.653Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log",
+    "build": "webpack"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "busboy": "^1.6.0",
+    "express": "^4.18.2",
+    "firebase": "^10.7.0",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-12-20T12:38:43.654Z] Building nodejs source
+[debug] [2023-12-20T12:38:43.655Z] Failed to find version of module node: reached end of search path C:\Users\Danish Irfan\OneDrive\Desktop\RINTIK\backend\functions\node_modules
+[warn] !  functions: Your requested "node" version "18" doesn't match your global version "21". Using node@21 from host. 
+[debug] [2023-12-20T12:38:43.662Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-12-20T12:38:43.697Z] Found firebase-functions binary at 'C:\Users\Danish Irfan\OneDrive\Desktop\RINTIK\backend\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8212
+
+[debug] [2023-12-20T12:38:46.052Z] Got response from /__/functions.yaml {"endpoints":{"api":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"api"},"getPlumbers":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"getPlumbers"},"getReports":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"getReports"},"addReports":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"addReports"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] +  functions: Loaded functions definitions from source: api, getPlumbers, getReports, addReports. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api, getPlumbers, getReports, addReports."}}
+[info] +  functions[us-central1-api]: http function initialized (http://localhost:5000/testingfirebase-3e0f7/us-central1/api). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://localhost:5000/testingfirebase-3e0f7/us-central1/api)."}}
+[info] +  functions[us-central1-getPlumbers]: http function initialized (http://localhost:5000/testingfirebase-3e0f7/us-central1/getPlumbers). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://localhost:5000/testingfirebase-3e0f7/us-central1/getPlumbers)."}}
+[info] +  functions[us-central1-getReports]: http function initialized (http://localhost:5000/testingfirebase-3e0f7/us-central1/getReports). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://localhost:5000/testingfirebase-3e0f7/us-central1/getReports)."}}
+[info] +  functions[us-central1-addReports]: http function initialized (http://localhost:5000/testingfirebase-3e0f7/us-central1/addReports). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://localhost:5000/testingfirebase-3e0f7/us-central1/addReports)."}}
+[debug] [2023-12-20T12:38:59.050Z] [work-queue] {"queuedWork":["/testingfirebase-3e0f7/us-central1/api/posts-2023-12-20T12:38:59.049Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-12-20T12:38:59.051Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/testingfirebase-3e0f7/us-central1/api/posts-2023-12-20T12:38:59.049Z"],"workRunningCount":1}
+[debug] [2023-12-20T12:38:59.052Z] Accepted request GET /testingfirebase-3e0f7/us-central1/api/posts --> us-central1-api
+[debug] [2023-12-20T12:38:59.065Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-12-20T12:38:59.067Z] [functions] Got req.url=/testingfirebase-3e0f7/us-central1/api/posts, mapping to path=/posts {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/testingfirebase-3e0f7/us-central1/api/posts, mapping to path=/posts"}}
+[debug] [2023-12-20T12:38:59.313Z] [worker-pool] addWorker(us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-api)"}}
+[debug] [2023-12-20T12:38:59.316Z] [worker-pool] Adding worker with key us-central1-api, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-api, total=1"}}
+[info] >  (node:12304) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead. {"user":"(node:12304) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m (node:12304) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead."}}
+[info] >  (Use `node --trace-deprecation ...` to show where the warning was created) {"user":"(Use `node --trace-deprecation ...` to show where the warning was created)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m (Use `node --trace-deprecation ...` to show where the warning was created)"}}
+[debug] [2023-12-20T12:39:03.650Z] [runtime-status] [12304] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.11.0","resolution":"C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [12304] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.11.0\",\"resolution\":\"C:\\\\Users\\\\Danish Irfan\\\\OneDrive\\\\Desktop\\\\RINTIK\\\\backend\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2023-12-20T12:39:03.659Z] [runtime-status] [12304] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.5.0","resolution":"C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [12304] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.5.0\",\"resolution\":\"C:\\\\Users\\\\Danish Irfan\\\\OneDrive\\\\Desktop\\\\RINTIK\\\\backend\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-12-20T12:39:03.663Z] [runtime-status] [12304] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [12304] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2023-12-20T12:39:03.679Z] [runtime-status] [12304] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.5.0","resolution":"C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [12304] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.5.0\",\"resolution\":\"C:\\\\Users\\\\Danish Irfan\\\\OneDrive\\\\Desktop\\\\RINTIK\\\\backend\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-12-20T12:39:04.656Z] [runtime-status] [12304] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [12304] Checked functions.config() {\"config\":{}}"}}
+[debug] [2023-12-20T12:39:04.657Z] [runtime-status] [12304] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"4.5.0","resolution":"C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [12304] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"4.5.0\",\"resolution\":\"C:\\\\Users\\\\Danish Irfan\\\\OneDrive\\\\Desktop\\\\RINTIK\\\\backend\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}}"}}
+[debug] [2023-12-20T12:39:04.660Z] [runtime-status] [12304] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.5.0","resolution":"C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [12304] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.5.0\",\"resolution\":\"C:\\\\Users\\\\Danish Irfan\\\\OneDrive\\\\Desktop\\\\RINTIK\\\\backend\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-12-20T12:39:04.665Z] [runtime-status] [12304] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.11.0","resolution":"C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [12304] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.11.0\",\"resolution\":\"C:\\\\Users\\\\Danish Irfan\\\\OneDrive\\\\Desktop\\\\RINTIK\\\\backend\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2023-12-20T12:39:04.683Z] [runtime-status] [12304] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.5.0","resolution":"C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [12304] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.5.0\",\"resolution\":\"C:\\\\Users\\\\Danish Irfan\\\\OneDrive\\\\Desktop\\\\RINTIK\\\\backend\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-12-20T12:39:04.685Z] [runtime-status] [12304] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"11.11.0","resolution":"C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [12304] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"11.11.0\",\"resolution\":\"C:\\\\Users\\\\Danish Irfan\\\\OneDrive\\\\Desktop\\\\RINTIK\\\\backend\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}}"}}
+[debug] [2023-12-20T12:39:05.112Z] [runtime-status] [12304] initializeApp(DEFAULT) {"storageBucket":"testingfirebase-3e0f7.appspot.com","databaseURL":"https://testingfirebase-3e0f7-default-rtdb.firebaseio.com","projectId":"testingfirebase-3e0f7"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [12304] initializeApp(DEFAULT) {\"storageBucket\":\"testingfirebase-3e0f7.appspot.com\",\"databaseURL\":\"https://testingfirebase-3e0f7-default-rtdb.firebaseio.com\",\"projectId\":\"testingfirebase-3e0f7\"}"}}
+[debug] [2023-12-20T12:39:05.537Z] [runtime-status] [12304] Functions runtime initialized. {"cwd":"C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions","node_version":"21.1.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [12304] Functions runtime initialized. {\"cwd\":\"C:\\\\Users\\\\Danish Irfan\\\\OneDrive\\\\Desktop\\\\RINTIK\\\\backend\\\\functions\",\"node_version\":\"21.1.0\"}"}}
+[debug] [2023-12-20T12:39:05.539Z] [runtime-status] [12304] Listening to port: \\?\pipe\fire_emu_533a06da201d00ea {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [12304] Listening to port: \\\\?\\pipe\\fire_emu_533a06da201d00ea"}}
+[debug] [2023-12-20T12:39:05.595Z] [worker-us-central1-api-eead67c9-3b58-426c-a3df-411c65e44e83]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-eead67c9-3b58-426c-a3df-411c65e44e83]: IDLE"}}
+[debug] [2023-12-20T12:39:05.596Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2023-12-20T12:39:05.601Z] [worker-us-central1-api-eead67c9-3b58-426c-a3df-411c65e44e83]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-eead67c9-3b58-426c-a3df-411c65e44e83]: BUSY"}}
+[warn] !  Google API requested!
+   - URL: "https://oauth2.googleapis.com/token"
+   - Be careful, this may be a production service. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Google API requested!\n   - URL: \"https://oauth2.googleapis.com/token\"\n   - Be careful, this may be a production service."}}
+[debug] [2023-12-20T12:39:10.936Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 5336.0655ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 5336.0655ms"}}
+[debug] [2023-12-20T12:39:10.941Z] [worker-us-central1-api-eead67c9-3b58-426c-a3df-411c65e44e83]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-eead67c9-3b58-426c-a3df-411c65e44e83]: IDLE"}}
+[debug] [2023-12-20T12:39:10.941Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-12-20T12:39:10.942Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-12-20T12:39:10.943Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-12-20T12:39:10.946Z] [work-queue] {"queuedWork":["/testingfirebase-3e0f7/us-central1/api/posts-2023-12-20T12:39:10.946Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-12-20T12:39:10.947Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/testingfirebase-3e0f7/us-central1/api/posts-2023-12-20T12:39:10.946Z"],"workRunningCount":1}
+[debug] [2023-12-20T12:39:10.947Z] Accepted request GET /testingfirebase-3e0f7/us-central1/api/posts --> us-central1-api
+[debug] [2023-12-20T12:39:10.952Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-12-20T12:39:10.953Z] [functions] Got req.url=/testingfirebase-3e0f7/us-central1/api/posts, mapping to path=/posts {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/testingfirebase-3e0f7/us-central1/api/posts, mapping to path=/posts"}}
+[debug] [2023-12-20T12:39:10.953Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2023-12-20T12:39:10.963Z] [worker-us-central1-api-eead67c9-3b58-426c-a3df-411c65e44e83]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-eead67c9-3b58-426c-a3df-411c65e44e83]: BUSY"}}
+[debug] [2023-12-20T12:39:11.327Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 364.4812ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 364.4812ms"}}
+[debug] [2023-12-20T12:39:11.399Z] [worker-us-central1-api-eead67c9-3b58-426c-a3df-411c65e44e83]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-eead67c9-3b58-426c-a3df-411c65e44e83]: IDLE"}}
+[debug] [2023-12-20T12:39:11.400Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-12-20T12:39:11.400Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-12-20T12:39:11.401Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-12-20T12:44:13.464Z] File C:\Users\Danish Irfan\OneDrive\Desktop\RINTIK\backend\functions\handlers\articles.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\\handlers\\articles.js changed, reloading triggers"}}
+[debug] [2023-12-20T12:44:14.530Z] Validating nodejs source
+[debug] [2023-12-20T12:44:24.593Z] checkFunctionsSDKVersion was unable to fetch information from NPM Error: spawnSync C:\WINDOWS\system32\cmd.exe ETIMEDOUT
+    at Object.spawnSync (node:internal/child_process:1124:20)
+    at Object.spawnSync (node:child_process:876:24)
+    at Function.spawnSync [as sync] (C:\Program Files\nodejs\node_modules\firebase-tools\node_modules\cross-spawn\index.js:26:23)
+    at Object.getLatestSDKVersion (C:\Program Files\nodejs\node_modules\firebase-tools\lib\deploy\functions\runtimes\node\versioning.js:54:25)
+    at Object.checkFunctionsSDKVersion (C:\Program Files\nodejs\node_modules\firebase-tools\lib\deploy\functions\runtimes\node\versioning.js:74:32)
+    at Delegate.validate (C:\Program Files\nodejs\node_modules\firebase-tools\lib\deploy\functions\runtimes\node\index.js:84:20)
+    at FunctionsEmulator.discoverTriggers (C:\Program Files\nodejs\node_modules\firebase-tools\lib\emulator\functionsEmulator.js:296:35)
+    at async FunctionsEmulator.loadTriggers (C:\Program Files\nodejs\node_modules\firebase-tools\lib\emulator\functionsEmulator.js:325:34)
+[debug] [2023-12-20T12:44:24.596Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log",
+    "build": "webpack"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "busboy": "^1.6.0",
+    "express": "^4.18.2",
+    "firebase": "^10.7.0",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-12-20T12:44:24.597Z] Building nodejs source
+[debug] [2023-12-20T12:44:24.597Z] Failed to find version of module node: reached end of search path C:\Users\Danish Irfan\OneDrive\Desktop\RINTIK\backend\functions\node_modules
+[warn] !  functions: Your requested "node" version "18" doesn't match your global version "21". Using node@21 from host. 
+[debug] [2023-12-20T12:44:24.600Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-12-20T12:44:24.630Z] Found firebase-functions binary at 'C:\Users\Danish Irfan\OneDrive\Desktop\RINTIK\backend\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8452
+
+[debug] [2023-12-20T12:44:28.351Z] Got response from /__/functions.yaml {"endpoints":{"api":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"api"},"getPlumbers":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"getPlumbers"},"getReports":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"getReports"},"addReports":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"addReports"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] +  functions: Loaded functions definitions from source: api, getPlumbers, getReports, addReports. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api, getPlumbers, getReports, addReports."}}
+[debug] [2023-12-20T12:44:33.422Z] [worker-pool] Shutting down IDLE worker (us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-api)"}}
+[debug] [2023-12-20T12:44:33.423Z] [worker-us-central1-api-eead67c9-3b58-426c-a3df-411c65e44e83]: FINISHING {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-eead67c9-3b58-426c-a3df-411c65e44e83]: FINISHING"}}
+[debug] [2023-12-20T12:44:33.478Z] [worker-us-central1-api-eead67c9-3b58-426c-a3df-411c65e44e83]: exited {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-eead67c9-3b58-426c-a3df-411c65e44e83]: exited"}}
+[debug] [2023-12-20T12:44:33.479Z] [worker-us-central1-api-eead67c9-3b58-426c-a3df-411c65e44e83]: FINISHED {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-eead67c9-3b58-426c-a3df-411c65e44e83]: FINISHED"}}
+[debug] [2023-12-20T12:54:29.447Z] ----------------------------------------------------------------------
+[debug] [2023-12-20T12:54:29.455Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2023-12-20T12:54:29.456Z] CLI Version:   13.0.2
+[debug] [2023-12-20T12:54:29.457Z] Platform:      win32
+[debug] [2023-12-20T12:54:29.457Z] Node Version:  v21.1.0
+[debug] [2023-12-20T12:54:29.458Z] Time:          Wed Dec 20 2023 20:54:29 GMT+0800 (Malaysia Time)
+[debug] [2023-12-20T12:54:29.458Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-12-20T12:54:29.778Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-12-20T12:54:29.780Z] > authorizing via signed-in user (danishirfan.tech@gmail.com)
+[debug] [2023-12-20T12:54:29.780Z] [iam] checking project testingfirebase-3e0f7 for permissions ["firebase.projects.get"]
+[debug] [2023-12-20T12:54:29.788Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/testingfirebase-3e0f7:testIamPermissions [none]
+[debug] [2023-12-20T12:54:29.789Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/testingfirebase-3e0f7:testIamPermissions x-goog-quota-user=projects/testingfirebase-3e0f7
+[debug] [2023-12-20T12:54:29.790Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/testingfirebase-3e0f7:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-12-20T12:54:31.156Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/testingfirebase-3e0f7:testIamPermissions 200
+[debug] [2023-12-20T12:54:31.157Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/testingfirebase-3e0f7:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-12-20T12:54:31.158Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/testingfirebase-3e0f7 [none]
+[debug] [2023-12-20T12:54:31.984Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/testingfirebase-3e0f7 200
+[debug] [2023-12-20T12:54:31.985Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/testingfirebase-3e0f7 {"projectId":"testingfirebase-3e0f7","projectNumber":"1085692725313","displayName":"Rintik","name":"projects/testingfirebase-3e0f7","resources":{"hostingSite":"testingfirebase-3e0f7","realtimeDatabaseInstance":"testingfirebase-3e0f7-default-rtdb","storageBucket":"testingfirebase-3e0f7.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_3f188af5-02ab-4474-bd57-44a0fd832944"}
+[info] 
+[info] === Serving from 'C:\Users\Danish Irfan\OneDrive\Desktop\RINTIK\backend'...
+[info] 
+[debug] [2023-12-20T12:54:31.996Z] defaultcredentials: writing to file C:\Users\Danish Irfan\AppData\Roaming\firebase\danishirfan_tech_gmail.com_application_default_credentials.json
+[debug] [2023-12-20T12:54:32.002Z] Setting GAC to C:\Users\Danish Irfan\AppData\Roaming\firebase\danishirfan_tech_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\Danish Irfan\\AppData\\Roaming\\firebase\\danishirfan_tech_gmail.com_application_default_credentials.json"}}
+[debug] [2023-12-20T12:54:32.003Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/testingfirebase-3e0f7/adminSdkConfig [none]
+[debug] [2023-12-20T12:54:33.023Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/testingfirebase-3e0f7/adminSdkConfig 200
+[debug] [2023-12-20T12:54:33.023Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/testingfirebase-3e0f7/adminSdkConfig {"projectId":"testingfirebase-3e0f7","databaseURL":"https://testingfirebase-3e0f7-default-rtdb.firebaseio.com","storageBucket":"testingfirebase-3e0f7.appspot.com","locationId":"us-central"}
+[info] i  functions: Watching "C:\Users\Danish Irfan\OneDrive\Desktop\RINTIK\backend\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\" for Cloud Functions..."}}
+[debug] [2023-12-20T12:54:33.095Z] Validating nodejs source
+[debug] [2023-12-20T12:54:38.600Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log",
+    "build": "webpack"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "busboy": "^1.6.0",
+    "express": "^4.18.2",
+    "firebase": "^10.7.0",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-12-20T12:54:38.601Z] Building nodejs source
+[debug] [2023-12-20T12:54:38.602Z] Failed to find version of module node: reached end of search path C:\Users\Danish Irfan\OneDrive\Desktop\RINTIK\backend\functions\node_modules
+[warn] !  functions: Your requested "node" version "18" doesn't match your global version "21". Using node@21 from host. 
+[debug] [2023-12-20T12:54:38.609Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-12-20T12:54:38.651Z] Found firebase-functions binary at 'C:\Users\Danish Irfan\OneDrive\Desktop\RINTIK\backend\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8995
+
+[debug] [2023-12-20T12:54:41.371Z] Got response from /__/functions.yaml {"endpoints":{"api":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"api"},"getPlumbers":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"getPlumbers"},"getReports":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"getReports"},"addReports":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"addReports"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] +  functions: Loaded functions definitions from source: api, getPlumbers, getReports, addReports. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api, getPlumbers, getReports, addReports."}}
+[info] +  functions[us-central1-api]: http function initialized (http://localhost:5000/testingfirebase-3e0f7/us-central1/api). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://localhost:5000/testingfirebase-3e0f7/us-central1/api)."}}
+[info] +  functions[us-central1-getPlumbers]: http function initialized (http://localhost:5000/testingfirebase-3e0f7/us-central1/getPlumbers). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://localhost:5000/testingfirebase-3e0f7/us-central1/getPlumbers)."}}
+[info] +  functions[us-central1-getReports]: http function initialized (http://localhost:5000/testingfirebase-3e0f7/us-central1/getReports). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://localhost:5000/testingfirebase-3e0f7/us-central1/getReports)."}}
+[info] +  functions[us-central1-addReports]: http function initialized (http://localhost:5000/testingfirebase-3e0f7/us-central1/addReports). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://localhost:5000/testingfirebase-3e0f7/us-central1/addReports)."}}
+[debug] [2023-12-20T12:57:25.867Z] ----------------------------------------------------------------------
+[debug] [2023-12-20T12:57:25.875Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2023-12-20T12:57:25.877Z] CLI Version:   13.0.2
+[debug] [2023-12-20T12:57:25.878Z] Platform:      win32
+[debug] [2023-12-20T12:57:25.879Z] Node Version:  v21.1.0
+[debug] [2023-12-20T12:57:25.879Z] Time:          Wed Dec 20 2023 20:57:25 GMT+0800 (Malaysia Time)
+[debug] [2023-12-20T12:57:25.880Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-12-20T12:57:26.373Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-12-20T12:57:26.375Z] > authorizing via signed-in user (danishirfan.tech@gmail.com)
+[debug] [2023-12-20T12:57:26.376Z] [iam] checking project testingfirebase-3e0f7 for permissions ["firebase.projects.get"]
+[debug] [2023-12-20T12:57:26.389Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/testingfirebase-3e0f7:testIamPermissions [none]
+[debug] [2023-12-20T12:57:26.389Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/testingfirebase-3e0f7:testIamPermissions x-goog-quota-user=projects/testingfirebase-3e0f7
+[debug] [2023-12-20T12:57:26.390Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/testingfirebase-3e0f7:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-12-20T12:57:27.722Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/testingfirebase-3e0f7:testIamPermissions 200
+[debug] [2023-12-20T12:57:27.722Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/testingfirebase-3e0f7:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-12-20T12:57:27.724Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/testingfirebase-3e0f7 [none]
+[debug] [2023-12-20T12:57:28.475Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/testingfirebase-3e0f7 200
+[debug] [2023-12-20T12:57:28.476Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/testingfirebase-3e0f7 {"projectId":"testingfirebase-3e0f7","projectNumber":"1085692725313","displayName":"Rintik","name":"projects/testingfirebase-3e0f7","resources":{"hostingSite":"testingfirebase-3e0f7","realtimeDatabaseInstance":"testingfirebase-3e0f7-default-rtdb","storageBucket":"testingfirebase-3e0f7.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_3f188af5-02ab-4474-bd57-44a0fd832944"}
+[info] 
+[info] === Serving from 'C:\Users\Danish Irfan\OneDrive\Desktop\RINTIK\backend'...
+[info] 
+[debug] [2023-12-20T12:57:28.488Z] defaultcredentials: writing to file C:\Users\Danish Irfan\AppData\Roaming\firebase\danishirfan_tech_gmail.com_application_default_credentials.json
+[debug] [2023-12-20T12:57:28.495Z] Setting GAC to C:\Users\Danish Irfan\AppData\Roaming\firebase\danishirfan_tech_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\Danish Irfan\\AppData\\Roaming\\firebase\\danishirfan_tech_gmail.com_application_default_credentials.json"}}
+[debug] [2023-12-20T12:57:28.497Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/testingfirebase-3e0f7/adminSdkConfig [none]
+[debug] [2023-12-20T12:57:29.574Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/testingfirebase-3e0f7/adminSdkConfig 200
+[debug] [2023-12-20T12:57:29.575Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/testingfirebase-3e0f7/adminSdkConfig {"projectId":"testingfirebase-3e0f7","databaseURL":"https://testingfirebase-3e0f7-default-rtdb.firebaseio.com","storageBucket":"testingfirebase-3e0f7.appspot.com","locationId":"us-central"}
+[info] i  functions: Watching "C:\Users\Danish Irfan\OneDrive\Desktop\RINTIK\backend\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\" for Cloud Functions..."}}
+[debug] [2023-12-20T12:57:29.618Z] Validating nodejs source
+[debug] [2023-12-20T12:57:34.641Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log",
+    "build": "webpack"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "busboy": "^1.6.0",
+    "express": "^4.18.2",
+    "firebase": "^10.7.0",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-12-20T12:57:34.642Z] Building nodejs source
+[debug] [2023-12-20T12:57:34.643Z] Failed to find version of module node: reached end of search path C:\Users\Danish Irfan\OneDrive\Desktop\RINTIK\backend\functions\node_modules
+[warn] !  functions: Your requested "node" version "18" doesn't match your global version "21". Using node@21 from host. 
+[debug] [2023-12-20T12:57:34.650Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-12-20T12:57:34.674Z] Found firebase-functions binary at 'C:\Users\Danish Irfan\OneDrive\Desktop\RINTIK\backend\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8222
+
+[debug] [2023-12-20T12:57:37.427Z] Got response from /__/functions.yaml {"endpoints":{"api":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"api"},"getPlumbers":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"getPlumbers"},"getReports":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"getReports"},"addReports":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"addReports"},"initializeArticles":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"initializeArticles"},"getArticles":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"getArticles"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] +  functions: Loaded functions definitions from source: api, getPlumbers, getReports, addReports, initializeArticles, getArticles. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api, getPlumbers, getReports, addReports, initializeArticles, getArticles."}}
+[info] +  functions[us-central1-api]: http function initialized (http://localhost:5000/testingfirebase-3e0f7/us-central1/api). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://localhost:5000/testingfirebase-3e0f7/us-central1/api)."}}
+[info] +  functions[us-central1-getPlumbers]: http function initialized (http://localhost:5000/testingfirebase-3e0f7/us-central1/getPlumbers). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://localhost:5000/testingfirebase-3e0f7/us-central1/getPlumbers)."}}
+[info] +  functions[us-central1-getReports]: http function initialized (http://localhost:5000/testingfirebase-3e0f7/us-central1/getReports). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://localhost:5000/testingfirebase-3e0f7/us-central1/getReports)."}}
+[info] +  functions[us-central1-addReports]: http function initialized (http://localhost:5000/testingfirebase-3e0f7/us-central1/addReports). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://localhost:5000/testingfirebase-3e0f7/us-central1/addReports)."}}
+[info] +  functions[us-central1-initializeArticles]: http function initialized (http://localhost:5000/testingfirebase-3e0f7/us-central1/initializeArticles). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://localhost:5000/testingfirebase-3e0f7/us-central1/initializeArticles)."}}
+[info] +  functions[us-central1-getArticles]: http function initialized (http://localhost:5000/testingfirebase-3e0f7/us-central1/getArticles). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://localhost:5000/testingfirebase-3e0f7/us-central1/getArticles)."}}
+[debug] [2023-12-20T12:59:43.246Z] [work-queue] {"queuedWork":["/testingfirebase-3e0f7/us-central1/api/posts-2023-12-20T12:59:43.245Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-12-20T12:59:43.249Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/testingfirebase-3e0f7/us-central1/api/posts-2023-12-20T12:59:43.245Z"],"workRunningCount":1}
+[debug] [2023-12-20T12:59:43.251Z] Accepted request GET /testingfirebase-3e0f7/us-central1/api/posts --> us-central1-api
+[debug] [2023-12-20T12:59:43.265Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-12-20T12:59:43.267Z] [functions] Got req.url=/testingfirebase-3e0f7/us-central1/api/posts, mapping to path=/posts {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/testingfirebase-3e0f7/us-central1/api/posts, mapping to path=/posts"}}
+[debug] [2023-12-20T12:59:43.310Z] [worker-pool] addWorker(us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-api)"}}
+[debug] [2023-12-20T12:59:43.319Z] [worker-pool] Adding worker with key us-central1-api, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-api, total=1"}}
+[info] >  (node:9848) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead. {"user":"(node:9848) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m (node:9848) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead."}}
+[info] >  (Use `node --trace-deprecation ...` to show where the warning was created) {"user":"(Use `node --trace-deprecation ...` to show where the warning was created)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m (Use `node --trace-deprecation ...` to show where the warning was created)"}}
+[debug] [2023-12-20T12:59:48.231Z] [runtime-status] [9848] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.11.0","resolution":"C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [9848] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.11.0\",\"resolution\":\"C:\\\\Users\\\\Danish Irfan\\\\OneDrive\\\\Desktop\\\\RINTIK\\\\backend\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2023-12-20T12:59:48.232Z] [runtime-status] [9848] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.5.0","resolution":"C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [9848] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.5.0\",\"resolution\":\"C:\\\\Users\\\\Danish Irfan\\\\OneDrive\\\\Desktop\\\\RINTIK\\\\backend\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-12-20T12:59:48.233Z] [runtime-status] [9848] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [9848] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2023-12-20T12:59:48.234Z] [runtime-status] [9848] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.5.0","resolution":"C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [9848] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.5.0\",\"resolution\":\"C:\\\\Users\\\\Danish Irfan\\\\OneDrive\\\\Desktop\\\\RINTIK\\\\backend\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-12-20T12:59:49.353Z] [runtime-status] [9848] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [9848] Checked functions.config() {\"config\":{}}"}}
+[debug] [2023-12-20T12:59:49.354Z] [runtime-status] [9848] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"4.5.0","resolution":"C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [9848] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"4.5.0\",\"resolution\":\"C:\\\\Users\\\\Danish Irfan\\\\OneDrive\\\\Desktop\\\\RINTIK\\\\backend\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}}"}}
+[debug] [2023-12-20T12:59:49.357Z] [runtime-status] [9848] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.5.0","resolution":"C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [9848] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.5.0\",\"resolution\":\"C:\\\\Users\\\\Danish Irfan\\\\OneDrive\\\\Desktop\\\\RINTIK\\\\backend\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-12-20T12:59:49.362Z] [runtime-status] [9848] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.11.0","resolution":"C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [9848] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.11.0\",\"resolution\":\"C:\\\\Users\\\\Danish Irfan\\\\OneDrive\\\\Desktop\\\\RINTIK\\\\backend\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2023-12-20T12:59:49.371Z] [runtime-status] [9848] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.5.0","resolution":"C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [9848] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.5.0\",\"resolution\":\"C:\\\\Users\\\\Danish Irfan\\\\OneDrive\\\\Desktop\\\\RINTIK\\\\backend\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-12-20T12:59:49.372Z] [runtime-status] [9848] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"11.11.0","resolution":"C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [9848] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"11.11.0\",\"resolution\":\"C:\\\\Users\\\\Danish Irfan\\\\OneDrive\\\\Desktop\\\\RINTIK\\\\backend\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}}"}}
+[debug] [2023-12-20T12:59:49.979Z] [runtime-status] [9848] initializeApp(DEFAULT) {"storageBucket":"testingfirebase-3e0f7.appspot.com","databaseURL":"https://testingfirebase-3e0f7-default-rtdb.firebaseio.com","projectId":"testingfirebase-3e0f7"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [9848] initializeApp(DEFAULT) {\"storageBucket\":\"testingfirebase-3e0f7.appspot.com\",\"databaseURL\":\"https://testingfirebase-3e0f7-default-rtdb.firebaseio.com\",\"projectId\":\"testingfirebase-3e0f7\"}"}}
+[debug] [2023-12-20T12:59:50.820Z] [runtime-status] [9848] Functions runtime initialized. {"cwd":"C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions","node_version":"21.1.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [9848] Functions runtime initialized. {\"cwd\":\"C:\\\\Users\\\\Danish Irfan\\\\OneDrive\\\\Desktop\\\\RINTIK\\\\backend\\\\functions\",\"node_version\":\"21.1.0\"}"}}
+[debug] [2023-12-20T12:59:50.823Z] [runtime-status] [9848] Listening to port: \\?\pipe\fire_emu_7f7cef36486598fb {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [9848] Listening to port: \\\\?\\pipe\\fire_emu_7f7cef36486598fb"}}
+[debug] [2023-12-20T12:59:50.857Z] [worker-us-central1-api-1aac9bbe-2c52-44cf-a65f-a2e426a6c0c8]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-1aac9bbe-2c52-44cf-a65f-a2e426a6c0c8]: IDLE"}}
+[debug] [2023-12-20T12:59:50.858Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2023-12-20T12:59:50.863Z] [worker-us-central1-api-1aac9bbe-2c52-44cf-a65f-a2e426a6c0c8]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-1aac9bbe-2c52-44cf-a65f-a2e426a6c0c8]: BUSY"}}
+[warn] !  Google API requested!
+   - URL: "https://oauth2.googleapis.com/token"
+   - Be careful, this may be a production service. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Google API requested!\n   - URL: \"https://oauth2.googleapis.com/token\"\n   - Be careful, this may be a production service."}}
+[debug] [2023-12-20T12:59:55.201Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 4338.875ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 4338.875ms"}}
+[debug] [2023-12-20T12:59:55.203Z] [worker-us-central1-api-1aac9bbe-2c52-44cf-a65f-a2e426a6c0c8]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-1aac9bbe-2c52-44cf-a65f-a2e426a6c0c8]: IDLE"}}
+[debug] [2023-12-20T12:59:55.204Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-12-20T12:59:55.204Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-12-20T12:59:55.205Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-12-20T12:59:55.212Z] [work-queue] {"queuedWork":["/testingfirebase-3e0f7/us-central1/api/posts-2023-12-20T12:59:55.211Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-12-20T12:59:55.212Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/testingfirebase-3e0f7/us-central1/api/posts-2023-12-20T12:59:55.211Z"],"workRunningCount":1}
+[debug] [2023-12-20T12:59:55.213Z] Accepted request GET /testingfirebase-3e0f7/us-central1/api/posts --> us-central1-api
+[debug] [2023-12-20T12:59:55.220Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-12-20T12:59:55.221Z] [functions] Got req.url=/testingfirebase-3e0f7/us-central1/api/posts, mapping to path=/posts {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/testingfirebase-3e0f7/us-central1/api/posts, mapping to path=/posts"}}
+[debug] [2023-12-20T12:59:55.221Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2023-12-20T12:59:55.243Z] [worker-us-central1-api-1aac9bbe-2c52-44cf-a65f-a2e426a6c0c8]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-1aac9bbe-2c52-44cf-a65f-a2e426a6c0c8]: BUSY"}}
+[debug] [2023-12-20T12:59:55.724Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 482.2089ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 482.2089ms"}}
+[debug] [2023-12-20T12:59:55.757Z] [worker-us-central1-api-1aac9bbe-2c52-44cf-a65f-a2e426a6c0c8]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-1aac9bbe-2c52-44cf-a65f-a2e426a6c0c8]: IDLE"}}
+[debug] [2023-12-20T12:59:55.758Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-12-20T12:59:55.758Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-12-20T12:59:55.759Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-12-20T13:06:12.264Z] [work-queue] {"queuedWork":["/testingfirebase-3e0f7/us-central1/initializeArticles-2023-12-20T13:06:12.264Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-12-20T13:06:12.264Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/testingfirebase-3e0f7/us-central1/initializeArticles-2023-12-20T13:06:12.264Z"],"workRunningCount":1}
+[debug] [2023-12-20T13:06:12.265Z] Accepted request GET /testingfirebase-3e0f7/us-central1/initializeArticles --> us-central1-initializeArticles
+[debug] [2023-12-20T13:06:12.278Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-12-20T13:06:12.279Z] [functions] Got req.url=/testingfirebase-3e0f7/us-central1/initializeArticles, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/testingfirebase-3e0f7/us-central1/initializeArticles, mapping to path=/"}}
+[debug] [2023-12-20T13:06:12.302Z] [worker-pool] addWorker(us-central1-initializeArticles) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-initializeArticles)"}}
+[debug] [2023-12-20T13:06:12.303Z] [worker-pool] Adding worker with key us-central1-initializeArticles, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-initializeArticles, total=1"}}
+[info] >  (node:13068) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead. {"user":"(node:13068) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-initializeArticles"},"extension":{},"message":"\u001b[90m> \u001b[39m (node:13068) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead."}}
+[info] >  (Use `node --trace-deprecation ...` to show where the warning was created) {"user":"(Use `node --trace-deprecation ...` to show where the warning was created)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-initializeArticles"},"extension":{},"message":"\u001b[90m> \u001b[39m (Use `node --trace-deprecation ...` to show where the warning was created)"}}
+[debug] [2023-12-20T13:06:19.478Z] [runtime-status] [13068] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.11.0","resolution":"C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-initializeArticles"},"extension":{},"message":"[runtime-status] [13068] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.11.0\",\"resolution\":\"C:\\\\Users\\\\Danish Irfan\\\\OneDrive\\\\Desktop\\\\RINTIK\\\\backend\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2023-12-20T13:06:19.568Z] [runtime-status] [13068] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.5.0","resolution":"C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-initializeArticles"},"extension":{},"message":"[runtime-status] [13068] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.5.0\",\"resolution\":\"C:\\\\Users\\\\Danish Irfan\\\\OneDrive\\\\Desktop\\\\RINTIK\\\\backend\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-12-20T13:06:19.573Z] [runtime-status] [13068] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-initializeArticles"},"extension":{},"message":"[runtime-status] [13068] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2023-12-20T13:06:19.584Z] [runtime-status] [13068] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.5.0","resolution":"C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-initializeArticles"},"extension":{},"message":"[runtime-status] [13068] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.5.0\",\"resolution\":\"C:\\\\Users\\\\Danish Irfan\\\\OneDrive\\\\Desktop\\\\RINTIK\\\\backend\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-12-20T13:06:21.018Z] [runtime-status] [13068] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-initializeArticles"},"extension":{},"message":"[runtime-status] [13068] Checked functions.config() {\"config\":{}}"}}
+[debug] [2023-12-20T13:06:21.028Z] [runtime-status] [13068] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"4.5.0","resolution":"C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-initializeArticles"},"extension":{},"message":"[runtime-status] [13068] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"4.5.0\",\"resolution\":\"C:\\\\Users\\\\Danish Irfan\\\\OneDrive\\\\Desktop\\\\RINTIK\\\\backend\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}}"}}
+[debug] [2023-12-20T13:06:21.030Z] [runtime-status] [13068] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.5.0","resolution":"C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-initializeArticles"},"extension":{},"message":"[runtime-status] [13068] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.5.0\",\"resolution\":\"C:\\\\Users\\\\Danish Irfan\\\\OneDrive\\\\Desktop\\\\RINTIK\\\\backend\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-12-20T13:06:21.035Z] [runtime-status] [13068] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.11.0","resolution":"C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-initializeArticles"},"extension":{},"message":"[runtime-status] [13068] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.11.0\",\"resolution\":\"C:\\\\Users\\\\Danish Irfan\\\\OneDrive\\\\Desktop\\\\RINTIK\\\\backend\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2023-12-20T13:06:21.049Z] [runtime-status] [13068] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.5.0","resolution":"C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-initializeArticles"},"extension":{},"message":"[runtime-status] [13068] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.5.0\",\"resolution\":\"C:\\\\Users\\\\Danish Irfan\\\\OneDrive\\\\Desktop\\\\RINTIK\\\\backend\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-12-20T13:06:21.050Z] [runtime-status] [13068] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"11.11.0","resolution":"C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-initializeArticles"},"extension":{},"message":"[runtime-status] [13068] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"11.11.0\",\"resolution\":\"C:\\\\Users\\\\Danish Irfan\\\\OneDrive\\\\Desktop\\\\RINTIK\\\\backend\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}}"}}
+[debug] [2023-12-20T13:06:22.201Z] [runtime-status] [13068] initializeApp(DEFAULT) {"storageBucket":"testingfirebase-3e0f7.appspot.com","databaseURL":"https://testingfirebase-3e0f7-default-rtdb.firebaseio.com","projectId":"testingfirebase-3e0f7"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-initializeArticles"},"extension":{},"message":"[runtime-status] [13068] initializeApp(DEFAULT) {\"storageBucket\":\"testingfirebase-3e0f7.appspot.com\",\"databaseURL\":\"https://testingfirebase-3e0f7-default-rtdb.firebaseio.com\",\"projectId\":\"testingfirebase-3e0f7\"}"}}
+[debug] [2023-12-20T13:06:23.899Z] [runtime-status] [13068] Functions runtime initialized. {"cwd":"C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions","node_version":"21.1.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-initializeArticles"},"extension":{},"message":"[runtime-status] [13068] Functions runtime initialized. {\"cwd\":\"C:\\\\Users\\\\Danish Irfan\\\\OneDrive\\\\Desktop\\\\RINTIK\\\\backend\\\\functions\",\"node_version\":\"21.1.0\"}"}}
+[debug] [2023-12-20T13:06:23.901Z] [runtime-status] [13068] Listening to port: \\?\pipe\fire_emu_7c0905812b2cbf3f {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-initializeArticles"},"extension":{},"message":"[runtime-status] [13068] Listening to port: \\\\?\\pipe\\fire_emu_7c0905812b2cbf3f"}}
+[debug] [2023-12-20T13:06:24.017Z] [worker-us-central1-initializeArticles-497fc80e-faf5-43ea-875e-dbca7c522e54]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-initializeArticles"},"extension":{},"message":"[worker-us-central1-initializeArticles-497fc80e-faf5-43ea-875e-dbca7c522e54]: IDLE"}}
+[debug] [2023-12-20T13:06:24.018Z] [worker-pool] submitRequest(triggerId=us-central1-initializeArticles) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-initializeArticles)"}}
+[info] i  functions: Beginning execution of "us-central1-initializeArticles" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-initializeArticles"},"extension":{},"message":"Beginning execution of \"us-central1-initializeArticles\""}}
+[debug] [2023-12-20T13:06:24.020Z] [worker-us-central1-initializeArticles-497fc80e-faf5-43ea-875e-dbca7c522e54]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-initializeArticles"},"extension":{},"message":"[worker-us-central1-initializeArticles-497fc80e-faf5-43ea-875e-dbca7c522e54]: BUSY"}}
+[warn] !  functions: ReferenceError: admin is not defined
+    at C:\Users\Danish Irfan\OneDrive\Desktop\RINTIK\backend\functions\handlers\articles.js:35:5
+    at C:\Users\Danish Irfan\OneDrive\Desktop\RINTIK\backend\functions\node_modules\firebase-functions\lib\v2\providers\https.js:57:29
+    at cors (C:\Users\Danish Irfan\OneDrive\Desktop\RINTIK\backend\functions\node_modules\cors\lib\index.js:188:7)
+    at C:\Users\Danish Irfan\OneDrive\Desktop\RINTIK\backend\functions\node_modules\cors\lib\index.js:224:17
+    at originCallback (C:\Users\Danish Irfan\OneDrive\Desktop\RINTIK\backend\functions\node_modules\cors\lib\index.js:214:15)
+    at C:\Users\Danish Irfan\OneDrive\Desktop\RINTIK\backend\functions\node_modules\cors\lib\index.js:219:13
+    at optionsCallback (C:\Users\Danish Irfan\OneDrive\Desktop\RINTIK\backend\functions\node_modules\cors\lib\index.js:199:9)
+    at corsMiddleware (C:\Users\Danish Irfan\OneDrive\Desktop\RINTIK\backend\functions\node_modules\cors\lib\index.js:204:7)
+    at C:\Users\Danish Irfan\OneDrive\Desktop\RINTIK\backend\functions\node_modules\firebase-functions\lib\v2\providers\https.js:56:33
+    at new Promise (<anonymous>) {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-initializeArticles"},"extension":{},"message":"ReferenceError: admin is not defined\n    at C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\\handlers\\articles.js:35:5\n    at C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\\node_modules\\firebase-functions\\lib\\v2\\providers\\https.js:57:29\n    at cors (C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\\node_modules\\cors\\lib\\index.js:188:7)\n    at C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\\node_modules\\cors\\lib\\index.js:224:17\n    at originCallback (C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\\node_modules\\cors\\lib\\index.js:214:15)\n    at C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\\node_modules\\cors\\lib\\index.js:219:13\n    at optionsCallback (C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\\node_modules\\cors\\lib\\index.js:199:9)\n    at corsMiddleware (C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\\node_modules\\cors\\lib\\index.js:204:7)\n    at C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\\node_modules\\firebase-functions\\lib\\v2\\providers\\https.js:56:33\n    at new Promise (<anonymous>)"}}
+[warn] !  Your function was killed because it raised an unhandled error. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-initializeArticles"},"extension":{},"message":"Your function was killed because it raised an unhandled error."}}
+[error] i  Request to function failed: Error: socket hang up {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-initializeArticles"},"extension":{},"message":"Request to function failed: Error: socket hang up"}}
+[debug] [2023-12-20T13:06:24.059Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-12-20T13:06:24.287Z] [worker-us-central1-initializeArticles-497fc80e-faf5-43ea-875e-dbca7c522e54]: exited {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-initializeArticles"},"extension":{},"message":"[worker-us-central1-initializeArticles-497fc80e-faf5-43ea-875e-dbca7c522e54]: exited"}}
+[debug] [2023-12-20T13:06:24.287Z] [worker-us-central1-initializeArticles-497fc80e-faf5-43ea-875e-dbca7c522e54]: FINISHED {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-initializeArticles"},"extension":{},"message":"[worker-us-central1-initializeArticles-497fc80e-faf5-43ea-875e-dbca7c522e54]: FINISHED"}}
+[debug] [2023-12-20T13:06:24.448Z] Functions emulator received unknown request at path /favicon.ico
+[debug] [2023-12-20T13:07:12.048Z] [work-queue] {"queuedWork":["/testingfirebase-3e0f7/us-central1/getPlumbers-2023-12-20T13:07:12.047Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-12-20T13:07:12.049Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/testingfirebase-3e0f7/us-central1/getPlumbers-2023-12-20T13:07:12.047Z"],"workRunningCount":1}
+[debug] [2023-12-20T13:07:12.049Z] Accepted request GET /testingfirebase-3e0f7/us-central1/getPlumbers --> us-central1-getPlumbers
+[debug] [2023-12-20T13:07:12.064Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-12-20T13:07:12.065Z] [functions] Got req.url=/testingfirebase-3e0f7/us-central1/getPlumbers, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/testingfirebase-3e0f7/us-central1/getPlumbers, mapping to path=/"}}
+[debug] [2023-12-20T13:07:12.065Z] [worker-pool] Cleaned up workers for us-central1-initializeArticles: 1 --> 0 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Cleaned up workers for us-central1-initializeArticles: 1 --> 0"}}
+[debug] [2023-12-20T13:07:12.186Z] [worker-pool] addWorker(us-central1-getPlumbers) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-getPlumbers)"}}
+[debug] [2023-12-20T13:07:12.191Z] [worker-pool] Adding worker with key us-central1-getPlumbers, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-getPlumbers, total=1"}}
+[info] >  (node:8636) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead. {"user":"(node:8636) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getPlumbers"},"extension":{},"message":"\u001b[90m> \u001b[39m (node:8636) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead."}}
+[info] >  (Use `node --trace-deprecation ...` to show where the warning was created) {"user":"(Use `node --trace-deprecation ...` to show where the warning was created)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getPlumbers"},"extension":{},"message":"\u001b[90m> \u001b[39m (Use `node --trace-deprecation ...` to show where the warning was created)"}}
+[debug] [2023-12-20T13:07:18.389Z] [runtime-status] [8636] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.11.0","resolution":"C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getPlumbers"},"extension":{},"message":"[runtime-status] [8636] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.11.0\",\"resolution\":\"C:\\\\Users\\\\Danish Irfan\\\\OneDrive\\\\Desktop\\\\RINTIK\\\\backend\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2023-12-20T13:07:18.401Z] [runtime-status] [8636] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.5.0","resolution":"C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getPlumbers"},"extension":{},"message":"[runtime-status] [8636] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.5.0\",\"resolution\":\"C:\\\\Users\\\\Danish Irfan\\\\OneDrive\\\\Desktop\\\\RINTIK\\\\backend\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-12-20T13:07:18.447Z] [runtime-status] [8636] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getPlumbers"},"extension":{},"message":"[runtime-status] [8636] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2023-12-20T13:07:18.451Z] [runtime-status] [8636] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.5.0","resolution":"C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getPlumbers"},"extension":{},"message":"[runtime-status] [8636] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.5.0\",\"resolution\":\"C:\\\\Users\\\\Danish Irfan\\\\OneDrive\\\\Desktop\\\\RINTIK\\\\backend\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-12-20T13:07:19.666Z] [runtime-status] [8636] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getPlumbers"},"extension":{},"message":"[runtime-status] [8636] Checked functions.config() {\"config\":{}}"}}
+[debug] [2023-12-20T13:07:19.667Z] [runtime-status] [8636] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"4.5.0","resolution":"C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getPlumbers"},"extension":{},"message":"[runtime-status] [8636] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"4.5.0\",\"resolution\":\"C:\\\\Users\\\\Danish Irfan\\\\OneDrive\\\\Desktop\\\\RINTIK\\\\backend\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}}"}}
+[debug] [2023-12-20T13:07:19.672Z] [runtime-status] [8636] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.5.0","resolution":"C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getPlumbers"},"extension":{},"message":"[runtime-status] [8636] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.5.0\",\"resolution\":\"C:\\\\Users\\\\Danish Irfan\\\\OneDrive\\\\Desktop\\\\RINTIK\\\\backend\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-12-20T13:07:19.681Z] [runtime-status] [8636] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.11.0","resolution":"C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getPlumbers"},"extension":{},"message":"[runtime-status] [8636] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.11.0\",\"resolution\":\"C:\\\\Users\\\\Danish Irfan\\\\OneDrive\\\\Desktop\\\\RINTIK\\\\backend\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2023-12-20T13:07:19.691Z] [runtime-status] [8636] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.5.0","resolution":"C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getPlumbers"},"extension":{},"message":"[runtime-status] [8636] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.5.0\",\"resolution\":\"C:\\\\Users\\\\Danish Irfan\\\\OneDrive\\\\Desktop\\\\RINTIK\\\\backend\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-12-20T13:07:19.693Z] [runtime-status] [8636] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"11.11.0","resolution":"C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getPlumbers"},"extension":{},"message":"[runtime-status] [8636] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"11.11.0\",\"resolution\":\"C:\\\\Users\\\\Danish Irfan\\\\OneDrive\\\\Desktop\\\\RINTIK\\\\backend\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}}"}}
+[debug] [2023-12-20T13:07:20.415Z] [runtime-status] [8636] initializeApp(DEFAULT) {"storageBucket":"testingfirebase-3e0f7.appspot.com","databaseURL":"https://testingfirebase-3e0f7-default-rtdb.firebaseio.com","projectId":"testingfirebase-3e0f7"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getPlumbers"},"extension":{},"message":"[runtime-status] [8636] initializeApp(DEFAULT) {\"storageBucket\":\"testingfirebase-3e0f7.appspot.com\",\"databaseURL\":\"https://testingfirebase-3e0f7-default-rtdb.firebaseio.com\",\"projectId\":\"testingfirebase-3e0f7\"}"}}
+[debug] [2023-12-20T13:07:21.047Z] [runtime-status] [8636] Functions runtime initialized. {"cwd":"C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions","node_version":"21.1.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getPlumbers"},"extension":{},"message":"[runtime-status] [8636] Functions runtime initialized. {\"cwd\":\"C:\\\\Users\\\\Danish Irfan\\\\OneDrive\\\\Desktop\\\\RINTIK\\\\backend\\\\functions\",\"node_version\":\"21.1.0\"}"}}
+[debug] [2023-12-20T13:07:21.049Z] [runtime-status] [8636] Listening to port: \\?\pipe\fire_emu_f2dc49f55cb6ca5e {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getPlumbers"},"extension":{},"message":"[runtime-status] [8636] Listening to port: \\\\?\\pipe\\fire_emu_f2dc49f55cb6ca5e"}}
+[debug] [2023-12-20T13:07:21.114Z] [worker-us-central1-getPlumbers-ae9a04e0-c2b8-4ad2-8fd3-b22c5719ab7d]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getPlumbers"},"extension":{},"message":"[worker-us-central1-getPlumbers-ae9a04e0-c2b8-4ad2-8fd3-b22c5719ab7d]: IDLE"}}
+[debug] [2023-12-20T13:07:21.114Z] [worker-pool] submitRequest(triggerId=us-central1-getPlumbers) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-getPlumbers)"}}
+[info] i  functions: Beginning execution of "us-central1-getPlumbers" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getPlumbers"},"extension":{},"message":"Beginning execution of \"us-central1-getPlumbers\""}}
+[debug] [2023-12-20T13:07:21.116Z] [worker-us-central1-getPlumbers-ae9a04e0-c2b8-4ad2-8fd3-b22c5719ab7d]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getPlumbers"},"extension":{},"message":"[worker-us-central1-getPlumbers-ae9a04e0-c2b8-4ad2-8fd3-b22c5719ab7d]: BUSY"}}
+[warn] !  Google API requested!
+   - URL: "https://oauth2.googleapis.com/token"
+   - Be careful, this may be a production service. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getPlumbers"},"extension":{},"message":"Google API requested!\n   - URL: \"https://oauth2.googleapis.com/token\"\n   - Be careful, this may be a production service."}}
+[debug] [2023-12-20T13:07:23.868Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getPlumbers"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-getPlumbers" in 2752.1831ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getPlumbers"},"extension":{},"message":"Finished \"us-central1-getPlumbers\" in 2752.1831ms"}}
+[debug] [2023-12-20T13:07:23.871Z] [worker-us-central1-getPlumbers-ae9a04e0-c2b8-4ad2-8fd3-b22c5719ab7d]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getPlumbers"},"extension":{},"message":"[worker-us-central1-getPlumbers-ae9a04e0-c2b8-4ad2-8fd3-b22c5719ab7d]: IDLE"}}
+[debug] [2023-12-20T13:07:23.872Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getPlumbers"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-12-20T13:07:23.872Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getPlumbers"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-12-20T13:07:23.873Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-12-20T13:07:32.719Z] [work-queue] {"queuedWork":["/testingfirebase-3e0f7/us-central1/getArticles-2023-12-20T13:07:32.719Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-12-20T13:07:32.722Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/testingfirebase-3e0f7/us-central1/getArticles-2023-12-20T13:07:32.719Z"],"workRunningCount":1}
+[debug] [2023-12-20T13:07:32.722Z] Accepted request GET /testingfirebase-3e0f7/us-central1/getArticles --> us-central1-getArticles
+[debug] [2023-12-20T13:07:32.731Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-12-20T13:07:32.732Z] [functions] Got req.url=/testingfirebase-3e0f7/us-central1/getArticles, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/testingfirebase-3e0f7/us-central1/getArticles, mapping to path=/"}}
+[debug] [2023-12-20T13:07:32.758Z] [worker-pool] addWorker(us-central1-getArticles) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-getArticles)"}}
+[debug] [2023-12-20T13:07:32.758Z] [worker-pool] Adding worker with key us-central1-getArticles, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-getArticles, total=1"}}
+[info] >  (node:11996) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead. {"user":"(node:11996) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getArticles"},"extension":{},"message":"\u001b[90m> \u001b[39m (node:11996) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead."}}
+[info] >  (Use `node --trace-deprecation ...` to show where the warning was created) {"user":"(Use `node --trace-deprecation ...` to show where the warning was created)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getArticles"},"extension":{},"message":"\u001b[90m> \u001b[39m (Use `node --trace-deprecation ...` to show where the warning was created)"}}
+[debug] [2023-12-20T13:07:38.889Z] [runtime-status] [11996] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.11.0","resolution":"C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getArticles"},"extension":{},"message":"[runtime-status] [11996] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.11.0\",\"resolution\":\"C:\\\\Users\\\\Danish Irfan\\\\OneDrive\\\\Desktop\\\\RINTIK\\\\backend\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2023-12-20T13:07:38.900Z] [runtime-status] [11996] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.5.0","resolution":"C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getArticles"},"extension":{},"message":"[runtime-status] [11996] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.5.0\",\"resolution\":\"C:\\\\Users\\\\Danish Irfan\\\\OneDrive\\\\Desktop\\\\RINTIK\\\\backend\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-12-20T13:07:38.939Z] [runtime-status] [11996] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getArticles"},"extension":{},"message":"[runtime-status] [11996] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2023-12-20T13:07:38.946Z] [runtime-status] [11996] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.5.0","resolution":"C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getArticles"},"extension":{},"message":"[runtime-status] [11996] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.5.0\",\"resolution\":\"C:\\\\Users\\\\Danish Irfan\\\\OneDrive\\\\Desktop\\\\RINTIK\\\\backend\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-12-20T13:07:40.223Z] [runtime-status] [11996] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getArticles"},"extension":{},"message":"[runtime-status] [11996] Checked functions.config() {\"config\":{}}"}}
+[debug] [2023-12-20T13:07:40.224Z] [runtime-status] [11996] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"4.5.0","resolution":"C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getArticles"},"extension":{},"message":"[runtime-status] [11996] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"4.5.0\",\"resolution\":\"C:\\\\Users\\\\Danish Irfan\\\\OneDrive\\\\Desktop\\\\RINTIK\\\\backend\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}}"}}
+[debug] [2023-12-20T13:07:40.227Z] [runtime-status] [11996] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.5.0","resolution":"C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getArticles"},"extension":{},"message":"[runtime-status] [11996] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.5.0\",\"resolution\":\"C:\\\\Users\\\\Danish Irfan\\\\OneDrive\\\\Desktop\\\\RINTIK\\\\backend\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-12-20T13:07:40.231Z] [runtime-status] [11996] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.11.0","resolution":"C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getArticles"},"extension":{},"message":"[runtime-status] [11996] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.11.0\",\"resolution\":\"C:\\\\Users\\\\Danish Irfan\\\\OneDrive\\\\Desktop\\\\RINTIK\\\\backend\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2023-12-20T13:07:40.244Z] [runtime-status] [11996] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.5.0","resolution":"C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getArticles"},"extension":{},"message":"[runtime-status] [11996] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.5.0\",\"resolution\":\"C:\\\\Users\\\\Danish Irfan\\\\OneDrive\\\\Desktop\\\\RINTIK\\\\backend\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-12-20T13:07:40.245Z] [runtime-status] [11996] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"11.11.0","resolution":"C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getArticles"},"extension":{},"message":"[runtime-status] [11996] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"11.11.0\",\"resolution\":\"C:\\\\Users\\\\Danish Irfan\\\\OneDrive\\\\Desktop\\\\RINTIK\\\\backend\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}}"}}
+[debug] [2023-12-20T13:07:40.826Z] [runtime-status] [11996] initializeApp(DEFAULT) {"storageBucket":"testingfirebase-3e0f7.appspot.com","databaseURL":"https://testingfirebase-3e0f7-default-rtdb.firebaseio.com","projectId":"testingfirebase-3e0f7"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getArticles"},"extension":{},"message":"[runtime-status] [11996] initializeApp(DEFAULT) {\"storageBucket\":\"testingfirebase-3e0f7.appspot.com\",\"databaseURL\":\"https://testingfirebase-3e0f7-default-rtdb.firebaseio.com\",\"projectId\":\"testingfirebase-3e0f7\"}"}}
+[debug] [2023-12-20T13:07:41.390Z] [runtime-status] [11996] Functions runtime initialized. {"cwd":"C:\\Users\\Danish Irfan\\OneDrive\\Desktop\\RINTIK\\backend\\functions","node_version":"21.1.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getArticles"},"extension":{},"message":"[runtime-status] [11996] Functions runtime initialized. {\"cwd\":\"C:\\\\Users\\\\Danish Irfan\\\\OneDrive\\\\Desktop\\\\RINTIK\\\\backend\\\\functions\",\"node_version\":\"21.1.0\"}"}}
+[debug] [2023-12-20T13:07:41.392Z] [runtime-status] [11996] Listening to port: \\?\pipe\fire_emu_e9d3d856dfbcfd65 {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getArticles"},"extension":{},"message":"[runtime-status] [11996] Listening to port: \\\\?\\pipe\\fire_emu_e9d3d856dfbcfd65"}}
+[debug] [2023-12-20T13:07:41.417Z] [worker-us-central1-getArticles-cdbd2ab7-34a0-4fe9-927d-55c277d857b3]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getArticles"},"extension":{},"message":"[worker-us-central1-getArticles-cdbd2ab7-34a0-4fe9-927d-55c277d857b3]: IDLE"}}
+[debug] [2023-12-20T13:07:41.418Z] [worker-pool] submitRequest(triggerId=us-central1-getArticles) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-getArticles)"}}
+[info] i  functions: Beginning execution of "us-central1-getArticles" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getArticles"},"extension":{},"message":"Beginning execution of \"us-central1-getArticles\""}}
+[debug] [2023-12-20T13:07:41.423Z] [worker-us-central1-getArticles-cdbd2ab7-34a0-4fe9-927d-55c277d857b3]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getArticles"},"extension":{},"message":"[worker-us-central1-getArticles-cdbd2ab7-34a0-4fe9-927d-55c277d857b3]: BUSY"}}
+[warn] !  Google API requested!
+   - URL: "https://oauth2.googleapis.com/token"
+   - Be careful, this may be a production service. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getArticles"},"extension":{},"message":"Google API requested!\n   - URL: \"https://oauth2.googleapis.com/token\"\n   - Be careful, this may be a production service."}}
+[debug] [2023-12-20T13:07:45.559Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getArticles"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-getArticles" in 4136.4237ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getArticles"},"extension":{},"message":"Finished \"us-central1-getArticles\" in 4136.4237ms"}}
+[debug] [2023-12-20T13:07:45.560Z] [worker-us-central1-getArticles-cdbd2ab7-34a0-4fe9-927d-55c277d857b3]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getArticles"},"extension":{},"message":"[worker-us-central1-getArticles-cdbd2ab7-34a0-4fe9-927d-55c277d857b3]: IDLE"}}
+[debug] [2023-12-20T13:07:45.561Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getArticles"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-12-20T13:07:45.561Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getArticles"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-12-20T13:07:45.561Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
