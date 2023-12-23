@@ -9,7 +9,7 @@ const Navbar = () =>{
     const [displayMessage, setDisplayMessage] = useState(false);
 
     return(
-        <nav className='p-5 flex items-center max-w-600 mx-auto border-b border-solid border-gray-300'>
+        <nav className='p-5 flex items-center max-w-600 mx-auto border-b border-solid border-gray-300 bg-white'>
             <img className='w-[10%] h-full' src={logo} alt="logo" />
                 <div className='flex items-center ml-auto'>
                 <ul className='pr-4 ml-auto flex'>

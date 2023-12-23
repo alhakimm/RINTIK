@@ -3,14 +3,18 @@
 @tailwind utilities;
 
 @layer utilities{
+
     .custom-article-section-width{
-        width: 66.5%;
+        width: 100%;
     }
     .custom-article-section-margin-left{
-        margin-left: 25%;
+        margin-left: 0%;
     }
 
     .custom-search-bar-width{
-        width: 22.5%;
+        width: 90%;
+    }
+    .custom-bookmark-bar-width{
+        width:90%;
     }
 }
