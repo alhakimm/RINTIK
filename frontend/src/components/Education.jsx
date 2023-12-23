@@ -13,7 +13,22 @@ const Education = () => {
         {title: 'Blue Future: Protecting Water for People and the Planet Forever', body: "lorem ipsum ching chong ling long", author: 'Maude Barlow', id: 7, type: 'Article'},
         {title: 'The Big Thirst: The Secret Life and Turbulent Future of Water', body: "lorem ipsum ching chong ling long", author: 'Charles Fishman', id: 8, type: 'Article'},
         {title: 'Cadillac Desert: The American West and Its Disappearing Water', body: "lorem ipsum ching chong ling long", author: 'Marc Reisner', id: 9, type: 'Article'},
-        {title: 'A Twenty-First Century US Water Policy', body: "lorem ipsum ching chong ling long", author: 'Juliet Christian-Smith, Peter H. Gleick, Heather Cooley, and Lucy Allen', id: 10, type: 'Article'}
+        {title: 'A Twenty-First Century US Water Policy', body: "lorem ipsum ching chong ling long", author: 'Juliet Christian-Smith, Peter H. Gleick, Heather Cooley, and Lucy Allen', id: 10, type: 'Article'},
+        {title: 'Water 4.0: The Past, Present, and Future of the World\'s Most Vital Resource', body: "lorem ipsum ching chong ling long", author: 'David Sedlak', id: 11, type:'Article'},
+        {title: 'Blue Future: Protecting Water for People and the Planet Forever', body: "lorem ipsum ching chong ling long", author: 'Maude Barlow', id: 12, type: 'Article'},
+        {title: 'The Big Thirst: The Secret Life and Turbulent Future of Water', body: "lorem ipsum ching chong ling long", author: 'Charles Fishman', id: 13, type: 'Article'},
+        {title: 'Cadillac Desert: The American West and Its Disappearing Water', body: "lorem ipsum ching chong ling long", author: 'Marc Reisner', id: 14, type: 'Article'},
+        {title: 'A Twenty-First Century US Water Policy', body: "lorem ipsum ching chong ling long", author: 'Juliet Christian-Smith, Peter H. Gleick, Heather Cooley, and Lucy Allen', id: 15, type: 'Article'},
+        {title: 'Water 4.0: The Past, Present, and Future of the World\'s Most Vital Resource', body: "lorem ipsum ching chong ling long", author: 'David Sedlak', id: 16, type:'Article'},
+        {title: 'Blue Future: Protecting Water for People and the Planet Forever', body: "lorem ipsum ching chong ling long", author: 'Maude Barlow', id: 17, type: 'Article'},
+        {title: 'The Big Thirst: The Secret Life and Turbulent Future of Water', body: "lorem ipsum ching chong ling long", author: 'Charles Fishman', id: 18, type: 'Article'},
+        {title: 'Cadillac Desert: The American West and Its Disappearing Water', body: "lorem ipsum ching chong ling long", author: 'Marc Reisner', id: 19, type: 'Article'},
+        {title: 'A Twenty-First Century US Water Policy', body: "lorem ipsum ching chong ling long", author: 'Juliet Christian-Smith, Peter H. Gleick, Heather Cooley, and Lucy Allen', id: 20, type: 'Article'},
+        {title: 'Water 4.0: The Past, Present, and Future of the World\'s Most Vital Resource', body: "lorem ipsum ching chong ling long", author: 'David Sedlak', id: 21, type:'Article'},
+        {title: 'Blue Future: Protecting Water for People and the Planet Forever', body: "lorem ipsum ching chong ling long", author: 'Maude Barlow', id: 22, type: 'Article'},
+        {title: 'The Big Thirst: The Secret Life and Turbulent Future of Water', body: "lorem ipsum ching chong ling long", author: 'Charles Fishman', id: 23, type: 'Article'},
+        {title: 'Cadillac Desert: The American West and Its Disappearing Water', body: "lorem ipsum ching chong ling long", author: 'Marc Reisner', id: 24, type: 'Article'},
+        {title: 'A Twenty-First Century US Water Policy', body: "lorem ipsum ching chong ling long", author: 'Juliet Christian-Smith, Peter H. Gleick, Heather Cooley, and Lucy Allen', id: 25, type: 'Article'},
     ]);
 
 
@@ -27,11 +42,11 @@ const Education = () => {
       <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
           
           <div class="hidden duration-700 ease-in-out" data-carousel-item>
-              <img src="C:\Users\Danish Irfan\OneDrive\Desktop\RINTIK\frontend\src\assets\water_pic_1.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="error"></img>
+              <img src="/frontend/src/assets/water_pic_1.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="error"></img>
           </div>
           
           <div class="hidden duration-700 ease-in-out" data-carousel-item>
-              <img src="C:\Users\Danish Irfan\OneDrive\Desktop\RINTIK\frontend\src\assets\water_pic_2.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."></img>
+              <img src="/frontend/src/assets/water_pic_2.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."></img>
           </div>
         
           <div class="hidden duration-700 ease-in-out" data-carousel-item>
