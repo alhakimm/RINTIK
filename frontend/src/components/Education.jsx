@@ -1,5 +1,7 @@
 import React from "react";
 import {useState, useEffect} from 'react';
+import { Carousel, Typography, Button } from "@material-tailwind/react";
+import { Link } from "react-router-dom";
 
 const Education = () => {
 
@@ -31,62 +33,107 @@ const Education = () => {
         {title: 'A Twenty-First Century US Water Policy', body: "lorem ipsum ching chong ling long", author: 'Juliet Christian-Smith, Peter H. Gleick, Heather Cooley, and Lucy Allen', id: 25, type: 'Article'},
     ]);
 
+    const CarouselTransition = () =>{
+      return (
+        <Carousel transition={{ duration: 1 }} className="rounded-xl h-60" autoplay="true" loop="true">
+          <div className="relative h-full w-full">
+            <img
+              src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2560&q=80"
+              alt="image 1"
+              className="h-60 w-full object-cover opacity-40"
+            />
+            <div className="absolute inset-0 grid h-full w-full items-end bg-black/50">
+              <div className="w-full p-12 pl-16 max-h-60">
+                <Typography 
+                  variant="h1"
+                  color="white"
+                  className="mb-4 text-3xl md:text-4xl lg:text-4xl">
+                  Water outage in Penang!
+                </Typography>
+                <Typography 
+                  variant="paragraph"
+                  color="white"
+                  className="mb-12 opacity-80">
+                  It is not so much for its beauty that the forest makes a claim
+                  upon men&apos;s hearts, as for that subtle something, that quality
+                  of air that emanation from old trees, that so wonderfully changes
+                  and renews a weary spirit. It is not so much for its beauty that the forest makes a claim
+                  upon men&apos;s hearts, as for that subtle something, that quality
+                  of air that emanation from old trees, that so wonderfully changes
+                  and renews..... <Link to="/" className="justify-center mt-4 rounded-xl custom-read-more-width flex transition duration-500 hover:font-bold hover:bg-blue-500">Read More</Link>
+                </Typography>
+                
+              </div>  
+            </div>
+          </div>
+          <div className="relative h-full w-full">
+            <img
+              src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
+              alt="image 2"
+              className="h-60 w-full object-cover opacity-40"
+            />
+            <div className="absolute inset-0 grid h-full w-full items-end bg-black/50">
+              <div className="w-full p-12 pl-16 max-h-60">
+                <Typography 
+                  variant="h1"
+                  color="white"
+                  className="mb-4 text-3xl md:text-4xl lg:text-4xl">
+                  Mak Kau Hijau
+                </Typography>
+                <Typography 
+                  variant="paragraph"
+                  color="white"
+                  className="mb-12 opacity-80">
+                  It is not so much for its beauty that the forest makes a claim
+                  upon men&apos;s hearts, as for that subtle something, that quality
+                  of air that emanation from old trees, that so wonderfully changes
+                  and renews a weary spirit. It is not so much for its beauty that the forest makes a claim
+                  upon men&apos;s hearts, as for that subtle something, that quality
+                  of air that emanation from old trees, that so wonderfully changes
+                  and renews......<Link to="/" className="justify-center mt-4 rounded-xl custom-read-more-width flex transition duration-500 hover:font-bold hover:bg-blue-500">Read More</Link>
+                </Typography>
+              </div>
+            </div>
+          </div>
+          <div className="relative h-full w-full">
+            <img
+              src="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80"
+              alt="image 3"
+              className="h-60 w-full object-cover opacity-40"
+            />
+            <div className="absolute inset-0 grid h-full w-full items-end bg-black/50">
+              <div className="w-full p-12 pl-16 max-h-60">
+                <Typography 
+                  variant="h1"
+                  color="white"
+                  className="mb-4 text-3xl md:text-4xl lg:text-4xl">
+                  Bapak Kau Kuning
+                </Typography>
+                <Typography 
+                  variant="paragraph"
+                  color="white"
+                  className="mb-12 opacity-80">
+                  It is not so much for its beauty that the forest makes a claim
+                  upon men&apos;s hearts, as for that subtle something, that quality
+                  of air that emanation from old trees, that so wonderfully changes
+                  and renews a weary spirit. It is not so much for its beauty that the forest makes a claim
+                  upon men&apos;s hearts, as for that subtle something, that quality
+                  of air that emanation from old trees, that so wonderfully changes
+                  and renews.....<Link to="/" className="justify-center mt-4 rounded-xl custom-read-more-width flex transition duration-500 hover:font-bold hover:bg-blue-500">Read More</Link>
+                </Typography>
+              </div>
+            </div>
+          </div>
+        </Carousel>
+      );
+  }
 
   return (
     <div className='bg-gradient-to-b from-[#0A2236] to-[#15436E] w-full px-20 py-6 justify-between min-=h-screen gap-2'>
 
       {/* <div className='rounded-lg border border-gray-300 h-60 w-full flex-none mb-6'></div> */}
 
-      <div id="default-carousel" class="relative w-full" data-carousel="slide">
-    
-      <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
-          
-          <div class="hidden duration-700 ease-in-out" data-carousel-item>
-              <img src="/frontend/src/assets/water_pic_1.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="error"></img>
-          </div>
-          
-          <div class="hidden duration-700 ease-in-out" data-carousel-item>
-              <img src="/frontend/src/assets/water_pic_2.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."></img>
-          </div>
-        
-          <div class="hidden duration-700 ease-in-out" data-carousel-item>
-              <img src="C:\Users\Danish Irfan\OneDrive\Desktop\RINTIK\frontend\src\assets\water_pic_3.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."></img>
-          </div>
-          
-          <div class="hidden duration-700 ease-in-out" data-carousel-item>
-              <img src="C:\Users\Danish Irfan\OneDrive\Desktop\RINTIK\frontend\src\assets\logo.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."></img>
-          </div>
-          
-          <div class="hidden duration-700 ease-in-out" data-carousel-item>
-              <img src="/docs/images/carousel/carousel-5.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."></img>
-          </div>
-    </div>
-    
-    <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
-        <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
-        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
-        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
-        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
-    </div>
-    
-    <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
-            </svg>
-            <span class="sr-only">Previous</span>
-        </span>
-    </button>
-    <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
-            </svg>
-            <span class="sr-only">Next</span>
-        </span>
-    </button>
-  </div>
+      {CarouselTransition()}
 
       <div className="grid grid-cols-3 flex-1">
         <div className="relative col-span-1">
@@ -123,7 +170,7 @@ const Education = () => {
             `}
           </style>
           <div className="ml-4">
-            <h2 className="text-white font-bold text-5xl static">Educational Materials</h2>
+            <h2 className="text-white font-black text-5xl static">Educational Materials</h2>
             <div className="space-y-5">
               {materials.map((mats) => (
                 <div className="p-4 pl-1 mb-5 border-b border-[#15436E] rounded-lg text-white hover:shadow-xl cursor-pointer" key={mats.id}>
