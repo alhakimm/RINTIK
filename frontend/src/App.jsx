@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Community from "./components/Community";
 import Navbar from "./components/Navbar";
 import Education from "./components/Education"; 
+import PlumberMenu from "./components/Plumber Menu";
 
 function App() {
   return (
@@ -16,7 +17,9 @@ function App() {
           <Route path="/education">
             <Education />
           </Route>
-          {/* Other routes */}
+          <Route>
+            <PlumberMenu />
+          </Route>
         </Switch>
       </div>
     </Router>
