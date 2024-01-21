@@ -18,6 +18,28 @@ export class PostCommunity extends Component {
             })
             .catch(err => console.log(err))
     }
+
+    //aku ubah sini utk upvote
+    handleUpvote = async (postId) => {
+      try {
+        // Send a request to backend to handle the upvote
+        const response = await axios.get(`http://localhost:5000/testingfirebase-3e0f7/us-central1/api/post/${postId}/upvote`);
+    
+        // Update the state to reflect the upvote
+        this.setState(prevState => ({
+          posts: prevState.posts.map(post => {
+            if (post.id === postId) {
+              // Use the updated upvote count from the backend
+              return { ...post, upvote: response.data.upvote };
+            }
+            return post;
+          })
+        }));
+      } catch (error) {
+        console.error('Error upvoting post:', error);
+      }
+    }
+
   render() {
     let postFinder = this.state.posts ? (
         this.state.posts.map(posts => <div key={posts.id} className="posts-box bg-white mb-4 p-4 rounded-3xl">
@@ -29,7 +51,7 @@ export class PostCommunity extends Component {
           <p className='mb-2'> {posts.body}</p>
           <div className='flex gap-2'>
             <button className='border rounded-full flex items-center px-2 bg-[#15436E] text-white'><FaRegComments className='mr-2'/> {posts.comments}</button>
-            <button className='border rounded-full flex items-center px-2 bg-[#15436E] text-white'><BiUpvote className='mr-2'/> {posts.upvote}</button>
+            <button className='border rounded-full flex items-center px-2 bg-[#15436E] text-white' onClick={() => this.handleUpvote(posts.id)}><BiUpvote className='mr-2'/> {posts.upvote}</button>
           </div>
       </div>
     )) : <p>loading...</p>

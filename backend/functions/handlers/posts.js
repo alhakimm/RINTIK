@@ -38,7 +38,7 @@ exports.writePost = (req, res) => {
     db
         .collection('posts')
         .add(newPosts)
-        .then(doc => {
+        .then((doc) => {
             const resPost = newPosts;
             resPost.postId = doc.id;
             res.json({resPost});
@@ -106,39 +106,39 @@ exports.commentOnPost = (req, res) => {
 }
 
 exports.upvotePost =  (req, res) => {
-    const likeDoc = db.collection('likes').where('username', '==', req.user.username)
+    const upvoteDoc = db.collection('upvote').where('username', '==', req.user.username)
         .where('postId', '==', req.params.postId).limit(1);
 
-    const postDoc = db.doc(`/posts/${req.params.postId}`);
+    const postDocument = db.doc(`/posts/${req.params.postId}`);
 
-    let postData;
+    let postData = {};
 
-    postDoc.get()
+    postDocument.get()
         .then(doc => {
             if(doc.exists){
                 postData = doc.data();
                 postData.postId = doc.id;
 
-                return likeDoc.get();
+                return upvoteDocument.get();
             } else {
                 return res.status(404).json({error: 'post not found'});
             }
         })
         .then(data => {
             if (data.empty){
-                return db.collection('likes').add({
+                return db.collection('upvote').add({ //likes->upvote
                     postId: req.params.postId,
                     username: req.user.username
                 })
                 .then(() => {
-                    postData.upvote++;
-                    return postDoc.update({upvote: postData.upvote});
+                    postData.upvoteCount++; 
+                    return postDocument.update({upvoteCount: postData.upvoteCount});
                 })
                 .then(() => {
                     return res.json(postData);
                 })
             } else{
-                return res.status(400).json({error: 'post already liked'});
+                return res.status(400).json({error: 'post already upvoted'});
             }
         })
         .catch(err => {
@@ -148,42 +148,43 @@ exports.upvotePost =  (req, res) => {
 }
 
 exports.unUpvotePost = (req, res) => {
-    const likeDoc = db.collection('likes').where('username', '==', req.user.username)
-        .where('postId', '==', req.params.postId).limit(1);
+    const upvoteDoc = db.collection('upvote').where('username', '==', req.user.username)
+    .where('postId', '==', req.params.postId).limit(1);
 
-    const postDoc = db.doc(`/posts/${req.params.postId}`);
+const postDocument = db.doc(`/posts/${req.params.postId}`);
 
-    let postData;
+let postData = {};
 
-    postDoc.get()
-        .then(doc => {
-            if(doc.exists){
-                postData = doc.data();
-                postData.postId = doc.id;
+postDocument.get()
+    .then(doc => {
+        if(doc.exists){
+            postData = doc.data();
+            postData.postId = doc.id;
 
-                return likeDoc.get();
-            } else {
-                return res.status(404).json({error: 'post not found'});
-            }
-        })
-        .then(data => {
-            if (data.empty){
-                return res.status(400).json({error: 'post not liked'});
-            } else{
-                return db.doc(`/likes/${data.docs[0].id}`).delete()
-                    .then(() => {
-                        postData.upvote--;
-                        return postDoc.update({upvote: postData.upvote});
-                    })
-                    .then(() => {
-                        res.json(postData);
-                    })
-            }
-        })
-        .catch(err => {
-            console.error(err);
-            res.status(500).json({error: err.code});
-        });
+            return upvoteDocument.get();
+        } else {
+            return res.status(404).json({error: 'post not found'});
+        }
+    })
+    .then(data => {
+        if (data.empty){
+            return res.status(400).json({error: 'post not upvoted'});
+            
+        } else{
+            return db.doc(`/upvote/${data.docs[0].id}`).delete()
+                .then(() => {
+                    postData.upvoteCount--;
+                    return postDocument.update({upvoteCount: postData.upvoteCount})
+                })
+                .then(() => {
+                    res.json(postData)
+                })
+        }
+    })
+    .catch(err => {
+        console.error(err);
+        res.status(500).json({error: err.code});
+    });
 }
 
 exports.deletePost = (req, res) => {
@@ -193,17 +194,17 @@ exports.deletePost = (req, res) => {
             if (!doc.exists){
                 return res.status(404).json({error: 'post not found'});
             } 
-            if (doc.data().username != req.user.username){
-                return res.status(403).json({error: 'unauthorized'});
+            if (doc.data().username !== req.user.username){
+                return res.status(403).json({error: 'Unauthorized'});
             } else{
                 return document.delete();
             }
         })
         .then(() => {
-            res.json({message: 'post deleted'});
+            res.json({message: 'post deleted successfully'});
         })
         .catch(err => {
-            console.log(err);
+            console.error(err);
             return res.status(500).json({error: err.code});
         })
 }
