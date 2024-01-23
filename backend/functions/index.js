@@ -37,10 +37,16 @@ app.post('/articles', initializeArticles);  //initialise articles
 //app.get('/plumbers', getPlumbers);
 
 //reports route
+app.get('/reports', getReports);
 
 exports.api = functions.https.onRequest(app);
-exports.getPlumbers = functions.https.onRequest(getPlumbers);
-exports.getReports = functions.https.onRequest(getReports);
-exports.addReports = functions.https.onRequest(addReports);
-exports.initializeArticles = functions.https.onRequest(initializeArticles);
-exports.getArticles = functions.https.onRequest(getArticles);
+// exports.getPlumbers = functions.https.onRequest(getPlumbers);
+// exports.getReports = functions.https.onRequest(getReports);
+// exports.addReports = functions.https.onRequest(addReports);
+// exports.initializeArticles = functions.https.onRequest(initializeArticles);
+// exports.getArticles = functions.https.onRequest(getArticles);
+
+
+
+
+
