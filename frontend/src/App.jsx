@@ -4,6 +4,7 @@ import Community from "./components/Community";
 import Navbar from "./components/Navbar";
 import Education from "./components/Education"; 
 import PlumberMenu from "./components/Plumber Menu";
+import Map from "./components/Map";
 
 function App() {
   return (
@@ -17,8 +18,11 @@ function App() {
           <Route path="/education">
             <Education />
           </Route>
-          <Route>
+          <Route path="/plumber">
             <PlumberMenu />
+          </Route>
+          <Route path="/map">
+            <Map />
           </Route>
         </Switch>
       </div>
