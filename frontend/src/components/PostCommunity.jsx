@@ -4,6 +4,7 @@ import { IoPersonCircleSharp } from "react-icons/io5";
 import { FaRegComments } from "react-icons/fa";
 import { BiUpvote } from "react-icons/bi";
 
+
 export class PostCommunity extends Component {
     state = {
         posts: null

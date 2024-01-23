@@ -4,6 +4,7 @@ import { IoPersonCircleSharp } from "react-icons/io5"
 import { FaTelegramPlane } from "react-icons/fa";
 import logo from '../assets/logo.png';
 import PostCommunity from './PostCommunity';
+import AutoscrollNews from './AutoscrollNews';
 
 const Community = () => {
 
@@ -48,7 +49,7 @@ const Community = () => {
           {/* end of community post */}
           <div className='w-full col-span-1 pl-6'>
             <div className='h-1/4 bg-red-200'>alert</div>
-            <div className='h-2/4 bg-green-200 my-2'>autoscroll news</div>
+            <AutoscrollNews/>
           </div>
         </div>
         
