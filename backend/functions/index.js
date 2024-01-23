@@ -10,6 +10,7 @@ const {signup, login, uploadImage, addUserDetails/*, getUserProfile, getUserDeta
 const {getPlumbers, /*regPlumbers*/} = require('./handlers/plumber');
 const {getReports, addReports} = require('./handlers/report')
 const {initializeArticles, getArticles} = require('./handlers/articles');
+const {viewMap} = require('./handlers/map');
 
 // posts route
 app.get('/posts', getAllPosts);
@@ -38,6 +39,9 @@ app.post('/articles', initializeArticles);  //initialise articles
 
 //reports route
 app.get('/reports', getReports);
+
+//map route
+app.get('/viewMap', viewMap);
 
 exports.api = functions.https.onRequest(app);
 // exports.getPlumbers = functions.https.onRequest(getPlumbers);
