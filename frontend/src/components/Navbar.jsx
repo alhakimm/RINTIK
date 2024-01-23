@@ -3,10 +3,21 @@ import { useState } from 'react'
 import { IoPersonCircleSharp } from "react-icons/io5"
 import logo from '../assets/logo.png';
 import { Link, useLocation } from "react-router-dom";
+import ReportModal from './ReportModal';
 
 const Navbar = () =>{
 
-    const [displayMessage, setDisplayMessage] = useState(false);
+    // const [displayMessage, setDisplayMessage] = useState(false);
+
+    // const [showMyModal, setShowMyModal] = useState(false);
+  
+    // const handleButtonClick = () => {
+    //   setShowModal(true);
+    // };
+  
+    // const closeModal = () => {
+    //   setShowModal(false);
+    // };
 
     return(
         <nav className='p-5 flex items-center max-w-600 mx-auto border-b border-solid border-gray-300 bg-white'>
@@ -45,20 +56,46 @@ const Navbar = () =>{
                         Map
                     </Link>
                     </li>
+                    {/* <li>
+                    <Link
+                        to="/report"
+                        className="pr-4 ml-4 no-underline py-2 transition-colors duration-300 hover:text-blue-600"
+                    >
+                        Report
+                    </Link>
+                    </li> */}
                 </ul>
+               {/* New REPORT Button*/}     
+                    {/* <ReportModal visible={showMyModal} /> */}
+
             {/*REPORT Button*/}
             <div className='relative'>
-                <button 
-                        className='rounded-lg mr-6 px-6 py-2 bg-[#BA1200] font-bold text-white transition duration-300 hover:bg-white hover:text-[#BA1200] ease-in-out'
-                        onMouseEnter={() => setDisplayMessage(true)} onMouseLeave={() => setDisplayMessage(false)}>
-                        Report
-                    </button>
-                    {/*Pop-up message on mouse hover on the Report button*/}
-                    {displayMessage && (<div className='absolute top-full left-1/2 transform -translate-x-1/2 w-40 h-30 bg-white bg-opacity-80 text-black text-sm font-10 border border-gray-300 p-2 rounded-md transition duration-300 ease-in-out'>
-                        Lodge a report on water accessibility issues to your local authority
-                    </div>)}
-                </div> 
-            
+                {/* <button
+                    className='rounded-lg mr-6 px-6 py-2 bg-[#BA1200] font-bold text-white transition duration-300 hover:bg-white hover:text-[#BA1200] ease-in-out'
+                    onClick={setShowMyModal(true)}>
+                    Report
+                </button> */}
+                {/* <button className='bg-red-500' onClick={setShowMyModal(true)}>Report</button> */}
+                {/* Pop-up message on mouse hover on the Report button */}
+                {/* {displayMessage && (
+                    <div className='absolute top-full left-1/2 transform -translate-x-1/2 w-40 h-30 bg-white bg-opacity-80 text-black text-sm font-10 border border-gray-300 p-2 rounded-md transition duration-300 ease-in-out'>
+                    Lodge a report on water accessibility issues to your local authority
+                    </div>
+                )} */}
+
+                {/* Modal */}
+                {/* {showModal && (
+                    <div className='fixed top-0 left-0 w-full h-full flex items-center justify-center'>
+                    <div className='absolute top-full left-1/2 transform -translate-x-1/2 w-80 h-60 bg-red-400 text-black text-sm font-10 border border-gray-300 p-4 rounded-md'>
+                        <p>Your modal content goes here.</p>
+                        <button className='mt-4 px-4 py-2 bg-[#BA1200] text-red-600 rounded-md' onClick={closeModal}>
+                        Close
+                        </button>
+                    </div>
+                    </div>
+                )} */}
+            </div>
+            {/*END REPORT Button*/}
                 <a href="#profile"><IoPersonCircleSharp size={45} /></a>
                 </div>
       </nav>

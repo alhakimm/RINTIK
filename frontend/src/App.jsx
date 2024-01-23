@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Education from "./components/Education"; 
 import PlumberMenu from "./components/Plumber Menu";
 import Map from "./components/Map";
+// import Report from "./components/Report";
 
 function App() {
   return (
@@ -24,6 +25,9 @@ function App() {
           <Route path="/map">
             <Map />
           </Route>
+          {/* <Route path="/report">
+            <Report />
+          </Route> */}
         </Switch>
       </div>
     </Router>
