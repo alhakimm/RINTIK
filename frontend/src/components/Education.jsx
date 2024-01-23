@@ -33,6 +33,42 @@ const Education = () => {
         {title: 'A Twenty-First Century US Water Policy', body: "lorem ipsum ching chong ling long", author: 'Juliet Christian-Smith, Peter H. Gleick, Heather Cooley, and Lucy Allen', id: 25, type: 'Article'},
     ]);
 
+    const [selectedMaterial, setSelectedMaterial] = useState(null);
+
+  const handleMaterialClick = (material) => {
+    setSelectedMaterial(material);
+  };
+
+  const handleClosePopup = () => {
+    setSelectedMaterial(null);
+  };
+
+    const MaterialPopup = ({ material }) => {
+      return (
+        <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-70 flex items-center justify-center">
+          <div className="bg-white p-6 rounded-lg max-w-md">
+            <Typography variant="h1" color="black" className="text-2xl mb-4">
+              {material.title}
+            </Typography>
+            <Typography variant="paragraph" color="black" className="mb-4">
+              {material.body}
+            </Typography>
+            <Button
+              color="blue"
+              buttonType="link"
+              onClick={handleClosePopup}
+              ripple="dark"
+            >
+              Close
+            </Button>
+            <Link to={`/original-post/${material.id}`} className="text-blue-500 mt-2 block">
+              Read Original Post
+            </Link>
+          </div>
+        </div>
+      );
+    };
+
     const CarouselTransition = () =>{
       return (
         <Carousel transition={{ duration: 1 }} className="rounded-xl h-60" autoplay="true" loop="true">
@@ -172,10 +208,14 @@ const Education = () => {
           <div className="ml-4">
             <h2 className="text-white font-black text-5xl static">Educational Materials</h2>
             <div className="space-y-5">
-              {materials.map((mats) => (
-                <div className="p-4 pl-1 mb-5 border-b border-[#15436E] rounded-lg text-white hover:shadow-xl cursor-pointer" key={mats.id}>
-                  <h2 className="text-blue-200 mb-2 text-2xl transition duration-500 hover:font-bold hover:text-3xl">{mats.title}</h2>
-                  <p className="text-xs">{mats.type} | {mats.author}</p>
+              {materials.map((material) => (
+                <div
+                  className="p-4 pl-1 mb-5 border-b border-[#15436E] rounded-lg text-white hover:shadow-xl cursor-pointer"
+                  key={material.id}
+                  onClick={() => handleMaterialClick(material)}
+                >
+                  <h2 className="text-blue-200 mb-2 text-2xl transition duration-500 hover:font-bold hover:text-3xl">{material.title}</h2>
+                  <p className="text-xs">{material.type} | {material.author}</p>
                 </div>
               ))}
             </div>
@@ -185,7 +225,7 @@ const Education = () => {
         </div>
       
       
-
+        {selectedMaterial && <MaterialPopup material={selectedMaterial} />}
     </div>
   );
 };
