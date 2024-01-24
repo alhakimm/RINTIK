@@ -67,21 +67,13 @@ const PlumberMenu = () =>{
                     <div className="flex gap-2">
                         <button
                         onClick={() => setFilterByLocation("Kampung Penambang")}
-<<<<<<< HEAD
-                        className="p-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-=======
                         className="p-2 text-sm font-medium text-white bg-blue-500 rounded-lg border border-blue-500 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
->>>>>>> ea6ff83bda3124c6539267281a549a136df8a6c5
                       >
                         Kampung Penambang
                       </button>
                       <button
                         onClick={() => setFilterByLocation("Kampung Cina")}
-<<<<<<< HEAD
-                        className="p-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-=======
                         className="p-2 text-sm font-medium text-white bg-blue-500 rounded-lg border border-blue-500 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
->>>>>>> ea6ff83bda3124c6539267281a549a136df8a6c5
                       >
                         Kampung Cina
                       </button>
@@ -179,14 +171,9 @@ const PlumberMenu = () =>{
               </div>
             </div>
             
-            
-<<<<<<< HEAD
-        {/* Pop-up menu */}
-      {selectedPlumber && (
-=======
+
 {/* Pop-up menu */}
 {selectedPlumber && (
->>>>>>> ea6ff83bda3124c6539267281a549a136df8a6c5
         <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50">
           <div className="bg-white p-4 rounded-lg">
             <Typography variant="h2" color="black" className="text-xl font-bold mb-4">
