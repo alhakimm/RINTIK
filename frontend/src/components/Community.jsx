@@ -5,7 +5,11 @@ import { FaTelegramPlane } from "react-icons/fa";
 import logo from '../assets/logo.png';
 import PostCommunity from './PostCommunity';
 import AutoscrollNews from './AutoscrollNews';
+<<<<<<< HEAD
 import Weather from './Weather';
+=======
+import JoinedGroup from './JoinedGroup';
+>>>>>>> ea6ff83bda3124c6539267281a549a136df8a6c5
 
 const Community = () => {
 
@@ -28,20 +32,25 @@ const Community = () => {
 
   return (
     <div>
-      <div className='bg-gradient-to-r from-[#0A2236] to-[#15436E] w-full flex px-20 justify-between h-full gap-2'>
+      <div className='bg-blue-500 w-full flex px-20 justify-between h-full gap-2'>
         <div className='grid grid-cols-5 flex-1 mt-6'>
           <div className='w-full col-span-1 pr-6'>
+<<<<<<< HEAD
           <Weather />
             <div className='h-2/4 bg-green-200 my-2'>joined group</div>
+=======
+            <div className='h-1/4 bg-red-200'>weather</div>
+            <div className=' bg-blue-300 rounded-xl my-2'><JoinedGroup/></div>
+>>>>>>> ea6ff83bda3124c6539267281a549a136df8a6c5
           </div>
         {/* start of community post */}
           <div className='w-full col-span-3'>
 
-            <div className="bg-white rounded-3xl shadow-md w-full p-4">
+            <div className="bg-white rounded-3xl shadow-md w-full p-4 mb-4">
               <div className='flex items-center'>
-                <IoPersonCircleSharp size={40} className='mr-2' />
+                <IoPersonCircleSharp size={40} className='mr-2 text-blue-500' />
                 <textarea name="" id="" placeholder='Post your twit here' className='w-full resize-none border-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'></textarea>
-                <button className='text-[#15436E] p-2'><FaTelegramPlane size={20}/></button>
+                <button className='text-blue-500 p-2'><FaTelegramPlane size={20}/></button>
               </div>
             </div>
             

@@ -42,7 +42,7 @@ const PlumberMenu = () =>{
     };
 
     return(
-        <div className=' flex items-center justify-center bg-gradient-to-b from-[#0A2236] to-[#15436E] w-full px-20 py-6 min-h-screen gap-2'>
+        <div className=' flex items-center justify-center bg-blue-500 w-full px-20 py-6 min-h-screen gap-2'>
             <div className="rounded-2xl w-[900px] h-full bg-white">
                 <div className="p-6 pt-6">
                   {/* search box , icon search, button search*/}
@@ -52,7 +52,7 @@ const PlumberMenu = () =>{
                     placeholder="   Search..."
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full border-2 border-blue-700 bg-transparent h-10 custom-search-bar-width rounded-lg text-sm text-black focus:outline-none"
+                    className="w-full border-2 border-blue-500 bg-transparent h-10 custom-search-bar-width rounded-lg text-sm text-black focus:outline-none"
                     />
                     <button type="submit" className="p-2.5 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                         <svg className="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
@@ -67,19 +67,27 @@ const PlumberMenu = () =>{
                     <div className="flex gap-2">
                         <button
                         onClick={() => setFilterByLocation("Kampung Penambang")}
+<<<<<<< HEAD
                         className="p-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+=======
+                        className="p-2 text-sm font-medium text-white bg-blue-500 rounded-lg border border-blue-500 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+>>>>>>> ea6ff83bda3124c6539267281a549a136df8a6c5
                       >
                         Kampung Penambang
                       </button>
                       <button
                         onClick={() => setFilterByLocation("Kampung Cina")}
+<<<<<<< HEAD
                         className="p-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+=======
+                        className="p-2 text-sm font-medium text-white bg-blue-500 rounded-lg border border-blue-500 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+>>>>>>> ea6ff83bda3124c6539267281a549a136df8a6c5
                       >
                         Kampung Cina
                       </button>
                       <button
                         onClick={() => setFilterByLocation("")}
-                        className="p-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                        className="p-2 text-sm font-medium text-white bg-blue-500 rounded-lg border border-blue-500 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                       >
                         Clear Location Filter
                       </button>
@@ -129,17 +137,17 @@ const PlumberMenu = () =>{
                     {filteredPlumbers &&
                       filteredPlumbers.map((plumber) => (
                         <div
-                          className="p-4 pl-1 mb-5 border-b border-[#15436E] rounded-lg text-white hover:shadow-xl cursor-pointer grid grid-cols-4 grid-rows-2"
+                          className="p-4 pl-1 mb-5 border-b border-[#15436E] rounded-lg hover:shadow-xl cursor-pointer grid grid-cols-4 grid-rows-2"
                           key={plumber.id}
                           onClick={() => openContactPopup(plumber)}
                         >
-                          <h2 className="text-blue-200 text-2xl transition duration-500 hover:font-bold hover:text-3xl col-span-2">
+                          <h2 className="text-blue-500 text-2xl transition duration-500 hover:font-bold hover:text-3xl col-span-2">
                             {plumber.name}
                           </h2>
                           <div className="flex items-center text-xs row-start-2 col-span-2">
                             <CgPin className="relative mr-1" />
-                            <p className="pr-1">
-                              {plumber.location} | {plumber.rating} <FaRegStar />
+                            <p className="pr-1 text-xl">
+                              {plumber.location} | {plumber.rating}
                             </p>
                           </div>
                           <p className="text-xs col-start-3 text-right pr-4 pt-1">from</p>{" "}
@@ -172,8 +180,13 @@ const PlumberMenu = () =>{
             </div>
             
             
+<<<<<<< HEAD
         {/* Pop-up menu */}
       {selectedPlumber && (
+=======
+{/* Pop-up menu */}
+{selectedPlumber && (
+>>>>>>> ea6ff83bda3124c6539267281a549a136df8a6c5
         <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50">
           <div className="bg-white p-4 rounded-lg">
             <Typography variant="h2" color="black" className="text-xl font-bold mb-4">
