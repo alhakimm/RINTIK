@@ -10,11 +10,11 @@ import Signup from "./components/Signup";
 import {jwtDecode} from 'jwt-decode';
 // import Report from "./components/Report";
 
-const token = localStorage.FBIdToken;
-if(token){
-  const decodedToken = jwtDecode(token);
-  console.log(decodedToken);
-}
+// const token = localStorage.FBIdToken;
+// if(token){
+//   const decodedToken = jwtDecode(token);
+//   console.log(decodedToken);
+// }
 
 function App() {
   return (
