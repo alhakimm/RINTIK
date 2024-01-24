@@ -5,6 +5,7 @@ import { FaTelegramPlane } from "react-icons/fa";
 import logo from '../assets/logo.png';
 import PostCommunity from './PostCommunity';
 import AutoscrollNews from './AutoscrollNews';
+import Weather from './Weather';
 
 const Community = () => {
 
@@ -30,7 +31,7 @@ const Community = () => {
       <div className='bg-gradient-to-r from-[#0A2236] to-[#15436E] w-full flex px-20 justify-between h-full gap-2'>
         <div className='grid grid-cols-5 flex-1 mt-6'>
           <div className='w-full col-span-1 pr-6'>
-            <div className='h-1/4 bg-red-200'>weather</div>
+          <Weather />
             <div className='h-2/4 bg-green-200 my-2'>joined group</div>
           </div>
         {/* start of community post */}

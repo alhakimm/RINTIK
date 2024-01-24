@@ -12,6 +12,7 @@ const PlumberMenu = () =>{
     const [searchQuery, setSearchQuery] = useState("");
     const [filterByLocation, setFilterByLocation] = useState("");
     const [filterByPrice, setFilterByPrice] = useState("");
+    const [selectedPlumber, setSelectedPlumber] = useState(null);
 
     const LoadingSpinner = () =>{
         return (
@@ -31,6 +32,14 @@ const PlumberMenu = () =>{
     ?.filter((plumber) =>
       filterByPrice ? plumber.price <= filterByPrice : true
     );
+
+    const openContactPopup = (plumber) => {
+      setSelectedPlumber(plumber);
+    };
+  
+    const closeContactPopup = () => {
+      setSelectedPlumber(null);
+    };
 
     return(
         <div className=' flex items-center justify-center bg-gradient-to-b from-[#0A2236] to-[#15436E] w-full px-20 py-6 min-h-screen gap-2'>
@@ -57,16 +66,16 @@ const PlumberMenu = () =>{
                     <h3 className="text-black">Location: </h3>
                     <div className="flex gap-2">
                         <button
-                        onClick={() => setFilterByLocation("wakaf bharu")}
+                        onClick={() => setFilterByLocation("Kampung Penambang")}
                         className="p-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                       >
-                        Wakaf Bharu
+                        Kampung Penambang
                       </button>
                       <button
-                        onClick={() => setFilterByLocation("kota bharu")}
+                        onClick={() => setFilterByLocation("Kampung Cina")}
                         className="p-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                       >
-                        Kota Bharu
+                        Kampung Cina
                       </button>
                       <button
                         onClick={() => setFilterByLocation("")}
@@ -122,6 +131,7 @@ const PlumberMenu = () =>{
                         <div
                           className="p-4 pl-1 mb-5 border-b border-[#15436E] rounded-lg text-white hover:shadow-xl cursor-pointer grid grid-cols-4 grid-rows-2"
                           key={plumber.id}
+                          onClick={() => openContactPopup(plumber)}
                         >
                           <h2 className="text-blue-200 text-2xl transition duration-500 hover:font-bold hover:text-3xl col-span-2">
                             {plumber.name}
@@ -162,10 +172,27 @@ const PlumberMenu = () =>{
             </div>
             
             
+        {/* Pop-up menu */}
+      {selectedPlumber && (
+        <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50">
+          <div className="bg-white p-4 rounded-lg">
+            <Typography variant="h2" color="black" className="text-xl font-bold mb-4">
+              {selectedPlumber.name}
+            </Typography>
+            <div className="flex flex-col mb-4">
+              <Typography variant="paragraph" color="black" className="text-sm mb-1">
+                Phone: {selectedPlumber.phone}
+              </Typography>
+              <Typography variant="paragraph" color="black" className="text-sm">
+                Email: {selectedPlumber.email}
+              </Typography>
+            </div>
+            <Button onClick={closeContactPopup}>Close</Button>
+          </div>
         </div>
-    );
-
-   
+      )}
+    </div>
+  );
 };
 
 export default PlumberMenu;
