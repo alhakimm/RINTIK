@@ -50,14 +50,21 @@ const Map = () => {
         const fetchedLocations =  response.data;
         console.log(fetchedLocations);
 
-        setLocations(fetchedLocations);
+        // setLocations(fetchedLocations);
 
         fetchedLocations.forEach(data => {
+            console.log(data.location._latitude)
+            console.log(data.location._longitude)
+
             const marker = new AdvancedMarkerElement({
-                position: data.position,
+                position: {lat: data.location._latitude, lng: data.location._longitude},
                 map: map,
                 title: "Penang"
             });
+
+            marker.addListener('click', () => {
+                console.log('marker clicked:', data.body)
+            })
         });
       } catch (error) {
         console.error("error", error);

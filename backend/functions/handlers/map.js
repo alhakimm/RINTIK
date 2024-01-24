@@ -21,12 +21,36 @@ exports.viewMap = (req,res) => {
                     body: doc.data().body,
                     username: doc.data().username,
                     createdAt: formattedDate,
-                    location: {lat: doc.data().latitude, lng: doc.data().longitude}
+                    location: doc.data().location
                 });
             })
             return res.json(posts);
         })
         .catch(err => console.error(err));
+}
+
+exports.reportMap = (req,res) => {
+    const newReportMap = {
+        body: req.body.body,
+        username: req.user.username,
+        userImage: req.user.imageUrl,
+        createdAt: new Date(),
+        upvote: 0,
+        comments: 0
+    };
+
+    db
+        .collection('posts')
+        .add(newReportMap)
+        .then((doc) => {
+            const resPost = newReportMap;
+            resPost.postId = doc.id;
+            res.json({resPost});
+        })
+        .catch(err => {
+            res.status(500).json({error: 'something went wrong'});
+            console.error(err)
+        });
 }
 
 
