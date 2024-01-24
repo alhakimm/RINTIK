@@ -13,7 +13,7 @@ import Signup from "./components/Signup";
 
 //redux
 import { Provider } from "react-redux";
-import store from './redux/store';
+// import store from './redux/store';
 
 // import Report from "./components/Report";
 
@@ -30,7 +30,7 @@ import store from './redux/store';
 
 function App() {
   return (
-    <Provider store={store}>
+    // <Provider store={store}>
       <Router>
       <div>
         <Navbar />
@@ -60,7 +60,7 @@ function App() {
       </div>
     </Router>
 
-    </Provider>
+    // </Provider>
     
   );
 }
