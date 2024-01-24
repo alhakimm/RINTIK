@@ -53,7 +53,7 @@ class Login extends Component {
         const {errors, loading} = this.state
         return (
             <div className='bg-blue-500 w-full h-screen flex items-center justify-center'>
-                <div className='max-w-[600px] bg-red-500 p-6 rounded-xl'>
+                <div className='max-w-[600px] bg-blue-300 p-6 rounded-xl'>
                     <h1 className='font-bold text-3xl mb-6'>Login</h1>
                     
                     <form className='flex flex-col gap-4 items-center' noValidate onSubmit={this.handleSubmit}>
@@ -73,7 +73,7 @@ class Login extends Component {
 
                         <Button type='submit' className='w-full'>Login</Button>
                         {/* camne nak link dri page ni ke signup */}
-                        <small>dont have account? sign up <Link to="/signup" >here</Link></small>
+                        <small>dont have account? sign up <Link to="/signup"><span className='underline'>here</span></Link></small>
                     </form>
                 </div>
                 

@@ -58,31 +58,43 @@ class Signup extends Component {
         // const {classes} = this.props
         const {errors, loading} = this.state
         return (
-            <div>
-                <h1>Signup page</h1>
-                
-                <form noValidate onSubmit={this.handleSubmit}>
-
-                    <label for="email">Enter Email:</label>
-                    <input id="email" name="email" label="Email"
-                    value={this.state.email} onChange={this.handleChange}></input>
-
-                    <label for="password">Enter Password:</label>
-                    <input id="password" name="password" label="Password"
-                    value={this.state.password} onChange={this.handleChange}></input>
-
-                    <label for="confirmPassword">Confirm Password:</label>
-                    <input id="confirmPassword" name="confirmPassword" label="Comfirm Password"
-                    value={this.state.confirmPassword} onChange={this.handleChange}></input>
+            <div className='bg-blue-300 w-full h-screen flex items-center justify-center'>
+                <div className='max-w-[600px] bg-blue-400 p-6 rounded-xl'>
+                    <h1 className='font-bold text-3xl mb-6'>Signup</h1>
                     
-                    <label for="username">Enter Username:</label>
-                    <input id="username" name="username"
-                    value={this.state.username} onChange={this.handleChange}></input>
+                    <form className='flex flex-col gap-4 items-center' noValidate onSubmit={this.handleSubmit}>
+                        <div className='flex flex-col gap-2'>
+                            <div>
+                                <label for="email">Enter Email:</label>
+                                <input id="email" name="email" label="Email" className='w-full rounded-md'
+                                value={this.state.email} onChange={this.handleChange}></input>
+                            </div>
+                            <div>
+                                <label for="password">Enter Password:</label>
+                                <input id="password" name="password" label="Password" className='w-full rounded-md'
+                                value={this.state.password} onChange={this.handleChange}></input>
+                            </div>
+                            <div>
+                                <label for="confirmPassword">Confirm Password:</label>
+                                <input id="confirmPassword" name="confirmPassword" label="Comfirm Password" className='w-full rounded-md'
+                                value={this.state.confirmPassword} onChange={this.handleChange}></input>
+                            </div>
+                            
+                            <div>
+                                <label for="username">Enter Username:</label>
+                                <input id="username" name="username" className='w-full rounded-md'
+                                value={this.state.username} onChange={this.handleChange}></input>
+                            </div>
+                        </div>
+                        
 
-                    <Button type='submit'>Signup</Button>
-                    {/* camne nak link dri page ni ke signup */}
-                    <small>already have an account? login <Link to="/" >here</Link></small>
-                </form>
+
+                        <Button type='submit' className='w-full'>Signup</Button>
+                        {/* camne nak link dri page ni ke signup */}
+                        <small>already have an account? login <Link to="/" ><span className='underline'>here</span></Link></small>
+                    </form>
+                </div>
+                
             </div>
             
         )
