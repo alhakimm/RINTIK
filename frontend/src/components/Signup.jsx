@@ -6,12 +6,14 @@ import { withRouter } from 'react-router'
 
 // import ReactDOM from 'react-dom'
 
-class Login extends Component {
+class Signup extends Component {
     constructor(){
         super();
         this.state = {
             email: '',
             password: '',
+            confirmPassword: '',
+            username: '',
             loading: false,
             errors: {}
         }
@@ -21,14 +23,17 @@ class Login extends Component {
         this.setState({
             loading: true
         })
-        const userData = {
+        const newUserData = {
             email: this.state.email,
-            password: this.state.password
+            password: this.state.password,
+            confirmPassword: this.state.confirmPassword,
+            username: this.state.username
         }
-        axios.post('http://localhost:5000/testingfirebase-3e0f7/us-central1/api/login', userData)
+        axios.post('http://localhost:5000/testingfirebase-3e0f7/us-central1/api/signup', newUserData)
          .then(res => {
             console.log(res.data)
             localStorage.setItem('FBIdToken', `Bearer ${res.data.token}`)
+            console.log(localStorage)
             this.setState({
                 loading: false
             });
@@ -36,7 +41,8 @@ class Login extends Component {
          })
          .catch(err => {
             console.log(err.response.data)
-            alert("Email " + err.response.data.email +"        "+ "Password " + err.response.data.password)
+            alert("Email " + err.response.data.email +"        "+ "Password " + err.response.data.password + 
+                    "confirm password " + err.response.data.confirmPassword +"        "+ "Username " + err.response.data.username)
             this.setState({
                 errors: err.response.data,
                 loading: false
@@ -53,7 +59,7 @@ class Login extends Component {
         const {errors, loading} = this.state
         return (
             <div>
-                <h1>login page</h1>
+                <h1>Signup page</h1>
                 
                 <form noValidate onSubmit={this.handleSubmit}>
 
@@ -65,9 +71,17 @@ class Login extends Component {
                     <input id="password" name="password" label="Password"
                     value={this.state.password} onChange={this.handleChange}></input>
 
-                    <Button type='submit'>Login</Button>
+                    <label for="confirmPassword">Confirm Password:</label>
+                    <input id="confirmPassword" name="confirmPassword" label="Comfirm Password"
+                    value={this.state.confirmPassword} onChange={this.handleChange}></input>
+                    
+                    <label for="username">Enter Username:</label>
+                    <input id="username" name="username"
+                    value={this.state.username} onChange={this.handleChange}></input>
+
+                    <Button type='submit'>Signup</Button>
                     {/* camne nak link dri page ni ke signup */}
-                    <small>dont have account? sign up <Link to="/signup" here></Link></small>
+                    <small>already have an account? login <Link to="/" here></Link></small>
                 </form>
             </div>
             
@@ -77,4 +91,4 @@ class Login extends Component {
 
 // const root = ReactDOM.createRoot(document.getElementById('root'));
 // root.render(<MyForm />);
-export default withRouter(Login);
+export default withRouter(Signup);

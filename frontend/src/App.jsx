@@ -6,7 +6,15 @@ import Education from "./components/Education";
 import PlumberMenu from "./components/Plumber Menu";
 import Map from "./components/Map";
 import Login from "./components/login";
+import Signup from "./components/Signup";
+import jwtDecode from 'jwt-decode';
 // import Report from "./components/Report";
+
+const token = localStorage.FBIdToken;
+if(token){
+  const decodedToken = jwtDecode(token);
+  console.log(decodedToken);
+}
 
 function App() {
   return (
@@ -16,6 +24,9 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Login />
+          </Route>
+          <Route path="/signup">
+            <Signup />
           </Route>
           <Route path="/community">
             <Community />
