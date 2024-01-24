@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Education from "./components/Education"; 
 import PlumberMenu from "./components/Plumber Menu";
 import Map from "./components/Map";
+import Login from "./components/login";
 // import Report from "./components/Report";
 
 function App() {
@@ -14,6 +15,9 @@ function App() {
         <Navbar />
         <Switch>
           <Route exact path="/">
+            <Login />
+          </Route>
+          <Route path="/community">
             <Community />
           </Route>
           <Route path="/education">

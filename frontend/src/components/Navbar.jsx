@@ -26,7 +26,7 @@ const Navbar = () =>{
                 <ul className='pr-4 ml-auto flex'>
                         <li>
                     <Link
-                        to="/"
+                        to="/community"
                         className="pr-4 ml-4 no-underline py-2 transition-colors duration-300 hover:text-blue-600"
                     >
                         Community
