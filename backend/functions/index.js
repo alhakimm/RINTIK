@@ -39,6 +39,7 @@ app.post('/articles', initializeArticles);  //initialise articles
 
 //reports route
 app.get('/reports', getReports);
+app.post('/reportProblem', addReports);
 
 //map route
 app.get('/viewMap', viewMap);

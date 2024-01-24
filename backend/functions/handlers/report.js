@@ -28,6 +28,7 @@ exports.addReports = functions.https.onRequest((req, res) => {
         priority : req.body.priority
     };
 
+    
     db
         .collection('reports')
         .add(newReports)

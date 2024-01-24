@@ -29,29 +29,29 @@ exports.viewMap = (req,res) => {
         .catch(err => console.error(err));
 }
 
-exports.reportMap = (req,res) => {
-    const newReportMap = {
-        body: req.body.body,
-        username: req.user.username,
-        userImage: req.user.imageUrl,
-        createdAt: new Date(),
-        upvote: 0,
-        comments: 0
-    };
+// exports.reportMap = (req,res) => {
+//     const newReportMap = {
+//         body: req.body.body,
+//         username: req.user.username,
+//         userImage: req.user.imageUrl,
+//         createdAt: new Date(),
+//         upvote: 0,
+//         comments: 0
+//     };
 
-    db
-        .collection('posts')
-        .add(newReportMap)
-        .then((doc) => {
-            const resPost = newReportMap;
-            resPost.postId = doc.id;
-            res.json({resPost});
-        })
-        .catch(err => {
-            res.status(500).json({error: 'something went wrong'});
-            console.error(err)
-        });
-}
+//     db
+//         .collection('posts')
+//         .add(newReportMap)
+//         .then((doc) => {
+//             const resPost = newReportMap;
+//             resPost.postId = doc.id;
+//             res.json({resPost});
+//         })
+//         .catch(err => {
+//             res.status(500).json({error: 'something went wrong'});
+//             console.error(err)
+//         });
+// }
 
 
 
