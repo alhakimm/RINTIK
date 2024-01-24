@@ -81,7 +81,7 @@ class Signup extends Component {
 
                     <Button type='submit'>Signup</Button>
                     {/* camne nak link dri page ni ke signup */}
-                    <small>already have an account? login <Link to="/" here></Link></small>
+                    <small>already have an account? login <Link to="/" >here</Link></small>
                 </form>
             </div>
             

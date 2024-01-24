@@ -52,23 +52,31 @@ class Login extends Component {
         // const {classes} = this.props
         const {errors, loading} = this.state
         return (
-            <div>
-                <h1>login page</h1>
+            <div className='bg-blue-500 w-full h-screen flex items-center justify-center'>
+                <div className='max-w-[600px] bg-red-500 p-6 rounded-xl'>
+                    <h1 className='font-bold text-3xl mb-6'>Login</h1>
+                    
+                    <form className='flex flex-col gap-4 items-center' noValidate onSubmit={this.handleSubmit}>
+                        <div className='flex flex-col gap-2'>
+                            <div>
+                                <label for="email">Enter Email:</label>
+                                <input id="email" name="email" label="Email" className='w-full rounded-md'
+                                value={this.state.email} onChange={this.handleChange}></input>
+                            </div>
+                            <div>
+                                <label for="password">Enter Password:</label>
+                                <input id="password" name="password" label="Password" className='w-full rounded-md'
+                                value={this.state.password} onChange={this.handleChange}></input>
+                            </div>
+                        </div>
+                        
+
+                        <Button type='submit' className='w-full'>Login</Button>
+                        {/* camne nak link dri page ni ke signup */}
+                        <small>dont have account? sign up <Link to="/signup" >here</Link></small>
+                    </form>
+                </div>
                 
-                <form noValidate onSubmit={this.handleSubmit}>
-
-                    <label for="email">Enter Email:</label>
-                    <input id="email" name="email" label="Email"
-                    value={this.state.email} onChange={this.handleChange}></input>
-
-                    <label for="password">Enter Password:</label>
-                    <input id="password" name="password" label="Password"
-                    value={this.state.password} onChange={this.handleChange}></input>
-
-                    <Button type='submit'>Login</Button>
-                    {/* camne nak link dri page ni ke signup */}
-                    <small>dont have account? sign up <Link to="/signup" here></Link></small>
-                </form>
             </div>
             
         )

@@ -7,7 +7,7 @@ import PlumberMenu from "./components/Plumber Menu";
 import Map from "./components/Map";
 import Login from "./components/login";
 import Signup from "./components/Signup";
-import jwtDecode from 'jwt-decode';
+import {jwtDecode} from 'jwt-decode';
 // import Report from "./components/Report";
 
 const token = localStorage.FBIdToken;
