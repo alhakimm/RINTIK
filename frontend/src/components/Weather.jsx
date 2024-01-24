@@ -9,13 +9,13 @@ const Weather = () => {
   useEffect(() => {
     const fetchWeather = async () => {
       try {
-        const apiKey = 'https://api.open-meteo.com/v1/forecast?latitude=5.3729&longitude=100.2496&current=temperature_2m,relative_humidity_2m,is_day,rain,wind_speed_10m,wind_direction_10m&timezone=Asia%2FSingapore';
+        const apiKey = 'https://api.open-meteo.com/v1/forecast?latitude=6.1236&longitude=102.2433&current=temperature_2m,relative_humidity_2m,is_day,rain,wind_speed_10m,wind_direction_10m&timezone=Asia%2FSingapore';
 
         if (!apiKey) {
           throw new Error('API key is missing or invalid');
         }
 
-        const response = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=5.3729&longitude=100.2496&current=temperature_2m,relative_humidity_2m,is_day,rain,wind_speed_10m,wind_direction_10m&timezone=Asia%2FSingapore`);
+        const response = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=6.1236&longitude=102.2433&current=temperature_2m,relative_humidity_2m,is_day,rain,wind_speed_10m,wind_direction_10m&timezone=Asia%2FSingapore`);
 
         if (!response.ok) {
           throw new Error(`Weather API request failed with status ${response.status}`);
