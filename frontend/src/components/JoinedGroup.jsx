@@ -11,7 +11,7 @@ const JoinedGroup = () => {
                     <p className='text-xs'>230k joined</p>
                 </div>
                 <div>
-                    <p className=' text-black'>></p>
+                    <p className=' text-black'>&gt;</p>
                 </div>           
             </div>
             <div className='bg-blue-100 rounded-lg p-2 px-4 flex justify-between items-center mt-2'>
@@ -20,7 +20,7 @@ const JoinedGroup = () => {
                     <p className='text-xs'>280k joined</p>
                 </div>
                 <div>
-                    <p className=' text-black'>></p>
+                    <p className=' text-black'>&gt;</p>
                 </div>           
             </div>
             <div className='bg-blue-100 rounded-lg p-2 px-4 flex justify-between items-center mt-2'>
@@ -29,7 +29,7 @@ const JoinedGroup = () => {
                     <p className='text-xs'>180k joined</p>
                 </div>
                 <div>
-                    <p className=' text-black'>></p>
+                    <p className=' text-black'>&gt;</p>
                 </div>           
             </div>
             <div className='bg-blue-100 rounded-lg p-2 px-4 flex justify-between items-center mt-2'>
@@ -38,7 +38,7 @@ const JoinedGroup = () => {
                     <p className='text-xs'>300k joined</p>
                 </div>
                 <div>
-                    <p className=' text-black'>></p>
+                    <p className=' text-black'>&gt;</p>
                 </div>           
             </div>
         </div>
