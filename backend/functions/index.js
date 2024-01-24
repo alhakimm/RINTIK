@@ -43,12 +43,15 @@ app.get('/reports', getReports);
 //map route
 app.get('/viewMap', viewMap);
 
+//plumber route
+// app.get('/plumber', getPlumbers);
+
 exports.api = functions.https.onRequest(app);
-// exports.getPlumbers = functions.https.onRequest(getPlumbers);
-// exports.getReports = functions.https.onRequest(getReports);
-// exports.addReports = functions.https.onRequest(addReports);
-// exports.initializeArticles = functions.https.onRequest(initializeArticles);
-// exports.getArticles = functions.https.onRequest(getArticles);
+exports.getPlumbers = functions.https.onRequest(getPlumbers);
+exports.getReports = functions.https.onRequest(getReports);
+exports.addReports = functions.https.onRequest(addReports);
+exports.initializeArticles = functions.https.onRequest(initializeArticles);
+exports.getArticles = functions.https.onRequest(getArticles);
 
 
 
