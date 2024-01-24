@@ -5,11 +5,8 @@ import { FaTelegramPlane } from "react-icons/fa";
 import logo from '../assets/logo.png';
 import PostCommunity from './PostCommunity';
 import AutoscrollNews from './AutoscrollNews';
-<<<<<<< HEAD
-import Weather from './Weather';
-=======
 import JoinedGroup from './JoinedGroup';
->>>>>>> ea6ff83bda3124c6539267281a549a136df8a6c5
+import Weather from './Weather';
 
 const Community = () => {
 
@@ -35,13 +32,8 @@ const Community = () => {
       <div className='bg-blue-500 w-full flex px-20 justify-between h-full gap-2'>
         <div className='grid grid-cols-5 flex-1 mt-6'>
           <div className='w-full col-span-1 pr-6'>
-<<<<<<< HEAD
           <Weather />
-            <div className='h-2/4 bg-green-200 my-2'>joined group</div>
-=======
-            <div className='h-1/4 bg-red-200'>weather</div>
             <div className=' bg-blue-300 rounded-xl my-2'><JoinedGroup/></div>
->>>>>>> ea6ff83bda3124c6539267281a549a136df8a6c5
           </div>
         {/* start of community post */}
           <div className='w-full col-span-3'>
