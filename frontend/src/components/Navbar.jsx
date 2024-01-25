@@ -125,12 +125,12 @@ const Navbar = () =>{
 
             {/*REPORT Button*/}
             <div className='relative'>
-                {/* <button
+                <button
                     className='rounded-lg mr-6 px-6 py-2 bg-[#BA1200] font-bold text-white transition duration-300 hover:bg-white hover:text-[#BA1200] ease-in-out'
-                    onClick={setShowMyModal(true)}>
+                    >
                     Report
-                </button> */}
-                {/* <button className='bg-red-500' onClick={setShowMyModal(true)}>Report</button> */}
+                </button>
+                {/* <button className='bg-red-500'>Report</button> */}
                 {/* Pop-up message on mouse hover on the Report button */}
                 {/* {displayMessage && (
                     <div className='absolute top-full left-1/2 transform -translate-x-1/2 w-40 h-30 bg-white bg-opacity-80 text-black text-sm font-10 border border-gray-300 p-2 rounded-md transition duration-300 ease-in-out'>

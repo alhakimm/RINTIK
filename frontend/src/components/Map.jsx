@@ -73,7 +73,7 @@ const Map = () => {
 
   }, []); // Empty dependency array ensures that this effect runs only once after the initial render
 
-  return <div id="map" style={{ height: '400px', width: '100%' }}>Map</div>;
+  return <div id="map" style={{ height: '1000px', width: '100%' }}>Map</div>;
 };
 
 export default Map;
