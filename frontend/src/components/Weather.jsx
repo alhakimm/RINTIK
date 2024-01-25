@@ -1,4 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import { FaTemperatureThreeQuarters } from "react-icons/fa6";
+import { WiHumidity } from "react-icons/wi";
+import { FaWind } from "react-icons/fa";
+import { GiWindsock } from "react-icons/gi";
 
 const Weather = () => {
   const [weatherData, setWeatherData] = useState(null);
@@ -48,20 +52,30 @@ const Weather = () => {
   }, []);
 
   return (
-    <div className="h-1/4 bg-red-200">
+    <div className="h-1/4 bg-blue-300">
       {error ? (
         <p>Error fetching weather data: {error}</p>
       ) : (
         weatherData && (
-          <div>
-            {/* <h2>{weatherData.condition}</h2> */}
-            <p>Temperature: {weatherData.temperature_2m}°C</p>
-            <p>Humidity: {weatherData.relative_humidity_2m}%</p>
-            <p>Wind Speed: {weatherData.wind_speed_10m}km/h</p>
-            <p>Wind Direction: {weatherData.wind_direction_10m}°</p>
-            <p>Weather: {weatherCondition}</p>
-            <p>Time of Day: {dayCycle}</p>
+          <div className='p-4'>
+            <div className='flex flex-col gap-4'>
+              {/* <h2>{weatherData.condition}</h2> */}
+              <div className='flex justify-center gap-4'>
+                <div className='bg-blue-100 rounded-2xl min-w-[80px] flex flex-col items-center p-2'><FaTemperatureThreeQuarters size={30}/> {weatherData.temperature_2m}°C</div>
+                <div className='bg-blue-100 rounded-2xl min-w-[80px] flex flex-col items-center p-2'><WiHumidity size={30} /> {weatherData.relative_humidity_2m}%</div>
+              </div>
+              <div className='flex justify-center gap-4'>
+                <div className='bg-blue-100 rounded-2xl min-w-[80px] flex flex-col items-center p-2'><FaWind size={30}/> {weatherData.wind_speed_10m}km/h</div>
+                <div className='bg-blue-100 rounded-2xl min-w-[80px] flex flex-col items-center p-2'><GiWindsock size={30} /> {weatherData.wind_direction_10m}°</div>
+              </div>
+              <div>
+                <p>Weather: {weatherCondition}</p>
+                <p>Time of Day: {dayCycle}</p>
+              </div>
+              
+            </div>
           </div>
+          
         )
       )}
     </div>
