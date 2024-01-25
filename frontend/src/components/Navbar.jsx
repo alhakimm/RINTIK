@@ -19,6 +19,11 @@ const Navbar = () =>{
     //   setShowModal(false);
     // };
 
+    const [profile,setProfile] = useState(false);
+    const handleProfile = () => {
+      setProfile(!profile); //basically nak true kan useState (default)
+    };
+
     return(
         <nav className='p-5 flex items-center max-w-600 mx-auto border-b border-solid border-gray-300 bg-white'>
             <img className='w-[10%] h-full' src={logo} alt="logo" />
@@ -96,7 +101,24 @@ const Navbar = () =>{
                 )} */}
             </div>
             {/*END REPORT Button*/}
-                <a href="#profile"><IoPersonCircleSharp size={45} /></a>
+                <IoPersonCircleSharp size={45} onClick={handleProfile}/>
+                {
+                    profile ? (
+                        <div className='fixed bottom-0 right-0 z-[99] bg-blue-900 h-full w-[30%]'>
+                            <div className='p-12 pt-16 flex flex-col items-center'>
+                                <p className='w-[75%] flex justify-center items-center rounded-3xl shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200'>edit profile pic</p>
+                                <p className='w-[75%] flex justify-center items-center rounded-3xl shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200'>view history report</p>
+                                <button className="absolute top-2 right-2 text-xl text-white" onClick={handleProfile}>
+                                    close
+                                </button>
+                            </div>
+                        </div>
+                       
+                    )
+                    : (
+                        ''
+                    )
+                }
                 </div>
       </nav>
     )
