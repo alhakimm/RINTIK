@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import useFetch from "./useFetch";
 import { IoPersonCircleSharp } from "react-icons/io5"
 import logo from '../assets/logo.png';
 import { Link, useLocation } from "react-router-dom";
@@ -19,9 +20,58 @@ const Navbar = () =>{
     //   setShowModal(false);
     // };
 
+    // Report
+    const {data: reportList, isLoading, error} = useFetch("http://localhost:5000/testingfirebase-3e0f7/us-central1/getReports");
+
+    const [showReportHistory, setShowReportHistory] = useState(false); // when selecting viewhistorybutton
+    const [selectedReport, setSelectedReport] = useState(null); // for when selecting a report in popup menu
+
+    const handleViewReportHistory = () => {
+        setShowReportHistory(true);
+    };
+
+    const handleReportClick = (report) => {
+        setSelectedReport(report);
+      };
+
+    // Profile
     const [profile,setProfile] = useState(false);
     const handleProfile = () => {
       setProfile(!profile); //basically nak true kan useState (default)
+    };
+
+    const [editProfile, setEditProfile] = useState(false);
+    const [selectedImage, setSelectedImage] = useState(null);
+
+    const handleEditProfile = () => {
+        setEditProfile(!editProfile);
+    };
+
+    const handleImageChange = (event) => {
+        const file = event.target.files[0];
+        if (file) {
+            setSelectedImage(file);
+        }
+    };
+
+    const handleImageUpload = () => {
+        if (selectedImage) {
+            const formData = new FormData();
+            formData.append('image', selectedImage);
+
+            fetch('/uploadImage', {
+                method: 'POST',
+                body: formData,
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Image uploaded successfully', data);
+                setEditProfile(false);
+            })
+            .catch(error => {
+                console.error('Error uploading image', error);
+            });
+        }
     };
 
     return(
@@ -106,8 +156,67 @@ const Navbar = () =>{
                     profile ? (
                         <div className='fixed bottom-0 right-0 z-[99] bg-blue-900 h-full w-[30%]'>
                             <div className='p-12 pt-16 flex flex-col items-center'>
-                                <p className='w-[75%] flex justify-center items-center rounded-3xl shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200'>edit profile pic</p>
-                                <p className='w-[75%] flex justify-center items-center rounded-3xl shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200'>view history report</p>
+                            <div className='w-[75%] flex justify-center items-center rounded-3xl shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200' onClick={handleEditProfile}>
+                                Edit Profile Pic
+                            </div>
+                            {editProfile && (
+                <div className='fixed top-0 left-0 w-full h-full flex items-center justify-center bg-gray-800 bg-opacity-50'>
+                    <div className='bg-white p-8 rounded-md'>
+                        <input type="file" accept="image/*" onChange={handleImageChange} />
+                        <button onClick={handleImageUpload}>Upload Image</button>
+                        <button onClick={() => setEditProfile(false)}>Cancel</button>
+                    </div>
+                </div>
+            )}
+
+{/* View Report History Button */}
+<div className='relative'>
+        <button
+          className='w-[75%] flex justify-center items-center rounded-3xl shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200'
+          onClick={handleViewReportHistory}
+        >
+          View Report History
+        </button>
+
+        {/* Pop-up for Report History */}
+        {showReportHistory && (
+          <div className='fixed top-0 left-0 w-full h-full flex items-center justify-center bg-gray-800 bg-opacity-50'>
+            <div className='bg-white p-8 rounded-md'>
+              {selectedReport ? (
+                <div>
+                  <h2>Report Details</h2>
+                  <p>Category: {selectedReport.category}</p>
+                  <p>Description: {selectedReport.description}</p>
+                  <p>Location: {selectedReport.location}</p>
+                  <p>Priority: {selectedReport.priority}</p>
+                  <p>Status: {selectedReport.status}</p>
+                  <button onClick={() => setSelectedReport(null)}>Back to Report List</button>
+                </div>
+              ) : (
+                <div>
+                  <h2>Report History</h2>
+                  {isLoading ? (
+                    <p>Loading report history...</p>
+                  ) : error ? (
+                    <p>Error loading report history</p>
+                  ) : (
+                    <ul>
+                      {reportList.map((report) => (
+                        <li key={report.id}>
+                          <button onClick={() => handleReportClick(report)}>
+                            Report
+                          </button>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                  <button onClick={() => setShowReportHistory(false)}>Close</button>
+                </div>
+              )}
+            </div>
+          </div>
+        )}
+      </div>
                                 <button className="absolute top-2 right-2 text-xl text-white" onClick={handleProfile}>
                                     close
                                 </button>
@@ -117,8 +226,7 @@ const Navbar = () =>{
                     )
                     : (
                         ''
-                    )
-                }
+                    )}
                 </div>
       </nav>
     )
