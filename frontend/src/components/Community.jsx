@@ -7,6 +7,7 @@ import PostCommunity from './PostCommunity';
 import AutoscrollNews from './AutoscrollNews';
 import JoinedGroup from './JoinedGroup';
 import Weather from './Weather';
+import Alert from './Alert';
 
 const Community = () => {
 
@@ -50,7 +51,7 @@ const Community = () => {
           </div>
           {/* end of community post */}
           <div className='w-full col-span-1 pl-6'>
-            <div className='h-1/4 bg-red-200'>alert</div>
+            <Alert/>
             <AutoscrollNews/>
           </div>
         </div>
