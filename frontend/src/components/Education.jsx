@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const Education = () => {
 
   const [materials, setMaterials] = useState([
-        {title: 'Water 4.0: The Past, Present, and Future of the World\'s Most Vital Resource', body: "lorem ipsum ching chong ling long", author: 'David Sedlak', id: 1, type:'Article'},
+        {title: 'Water 4.0: The Past, Present, and Future of the World\'s Most Vital Resource', body: 'Explore Water 4.0, tracing the evolution of water management from its origins, assessing current challenges, to envisioning a sustainable future.', author: 'David Sedlak', id: 1, type:'Article'},
         {title: 'Blue Future: Protecting Water for People and the Planet Forever', body: "lorem ipsum ching chong ling long", author: 'Maude Barlow', id: 2, type: 'Article'},
         {title: 'The Big Thirst: The Secret Life and Turbulent Future of Water', body: "lorem ipsum ching chong ling long", author: 'Charles Fishman', id: 3, type: 'Article'},
         {title: 'Cadillac Desert: The American West and Its Disappearing Water', body: "lorem ipsum ching chong ling long", author: 'Marc Reisner', id: 4, type: 'Article'},
@@ -90,12 +90,7 @@ const Education = () => {
                   variant="paragraph"
                   color="white"
                   className="mb-12 opacity-80">
-                  It is not so much for its beauty that the forest makes a claim
-                  upon men&apos;s hearts, as for that subtle something, that quality
-                  of air that emanation from old trees, that so wonderfully changes
-                  and renews a weary spirit. It is not so much for its beauty that the forest makes a claim
-                  upon men&apos;s hearts, as for that subtle something, that quality
-                  of air that emanation from old trees, that so wonderfully changes
+                  Penang faces water outage crisis, impacting residents with shortages. Urgent measures needed for immediate relief and long-term water security.
                   and renews..... <Link to="/" className="justify-center mt-4 rounded-xl custom-read-more-width flex transition duration-500 hover:font-bold hover:bg-blue-500">Read More</Link>
                 </Typography>
                 
@@ -114,7 +109,7 @@ const Education = () => {
                   variant="h1"
                   color="white"
                   className="mb-4 text-3xl md:text-4xl lg:text-4xl">
-                  Mak Kau Hijau
+                  Water News
                 </Typography>
                 <Typography 
                   variant="paragraph"
@@ -143,7 +138,7 @@ const Education = () => {
                   variant="h1"
                   color="white"
                   className="mb-4 text-3xl md:text-4xl lg:text-4xl">
-                  Bapak Kau Kuning
+                  Water News 2
                 </Typography>
                 <Typography 
                   variant="paragraph"
