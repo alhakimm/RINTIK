@@ -38,7 +38,7 @@ class Login extends Component {
         })
     }
     render() {
-        const {classes, UI: {loading}} = this.props
+        // const {classes, UI: {loading}} = this.props
         const {errors} = this.state
         return (
             <div className='bg-blue-500 w-full h-screen flex items-center justify-center'>
@@ -75,11 +75,11 @@ class Login extends Component {
 // const root = ReactDOM.createRoot(document.getElementById('root'));
 // root.render(<MyForm />);
 
-Login.propTypes = {
-    loginUser: PropTypes.func.isRequired,
-    user: PropTypes.object.isRequired,
-    UI: PropTypes.object.isRequired
-}
+// Login.propTypes = {
+//     loginUser: PropTypes.func.isRequired,
+//     user: PropTypes.object.isRequired,
+//     UI: PropTypes.object.isRequired
+// }
 
 const mapStateToProps = (state) => ({
     user: state.user,
@@ -90,4 +90,4 @@ const mapActionsToProps = {
     loginUser
 }
 
-export default connect(mapStateToProps, mapActionsToProps)(withRouter(Login));
+export default (withRouter(Login));
