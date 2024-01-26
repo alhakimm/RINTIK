@@ -185,7 +185,7 @@ const Navbar = () =>{
             <div className='bg-white p-8 rounded-md'>
               <div className='flex justify-between'>
                 <h2 className="text-2xl font-bold">Report</h2>
-                <button className="text-xl text-black" onClick={handlePopupReport}>
+                <button className="text-xl text-black" onClick={handleReportButtonClick}>
                   <RiCloseFill />
                 </button>
               </div>
