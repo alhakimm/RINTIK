@@ -9,37 +9,39 @@ export class PostCommunity extends Component {
     state = {
         posts: null
     }
-    componentDidMount(){
-        axios.get('http://localhost:5000/testingfirebase-3e0f7/us-central1/api/posts')
-            .then(res => {
-                console.log(res.data)
-                this.setState({
-                    posts: res.data
-                })
-            })
-            .catch(err => console.log(err))
-    }
 
-    //aku ubah sini utk upvote
-    handleUpvote = async (postId) => {
-      try {
-        // Send a request to backend to handle the upvote
-        const response = await axios.get(`http://localhost:5000/testingfirebase-3e0f7/us-central1/api/post/${postId}/upvote`);
-    
-        // Update the state to reflect the upvote
-        this.setState(prevState => ({
-          posts: prevState.posts.map(post => {
-            if (post.id === postId) {
-              // Use the updated upvote count from the backend
-              return { ...post, upvote: response.data.upvote };
-            }
-            return post;
+    componentDidMount() {
+      this.fetchPosts();
+  }
+
+  fetchPosts() {
+      axios.get('http://localhost:5000/testingfirebase-3e0f7/us-central1/api/posts')
+          .then(res => {
+              console.log(res.data);
+              this.setState({
+                  posts: res.data
+              });
           })
-        }));
-      } catch (error) {
-        console.error('Error upvoting post:', error);
-      }
-    }
+          .catch(err => console.log(err));
+  }
+
+  // untuk upvote tapi xjadi babi
+  handleUpvote = (postId) => {
+    axios.post(`http://localhost:5000/testingfirebase-3e0f7/us-central1/api/posts/upvotePost/${postId}`)
+        .then(res => {
+            console.log(res.data);
+
+            this.setState(prevState => ({
+                posts: prevState.posts.map(post => {
+                    if (post.postId === postId) {
+                        return { ...post, upvote: res.data.upvoteCount };
+                    }
+                    return post;
+                })
+            }));
+        })
+        .catch(err => console.log(err));
+}
 
   render() {
     let postFinder = this.state.posts ? (
@@ -51,8 +53,14 @@ export class PostCommunity extends Component {
           </div>
           <p className='mb-2'> {posts.body}</p>
           <div className='flex gap-2'>
-            <button className='border rounded-full flex items-center px-2 bg-blue-500 text-white'><FaRegComments className='mr-2'/> {posts.comments}</button>
-            <button className='border rounded-full flex items-center px-2 bg-blue-500 text-white' onClick={() => this.handleUpvote(posts.id)}><BiUpvote className='mr-2'/> {posts.upvote}</button>
+          <button className='border rounded-full flex items-center px-2 bg-blue-500 text-white'>
+                            <FaRegComments className='mr-2'/> {posts.comments}
+                        </button>
+                        <button
+                            className='border rounded-full flex items-center px-2 bg-blue-500 text-white'
+                            onClick={() => this.handleUpvote(posts.postId)}>
+                            <BiUpvote className='mr-2'/> {posts.upvote}
+                        </button>
           </div>
       </div>
     )) : <p>loading...</p>
