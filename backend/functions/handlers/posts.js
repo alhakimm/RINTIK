@@ -35,6 +35,9 @@ exports.writePost = (req, res) => {
         comments: 0
     };
 
+    let errors = {}
+    if (newPosts.body == '') errors.body = "must not be empty";
+
     db
         .collection('posts')
         .add(newPosts)

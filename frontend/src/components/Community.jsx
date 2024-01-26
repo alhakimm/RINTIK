@@ -30,7 +30,8 @@ const Community = () => {
     // };
 
     const [postForm, setPostForm] = useState({
-      body: ""
+      body: "",
+      errors: {}
     });
 
     const handleChange = (event) => {
@@ -42,14 +43,14 @@ const Community = () => {
     }
 
     const handlePostSubmit = () => {
-      console.log("post submitted:", postForm)
 
       axios.post('http://localhost:5000/testingfirebase-3e0f7/us-central1/api/post', postForm)
         .then(response => {
           console.log(response.data);
+          console.log("post submitted:", postForm)
         })
-        .catch(error => {
-          alert(error.response.data)
+        .catch(errors => {
+          alert(errors.response.data)
         })
     }
 
@@ -57,6 +58,7 @@ const Community = () => {
 
   return (
     <div>
+      {/* const {errors} = postForm.state */}
       <div className='bg-blue-500 w-full flex px-20 justify-between h-full gap-2'>
         <div className='grid grid-cols-5 flex-1 mt-6'>
           <div className='w-full col-span-1 pr-6'>
