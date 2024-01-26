@@ -165,62 +165,65 @@ const Navbar = () =>{
 
                 {/* Pop-up menu on Report Button click */}
                 {showReportMenu && (
-          <div className='absolute top-full left-1/2 transform -translate-x-1/2 w-80 bg-white p-4 rounded-md border border-gray-300'>
-            <div className="mb-4">
-              <label htmlFor="name">Name:</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={reportForm.name}
-                onChange={handleInputChange}
-              />
+          <div>
+            <div>
+                <div className="mb-4">
+                  <label htmlFor="name">Name:</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={reportForm.name}
+                    onChange={handleInputChange}
+                  />
+                </div>
+                <div className="mb-4">
+                  <label htmlFor="location">Location:</label>
+                  <input
+                    type="text"
+                    id="location"
+                    name="location"
+                    value={reportForm.location}
+                    onChange={handleInputChange}
+                  />
+                </div>
+                <div className="mb-4">
+                  <label htmlFor="description">Description:</label>
+                  <textarea
+                    id="description"
+                    name="description"
+                    value={reportForm.description}
+                    onChange={handleInputChange}
+                  ></textarea>
+                </div>
+                <div className="mb-4">
+                  <label htmlFor="category">Category:</label>
+                  <input
+                    type="text"
+                    id="category"
+                    name="category"
+                    value={reportForm.category}
+                    onChange={handleInputChange}
+                  />
+                </div>
+                <div className="mb-4">
+                  <label htmlFor="priority">Priority:</label>
+                  <input
+                    type="text"
+                    id="priority"
+                    name="priority"
+                    value={reportForm.priority}
+                    onChange={handleInputChange}
+                  />
+                </div>
+                <button
+                  className='px-4 py-2 bg-[#BA1200] text-white rounded-md'
+                  onClick={handleReportSubmit}
+                >
+                  Submit Report
+                </button>
             </div>
-            <div className="mb-4">
-              <label htmlFor="location">Location:</label>
-              <input
-                type="text"
-                id="location"
-                name="location"
-                value={reportForm.location}
-                onChange={handleInputChange}
-              />
-            </div>
-            <div className="mb-4">
-              <label htmlFor="description">Description:</label>
-              <textarea
-                id="description"
-                name="description"
-                value={reportForm.description}
-                onChange={handleInputChange}
-              ></textarea>
-            </div>
-            <div className="mb-4">
-              <label htmlFor="category">Category:</label>
-              <input
-                type="text"
-                id="category"
-                name="category"
-                value={reportForm.category}
-                onChange={handleInputChange}
-              />
-            </div>
-            <div className="mb-4">
-              <label htmlFor="priority">Priority:</label>
-              <input
-                type="text"
-                id="priority"
-                name="priority"
-                value={reportForm.priority}
-                onChange={handleInputChange}
-              />
-            </div>
-            <button
-              className='px-4 py-2 bg-[#BA1200] text-white rounded-md'
-              onClick={handleReportSubmit}
-            >
-              Submit Report
-            </button>
+
           </div>
         )}
 
