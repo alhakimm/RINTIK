@@ -32,7 +32,7 @@ class Signup extends Component {
         axios.post('http://localhost:5000/testingfirebase-3e0f7/us-central1/api/signup', newUserData)
          .then(res => {
             console.log(res.data)
-            localStorage.setItem('FBIdToken', `Bearer ${res.data.token}`)
+            localStorage.setItem('FBIdToken', `Bearer ${res.data}`)
             console.log(localStorage)
             this.setState({
                 loading: false

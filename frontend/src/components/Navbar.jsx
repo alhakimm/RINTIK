@@ -6,6 +6,7 @@ import logo from '../assets/logo.png';
 import axios from 'axios';
 import { Link, useLocation } from "react-router-dom";
 import ReportModal from './ReportModal';
+import PropTypes from 'prop-types'
 import { RiCloseFill } from "react-icons/ri";
 
 const Navbar = () =>{
@@ -106,7 +107,7 @@ const Navbar = () =>{
             const formData = new FormData();
             formData.append('image', selectedImage);
 
-            fetch('/uploadImage', {
+            fetch('http://localhost:5000/testingfirebase-3e0f7/us-central1/api/user/image', {
                 method: 'POST',
                 body: formData,
             })
@@ -121,9 +122,17 @@ const Navbar = () =>{
         }
     };
 
+    // const image = {
+    //   user: {
+    //     credentials: {imageUrl}
+    //   }
+      
+    // } 
+    // console.log(image)
+
     return(
         <nav className='p-5 flex items-center max-w-600 mx-auto border-b border-solid border-gray-300 bg-white'>
-            <img className='w-[10%] h-full' src={logo} alt="logo" />
+            <img className='w-[10%] h-full' src={logo} alt="user image" />
                 <div className='flex items-center ml-auto'>
                 <ul className='pr-4 ml-auto flex'>
                         <li>
