@@ -154,16 +154,17 @@ const Navbar = () =>{
                {/* New REPORT Button*/}     
                     {/* <ReportModal visible={showMyModal} /> */}
 
-            {/*REPORT Button*/}
-            <div className='relative'>
-                <button
-                    className='rounded-lg mr-6 px-6 py-2 bg-[#BA1200] font-bold text-white transition duration-300 hover:bg-white hover:text-[#BA1200] ease-in-out'
-                    onClick={handleReportButtonClick}
-                    >
-                    Report
-                </button>
-                        {/* Pop-up menu on Report Button click */}
-        {showReportMenu && (
+      {/* REPORT Button */}
+      <div className='relative'>
+        <button
+          className='rounded-lg mr-6 px-6 py-2 bg-[#BA1200] font-bold text-white transition duration-300 hover:bg-white hover:text-[#BA1200] ease-in-out'
+          onClick={handleReportButtonClick}
+        >
+          Report
+        </button>
+
+                {/* Pop-up menu on Report Button click */}
+                {showReportMenu && (
           <div className='absolute top-full left-1/2 transform -translate-x-1/2 w-80 bg-white p-4 rounded-md border border-gray-300'>
             <div className="mb-4">
               <label htmlFor="name">Name:</label>
@@ -222,6 +223,7 @@ const Navbar = () =>{
             </button>
           </div>
         )}
+
             </div>
             {/*END REPORT Button*/}
                 <IoPersonCircleSharp size={45} onClick={handleProfile}/>
@@ -245,15 +247,15 @@ const Navbar = () =>{
 {/* View Report History Button */}
 <div className='relative'>
         <button
-          className='rounded-lg mr-6 px-6 py-2 bg-[#BA1200] font-bold text-white transition duration-300 hover:bg-white hover:text-[#BA1200] ease-in-out'
-          onClick={handleReportButtonClick}
+          className='w-[75%] flex justify-center items-center rounded-3xl shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200'
+          onClick={handleViewReportHistory}
         >
-          Report
+          View Report History
         </button>
 
-        {/* Pop-up menu on Report Button click */}
-        {showReportMenu && (
-          <div className='flex items-center justify-center w-80 bg-white p-4 rounded-md border border-gray-300'>
+        {/* Pop-up for Report History */}
+        {showReportHistory && (
+          <div className='fixed top-0 left-0 w-full h-full flex items-center justify-center bg-gray-800 bg-opacity-50'>
             <div className='bg-white p-8 rounded-md'>
               {selectedReport ? (
                 <div>
