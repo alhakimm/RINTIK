@@ -46,6 +46,18 @@ const Navbar = () =>{
     };
 
     const handleReportSubmit = () => {
+      if (
+        reportForm.name.trim() === '' ||
+        reportForm.location.trim() === '' ||
+        reportForm.description.trim() === '' ||
+        reportForm.category.trim() === '' ||
+        reportForm.priority.trim() === ''
+      ) {
+        // Display an error message or take appropriate action
+        alert('Please fill in all required fields.');
+        return;
+      }
+
       axios
         .post('http://localhost:5000/testingfirebase-3e0f7/us-central1/addReports', reportForm)
         .then(response => {
