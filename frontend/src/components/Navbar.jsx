@@ -20,7 +20,38 @@ const Navbar = () =>{
     //   setShowModal(false);
     // };
 
-    // Report
+    // Submit Report
+    const [showReportMenu, setShowReportMenu] = useState(false); // for showing the report menu
+    const [reportForm, setReportForm] = useState({
+      name: "",
+      location: "",
+      description: "",
+      category: "",
+      priority: "",
+    });
+
+    const handleReportButtonClick = () => {
+      setShowReportMenu(!showReportMenu);
+    };
+  
+    const handleInputChange = (e) => {
+      const { name, value } = e.target;
+      setReportForm({
+        ...reportForm,
+        [name]: value,
+      });
+    };
+
+    const handleReportSubmit = () => {
+      // You can handle the report submission logic here
+      // Use the values in reportForm to send the report data to your server or perform other actions
+      console.log("Report submitted:", reportForm);
+  
+      // Close the pop-up menu after submitting the report
+      setShowReportMenu(false);
+    };
+
+    // Report History, getReports
     const {data: reportList, isLoading, error} = useFetch("http://localhost:5000/testingfirebase-3e0f7/us-central1/getReports");
 
     const [showReportHistory, setShowReportHistory] = useState(false); // when selecting viewhistorybutton
@@ -127,28 +158,70 @@ const Navbar = () =>{
             <div className='relative'>
                 <button
                     className='rounded-lg mr-6 px-6 py-2 bg-[#BA1200] font-bold text-white transition duration-300 hover:bg-white hover:text-[#BA1200] ease-in-out'
+                    onClick={handleReportButtonClick}
                     >
                     Report
                 </button>
-                {/* <button className='bg-red-500'>Report</button> */}
-                {/* Pop-up message on mouse hover on the Report button */}
-                {/* {displayMessage && (
-                    <div className='absolute top-full left-1/2 transform -translate-x-1/2 w-40 h-30 bg-white bg-opacity-80 text-black text-sm font-10 border border-gray-300 p-2 rounded-md transition duration-300 ease-in-out'>
-                    Lodge a report on water accessibility issues to your local authority
-                    </div>
-                )} */}
-
-                {/* Modal */}
-                {/* {showModal && (
-                    <div className='fixed top-0 left-0 w-full h-full flex items-center justify-center'>
-                    <div className='absolute top-full left-1/2 transform -translate-x-1/2 w-80 h-60 bg-red-400 text-black text-sm font-10 border border-gray-300 p-4 rounded-md'>
-                        <p>Your modal content goes here.</p>
-                        <button className='mt-4 px-4 py-2 bg-[#BA1200] text-red-600 rounded-md' onClick={closeModal}>
-                        Close
-                        </button>
-                    </div>
-                    </div>
-                )} */}
+                        {/* Pop-up menu on Report Button click */}
+        {showReportMenu && (
+          <div className='absolute top-full left-1/2 transform -translate-x-1/2 w-80 bg-white p-4 rounded-md border border-gray-300'>
+            <div className="mb-4">
+              <label htmlFor="name">Name:</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                value={reportForm.name}
+                onChange={handleInputChange}
+              />
+            </div>
+            <div className="mb-4">
+              <label htmlFor="location">Location:</label>
+              <input
+                type="text"
+                id="location"
+                name="location"
+                value={reportForm.location}
+                onChange={handleInputChange}
+              />
+            </div>
+            <div className="mb-4">
+              <label htmlFor="description">Description:</label>
+              <textarea
+                id="description"
+                name="description"
+                value={reportForm.description}
+                onChange={handleInputChange}
+              ></textarea>
+            </div>
+            <div className="mb-4">
+              <label htmlFor="category">Category:</label>
+              <input
+                type="text"
+                id="category"
+                name="category"
+                value={reportForm.category}
+                onChange={handleInputChange}
+              />
+            </div>
+            <div className="mb-4">
+              <label htmlFor="priority">Priority:</label>
+              <input
+                type="text"
+                id="priority"
+                name="priority"
+                value={reportForm.priority}
+                onChange={handleInputChange}
+              />
+            </div>
+            <button
+              className='px-4 py-2 bg-[#BA1200] text-white rounded-md'
+              onClick={handleReportSubmit}
+            >
+              Submit Report
+            </button>
+          </div>
+        )}
             </div>
             {/*END REPORT Button*/}
                 <IoPersonCircleSharp size={45} onClick={handleProfile}/>
@@ -172,15 +245,15 @@ const Navbar = () =>{
 {/* View Report History Button */}
 <div className='relative'>
         <button
-          className='w-[75%] flex justify-center items-center rounded-3xl shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200'
-          onClick={handleViewReportHistory}
+          className='rounded-lg mr-6 px-6 py-2 bg-[#BA1200] font-bold text-white transition duration-300 hover:bg-white hover:text-[#BA1200] ease-in-out'
+          onClick={handleReportButtonClick}
         >
-          View Report History
+          Report
         </button>
 
-        {/* Pop-up for Report History */}
-        {showReportHistory && (
-          <div className='fixed top-0 left-0 w-full h-full flex items-center justify-center bg-gray-800 bg-opacity-50'>
+        {/* Pop-up menu on Report Button click */}
+        {showReportMenu && (
+          <div className='flex items-center justify-center w-80 bg-white p-4 rounded-md border border-gray-300'>
             <div className='bg-white p-8 rounded-md'>
               {selectedReport ? (
                 <div>
