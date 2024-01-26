@@ -46,20 +46,15 @@ const Navbar = () =>{
     };
 
     const handleReportSubmit = () => {
-      // Use the values in reportForm to send the report data to your server or perform other actions
-      console.log("Report submitted:", reportForm);
-
-      // Make a POST request to your backend endpoint using Axios
-      axios.post('http://localhost:5000/testingfirebase-3e0f7/us-central1/addReports', reportForm)
+      axios
+        .post('http://localhost:5000/testingfirebase-3e0f7/us-central1/addReports', reportForm)
         .then(response => {
-          console.log(response.data); // Log the response from the server
-          // Close the pop-up menu after submitting the report
+          console.log(response.data);
           setShowReportMenu(false);
         })
         .catch(error => {
           console.error("Error submitting report:", error);
-          // Handle errors as needed
-        });
+        })
     };
 
     // Report History, getReports
@@ -231,29 +226,34 @@ const Navbar = () =>{
                     className='w-full resize-none border-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'
                   ></textarea>
                 </div>
-                {/* <div className="mb-4 flex gap-2">
-                  <label htmlFor="category">Category:</label>
-                  <input
-                    id="category"
-                    name="category"
-                    value={reportForm.category}
-                    onChange={handleInputChange}
-                    multiple
-                    className='w-full resize-none border-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'
-                  />
-                  
-                </div> */}
+                <div className="mb-4 flex gap-2">
+                <label htmlFor="category">Category:</label>
+                <select
+                  id="category"
+                  name="category"
+                  value={reportForm.category}
+                  onChange={handleInputChange}
+                  className='w-full border-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'
+                >
+                  <option value="Dirty Water">Dirty Water</option>
+                  <option value="Raised Water Level">Raised Water Level</option>
+                  <option value="Water Quality">Water Quality</option>
+                  <option value="Water Shortage">Water Shortage</option>
+                </select>
+              </div>
                 <div className="mb-4 flex gap-2">
                   <label htmlFor="priority">Priority:</label>
-                  <input
-                    type="text"
+                  <select
                     id="priority"
                     name="priority"
                     value={reportForm.priority}
                     onChange={handleInputChange}
-                    className='w-full resize-none border-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'
-                  />
-                </div>
+                    className='w-full border-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'
+                  >
+                    <option value="Low Urgency">Low Urgency</option>
+                    <option value="High Urgency">High Urgency</option>
+                  </select>
+                </div>  
                 <button
                   className='px-4 py-2 bg-[#BA1200] text-white rounded-md w-full'
                   onClick={handleReportSubmit}
