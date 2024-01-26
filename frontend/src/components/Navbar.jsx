@@ -233,11 +233,6 @@ const Navbar = () =>{
                     multiple
                     className='w-full resize-none border-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'
                   >
-                    {/* Options go here */}
-                    <option value="option1">Option 1</option>
-                    <option value="option2">Option 2</option>
-                    <option value="option3">Option 3</option>
-                    {/* Add more options as needed */}
                   </select>
                 </div>
                 <div className="mb-4 flex gap-2">
