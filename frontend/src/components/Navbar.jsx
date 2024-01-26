@@ -3,6 +3,7 @@ import { useState } from 'react'
 import useFetch from "./useFetch";
 import { IoPersonCircleSharp } from "react-icons/io5"
 import logo from '../assets/logo.png';
+import axios from 'axios';
 import { Link, useLocation } from "react-router-dom";
 import ReportModal from './ReportModal';
 
@@ -46,9 +47,18 @@ const Navbar = () =>{
       // You can handle the report submission logic here
       // Use the values in reportForm to send the report data to your server or perform other actions
       console.log("Report submitted:", reportForm);
-  
-      // Close the pop-up menu after submitting the report
-      setShowReportMenu(false);
+
+      // Make a POST request to your backend endpoint using Axios
+      axios.post('http://localhost:5000/testingfirebase-3e0f7/us-central1/addReports', reportForm)
+        .then(response => {
+          console.log(response.data); // Log the response from the server
+          // Close the pop-up menu after submitting the report
+          setShowReportMenu(false);
+        })
+        .catch(error => {
+          console.error("Error submitting report:", error);
+          // Handle errors as needed
+        });
     };
 
     // Report History, getReports
