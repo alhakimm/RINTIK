@@ -6,7 +6,7 @@ const app = express();
 const FBAuth = require('./util/FBAuth');
 
 const {getAllPosts, writePost, getPost, commentOnPost, upvotePost, unUpvotePost, deletePost} = require('./handlers/posts');
-const {signup, login, uploadImage, addUserDetails/*, getUserProfile, getUserDetails*/} = require('./handlers/users');
+const {signup, login, uploadImage, addUserDetails, getUserProfile/*, getUserDetails*/} = require('./handlers/users');
 const {getPlumbers, /*regPlumbers*/} = require('./handlers/plumber');
 const {getReports, addReports} = require('./handlers/report')
 const {initializeArticles, getArticles} = require('./handlers/articles');
@@ -27,7 +27,7 @@ app.post('/signup', signup);
 app.post('/login', login);
 app.post('/user/image', FBAuth, uploadImage);
 app.post('/user', FBAuth, addUserDetails);
-// app.get('/user', FBAuth, getUserProfile);
+app.get('/user', FBAuth, getUserProfile);
 // app.get('/user/:username', getUserDetails);
 
 //Articles for Education Page

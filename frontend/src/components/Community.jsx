@@ -8,6 +8,7 @@ import AutoscrollNews from './AutoscrollNews';
 import JoinedGroup from './JoinedGroup';
 import Weather from './Weather';
 import Alert from './Alert';
+import axios from 'axios';
 
 const Community = () => {
 
@@ -28,6 +29,32 @@ const Community = () => {
     //   }
     // };
 
+    const [postForm, setPostForm] = useState({
+      body: ""
+    });
+
+    const handleChange = (event) => {
+      const { name, value } = event.target
+      setPostForm({
+        ...postForm,
+        [name]: value,
+      })
+    }
+
+    const handlePostSubmit = () => {
+      console.log("post submitted:", postForm)
+
+      axios.post('http://localhost:5000/testingfirebase-3e0f7/us-central1/api/post', postForm)
+        .then(response => {
+          console.log(response.data);
+        })
+        .catch(error => {
+          alert(error.response.data)
+        })
+    }
+
+    
+
   return (
     <div>
       <div className='bg-blue-500 w-full flex px-20 justify-between h-full gap-2'>
@@ -42,8 +69,8 @@ const Community = () => {
             <div className="bg-white rounded-3xl shadow-md w-full p-4 mb-4">
               <div className='flex items-center'>
                 <IoPersonCircleSharp size={40} className='mr-2 text-blue-500' />
-                <textarea name="" id="" placeholder='Post your twit here' className='w-full resize-none border-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'></textarea>
-                <button className='text-blue-500 p-2'><FaTelegramPlane size={20}/></button>
+                <input name="body" id="body" value={postForm.body} onChange={handleChange} placeholder='Post your twit here' className='w-full h-[35px] resize-none border-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'/>
+                <button onClick={handlePostSubmit} className='text-blue-500 p-2'><FaTelegramPlane size={20}/></button>
               </div>
             </div>
             

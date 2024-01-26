@@ -10,35 +10,43 @@ import PlumberMenu from "./components/Plumber Menu";
 import Map from "./components/Map";
 import Login from "./components/login";
 import Signup from "./components/Signup";
+import AuthRoute from './util/AuthRoute';
 
 //redux
 import { Provider } from "react-redux";
-// import store from './redux/store';
+import store from './redux/store';
+import { logOutUser, getUserData } from "./redux/actions/userAction";
 
 // import Report from "./components/Report";
 
-// const token = localStorage.FBIdToken;
-// if(token){
-//   const decodedToken = jwtDecode(token);
-//   if(decodedToken.exp * 1000 < Date.now()){
-//     window.location.href = '/';
-//     authenticated = false;
-//   } else {
-//     authenticated = true;
-//   }
-// }
+let authenticated;
+const token = localStorage.FBIdToken;
+console.log(token)
+if(token){
+  const decodedToken = jwtDecode(token);
+  console.log(decodedToken)
+  console.log(Date.now())
+  if(decodedToken.exp * 1000 < Date.now()){
+    localStorage.removeItem('FBIdToken')
+    delete axios.defaults.headers.common['Authorization']
+    window.location.href = '/';
+  } else {
+    authenticated = true;
+  }
+}
+
 
 function App() {
   return (
-    // <Provider store={store}>
+    <Provider store={store}>
       <Router>
       <div>
         <Navbar />
         <Switch>
-          <Route exact path="/">
+          <Route exact path="/" component={Login} >
             <Login />
           </Route>
-          <Route path="/signup">
+          <Route path="/signup" component={Signup}  >
             <Signup />
           </Route>
           <Route path="/community">
@@ -60,7 +68,7 @@ function App() {
       </div>
     </Router>
 
-    // </Provider>
+     </Provider>
     
   );
 }
