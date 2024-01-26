@@ -231,18 +231,18 @@ const Navbar = () =>{
                     className='w-full resize-none border-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'
                   ></textarea>
                 </div>
-                <div className="mb-4 flex gap-2">
+                {/* <div className="mb-4 flex gap-2">
                   <label htmlFor="category">Category:</label>
-                  <select
+                  <input
                     id="category"
                     name="category"
                     value={reportForm.category}
                     onChange={handleInputChange}
                     multiple
                     className='w-full resize-none border-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'
-                  >
-                  </select>
-                </div>
+                  />
+                  
+                </div> */}
                 <div className="mb-4 flex gap-2">
                   <label htmlFor="priority">Priority:</label>
                   <input
