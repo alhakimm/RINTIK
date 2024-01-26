@@ -119,8 +119,9 @@ exports.getUserProfile = (req, res) => {
         .then(doc => {
             if (doc.exists){
                 userData.credentials = doc.data();
+                console.log(userData.credentials)
                 return db.collection('likes').where('username', '==', req.user.username).get();
-            }
+            } 
         })
         .then(data => {
             userData.likes = [];

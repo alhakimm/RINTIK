@@ -1,8 +1,13 @@
 import { Button } from '@material-tailwind/react';
 import React, { Component } from 'react'
-import axios from 'axios';
+// import axios from 'axios';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import { withRouter } from 'react-router'
+import PropTypes from 'prop-types'
+
+//redux
+import { connect } from 'react-redux';
+import { loginUser } from '../redux/actions/userAction';
 
 // import ReactDOM from 'react-dom'
 
@@ -25,23 +30,7 @@ class Login extends Component {
             email: this.state.email,
             password: this.state.password
         }
-        axios.post('http://localhost:5000/testingfirebase-3e0f7/us-central1/api/login', userData)
-         .then(res => {
-            console.log(res.data)
-            localStorage.setItem('FBIdToken', `Bearer ${res.data.token}`)
-            this.setState({
-                loading: false
-            });
-            this.props.history.push('/community')
-         })
-         .catch(err => {
-            console.log(err.response.data)
-            alert("Email " + err.response.data.email +"        "+ "Password " + err.response.data.password)
-            this.setState({
-                errors: err.response.data,
-                loading: false
-            })
-         })
+        this.props.loginUser(userData, this.props.history)
     }
     handleChange = (event) => {
         this.setState({
@@ -49,8 +38,8 @@ class Login extends Component {
         })
     }
     render() {
-        // const {classes} = this.props
-        const {errors, loading} = this.state
+        const {classes, UI: {loading}} = this.props
+        const {errors} = this.state
         return (
             <div className='bg-blue-500 w-full h-screen flex items-center justify-center'>
                 <div className='max-w-[600px] bg-blue-300 p-6 rounded-xl'>
@@ -85,4 +74,20 @@ class Login extends Component {
 
 // const root = ReactDOM.createRoot(document.getElementById('root'));
 // root.render(<MyForm />);
-export default withRouter(Login);
+
+Login.propTypes = {
+    loginUser: PropTypes.func.isRequired,
+    user: PropTypes.object.isRequired,
+    UI: PropTypes.object.isRequired
+}
+
+const mapStateToProps = (state) => ({
+    user: state.user,
+    UI: state.UI
+})
+
+const mapActionsToProps = {
+    loginUser
+}
+
+export default connect(mapStateToProps, mapActionsToProps)(withRouter(Login));

@@ -6,6 +6,7 @@ import logo from '../assets/logo.png';
 import axios from 'axios';
 import { Link, useLocation } from "react-router-dom";
 import ReportModal from './ReportModal';
+import PropTypes from 'prop-types'
 import { RiCloseFill } from "react-icons/ri";
 
 const Navbar = () =>{
@@ -105,7 +106,7 @@ const Navbar = () =>{
             const formData = new FormData();
             formData.append('image', selectedImage);
 
-            fetch('/uploadImage', {
+            fetch('http://localhost:5000/testingfirebase-3e0f7/us-central1/api/user/image', {
                 method: 'POST',
                 body: formData,
             })
@@ -120,9 +121,17 @@ const Navbar = () =>{
         }
     };
 
+    // const image = {
+    //   user: {
+    //     credentials: {imageUrl}
+    //   }
+      
+    // } 
+    // console.log(image)
+
     return(
         <nav className='p-5 flex items-center max-w-600 mx-auto border-b border-solid border-gray-300 bg-white'>
-            <img className='w-[10%] h-full' src={logo} alt="logo" />
+            <img className='w-[10%] h-full' src={logo} alt="user image" />
                 <div className='flex items-center ml-auto'>
                 <ul className='pr-4 ml-auto flex'>
                         <li>
@@ -181,16 +190,16 @@ const Navbar = () =>{
                 {/* Pop-up menu on Report Button click */}
                 {showReportMenu && (
           <div className='fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black/80 bg-opacity-50'>
-            <div className='bg-white p-8 rounded-md'>
-              <div className='flex justify-between'>
-                <h2 className="text-2xl font-bold">Report</h2>
+            <div className='bg-blue-300 p-8 rounded-md'>
+              <div className='flex justify-between mb-4'>
+                <h2 className="text-2xl font-bold text-black underline">Report</h2>
                 <button className="text-xl text-black" onClick={handleReportButtonClick}>
                   <RiCloseFill />
                 </button>
               </div>
                   
 
-                <div className="mb-4">
+                <div className="mb-4 flex gap-2">
                   <label htmlFor="name">Name:</label>
                   <input
                     type="text"
@@ -198,9 +207,10 @@ const Navbar = () =>{
                     name="name"
                     value={reportForm.name}
                     onChange={handleInputChange}
+                    className='w-full resize-none border-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'
                   />
                 </div>
-                <div className="mb-4">
+                <div className="mb-4 flex gap-2">
                   <label htmlFor="location">Location:</label>
                   <input
                     type="text"
@@ -208,28 +218,32 @@ const Navbar = () =>{
                     name="location"
                     value={reportForm.location}
                     onChange={handleInputChange}
+                    className='w-full resize-none border-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'
                   />
                 </div>
-                <div className="mb-4">
+                <div className="mb-4 flex flex-col gap-2">
                   <label htmlFor="description">Description:</label>
                   <textarea
                     id="description"
                     name="description"
                     value={reportForm.description}
                     onChange={handleInputChange}
+                    className='w-full resize-none border-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'
                   ></textarea>
                 </div>
-                <div className="mb-4">
+                <div className="mb-4 flex gap-2">
                   <label htmlFor="category">Category:</label>
-                  <input
-                    type="text"
+                  <select
                     id="category"
                     name="category"
                     value={reportForm.category}
                     onChange={handleInputChange}
-                  />
+                    multiple
+                    className='w-full resize-none border-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'
+                  >
+                  </select>
                 </div>
-                <div className="mb-4">
+                <div className="mb-4 flex gap-2">
                   <label htmlFor="priority">Priority:</label>
                   <input
                     type="text"
@@ -237,10 +251,11 @@ const Navbar = () =>{
                     name="priority"
                     value={reportForm.priority}
                     onChange={handleInputChange}
+                    className='w-full resize-none border-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'
                   />
                 </div>
                 <button
-                  className='px-4 py-2 bg-[#BA1200] text-white rounded-md'
+                  className='px-4 py-2 bg-[#BA1200] text-white rounded-md w-full'
                   onClick={handleReportSubmit}
                 >
                   Submit Report
