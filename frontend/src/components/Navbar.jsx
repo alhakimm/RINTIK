@@ -45,7 +45,6 @@ const Navbar = () =>{
     };
 
     const handleReportSubmit = () => {
-      // You can handle the report submission logic here
       // Use the values in reportForm to send the report data to your server or perform other actions
       console.log("Report submitted:", reportForm);
 

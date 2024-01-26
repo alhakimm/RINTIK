@@ -3,37 +3,61 @@ import {useState, useEffect} from 'react';
 import { Carousel, Typography, Button } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
 
+
 const Education = () => {
 
   const [materials, setMaterials] = useState([
-        {title: 'Water 4.0: The Past, Present, and Future of the World\'s Most Vital Resource', body: 'Explore Water 4.0, tracing the evolution of water management from its origins, assessing current challenges, to envisioning a sustainable future.', author: 'David Sedlak', id: 1, type:'Article'},
-        {title: 'Blue Future: Protecting Water for People and the Planet Forever', body: "lorem ipsum ching chong ling long", author: 'Maude Barlow', id: 2, type: 'Article'},
-        {title: 'The Big Thirst: The Secret Life and Turbulent Future of Water', body: "lorem ipsum ching chong ling long", author: 'Charles Fishman', id: 3, type: 'Article'},
-        {title: 'Cadillac Desert: The American West and Its Disappearing Water', body: "lorem ipsum ching chong ling long", author: 'Marc Reisner', id: 4, type: 'Article'},
-        {title: 'A Twenty-First Century US Water Policy', body: "lorem ipsum ching chong ling long", author: 'Juliet Christian-Smith, Peter H. Gleick, Heather Cooley, and Lucy Allen', id: 5, type: 'Article'},
-        {title: 'Water 4.0: The Past, Present, and Future of the World\'s Most Vital Resource', body: "lorem ipsum ching chong ling long", author: 'David Sedlak', id: 6, type:'Article'},
-        {title: 'Blue Future: Protecting Water for People and the Planet Forever', body: "lorem ipsum ching chong ling long", author: 'Maude Barlow', id: 7, type: 'Article'},
-        {title: 'The Big Thirst: The Secret Life and Turbulent Future of Water', body: "lorem ipsum ching chong ling long", author: 'Charles Fishman', id: 8, type: 'Article'},
-        {title: 'Cadillac Desert: The American West and Its Disappearing Water', body: "lorem ipsum ching chong ling long", author: 'Marc Reisner', id: 9, type: 'Article'},
-        {title: 'A Twenty-First Century US Water Policy', body: "lorem ipsum ching chong ling long", author: 'Juliet Christian-Smith, Peter H. Gleick, Heather Cooley, and Lucy Allen', id: 10, type: 'Article'},
-        {title: 'Water 4.0: The Past, Present, and Future of the World\'s Most Vital Resource', body: "lorem ipsum ching chong ling long", author: 'David Sedlak', id: 11, type:'Article'},
-        {title: 'Blue Future: Protecting Water for People and the Planet Forever', body: "lorem ipsum ching chong ling long", author: 'Maude Barlow', id: 12, type: 'Article'},
-        {title: 'The Big Thirst: The Secret Life and Turbulent Future of Water', body: "lorem ipsum ching chong ling long", author: 'Charles Fishman', id: 13, type: 'Article'},
-        {title: 'Cadillac Desert: The American West and Its Disappearing Water', body: "lorem ipsum ching chong ling long", author: 'Marc Reisner', id: 14, type: 'Article'},
-        {title: 'A Twenty-First Century US Water Policy', body: "lorem ipsum ching chong ling long", author: 'Juliet Christian-Smith, Peter H. Gleick, Heather Cooley, and Lucy Allen', id: 15, type: 'Article'},
-        {title: 'Water 4.0: The Past, Present, and Future of the World\'s Most Vital Resource', body: "lorem ipsum ching chong ling long", author: 'David Sedlak', id: 16, type:'Article'},
-        {title: 'Blue Future: Protecting Water for People and the Planet Forever', body: "lorem ipsum ching chong ling long", author: 'Maude Barlow', id: 17, type: 'Article'},
-        {title: 'The Big Thirst: The Secret Life and Turbulent Future of Water', body: "lorem ipsum ching chong ling long", author: 'Charles Fishman', id: 18, type: 'Article'},
-        {title: 'Cadillac Desert: The American West and Its Disappearing Water', body: "lorem ipsum ching chong ling long", author: 'Marc Reisner', id: 19, type: 'Article'},
-        {title: 'A Twenty-First Century US Water Policy', body: "lorem ipsum ching chong ling long", author: 'Juliet Christian-Smith, Peter H. Gleick, Heather Cooley, and Lucy Allen', id: 20, type: 'Article'},
-        {title: 'Water 4.0: The Past, Present, and Future of the World\'s Most Vital Resource', body: "lorem ipsum ching chong ling long", author: 'David Sedlak', id: 21, type:'Article'},
-        {title: 'Blue Future: Protecting Water for People and the Planet Forever', body: "lorem ipsum ching chong ling long", author: 'Maude Barlow', id: 22, type: 'Article'},
-        {title: 'The Big Thirst: The Secret Life and Turbulent Future of Water', body: "lorem ipsum ching chong ling long", author: 'Charles Fishman', id: 23, type: 'Article'},
-        {title: 'Cadillac Desert: The American West and Its Disappearing Water', body: "lorem ipsum ching chong ling long", author: 'Marc Reisner', id: 24, type: 'Article'},
-        {title: 'A Twenty-First Century US Water Policy', body: "lorem ipsum ching chong ling long", author: 'Juliet Christian-Smith, Peter H. Gleick, Heather Cooley, and Lucy Allen', id: 25, type: 'Article'},
+        {title: 'Imminent risk of a global water crisis, warns the UN World Water Development Report 2023', 
+        body: 'The report states that between two and three billion people worldwide experience water shortages, and these shortages will worsen in the coming decades, especially in cities, if international cooperation in this area is not boosted. The report also highlights that globally, 2 billion people (26% of the population) do not have safe drinking water and 3.6 billion (46%) lack access to safely managed sanitation 1.', 
+        author: 'UNESCO', 
+        id: "https://www.unesco.org/en/articles/imminent-risk-global-water-crisis-warns-un-world-water-development-report-2023", 
+        type:'Report'},
+
+        {title: 'Water Stress: A Global Problem That’s Getting Worse', 
+        body: "lThis article from the Council on Foreign Relations discusses how water scarcity threatens the health and development of communities around the globe. It also highlights how climate change is intensifying the problem, pushing governments to find more innovative, collaborative ways to address water stress.", 
+        author: 'Claire Klobucista and Kali Robinson', 
+        id: "https://www.cfr.org/backgrounder/water-stress-global-problem-thats-getting-worse", 
+        type: 'Article'},
+
+        {title: 'The Water Crisis: Shortage, Problems, Solutions', 
+        body: "This article from the World Wildlife Fund discusses the causes and consequences of the global water crisis. It also highlights the importance of water conservation and sustainable water management practices.", 
+        author: 'World Wildlife Fund', 
+        id: "https://water.org/our-impact/water-crisis/", 
+        type: 'Article'},
+
+        {title: 'Water Scarcity: A threat to global security', 
+        body: "This article from the Brookings Institution discusses how water scarcity is a growing threat to global security. It also highlights how water scarcity can lead to conflict and instability, particularly in regions where water resources are shared across borders.", 
+        author: 'Peter Gleick', 
+        id: "https://www.nature.com/articles/d41586-023-03899-2", 
+        type: 'Article'},
+
+        {title: 'The Water Crisis is Worsening. Researchers must tackle it together', 
+        body: "It’s unacceptable that millions living in poverty still lack access to safe water and basic sanitation. Nature Water will help researchers to find a way forward.", 
+        author: 'Nature.com', 
+        id: "https://www.nature.com/articles/d41586-023-00182-2", 
+        type: 'Article'},
+
+        {title: 'The scarcity of water is emerging as a global economic threat. With China and India looking the most at risk', 
+        body: "Water scarcity is seen as the most significant and potentially most impactful component of the wider climate crisis, and researchers say that large Asian economies like India and China will be the most affected from these water shortages.", 
+        author: 'Charmaine Jacob', 
+        id: "https://www.cnbc.com/2023/06/13/water-scarcity-china-and-india-look-the-most-threatened-from-shortages.html", 
+        type: 'Article'},
+
+        {title: 'Water Rights and Water Fights: Preventing and Resolving Conflicts Before They Boil Over', 
+        body: "Scarcity of freshwater is an increasingly critical public health problem in many parts of the world. World leaders, including United Nations Secretary-General Ban Ki-moon, have urged that this issue be given high priority. Inadequate access to safe freshwater contributes to waterborne disease, malnutrition, poverty, economic and political instability, and conflict—potentially violent conflict—between countries or groups within countries.", 
+        author: 'Barry S. Levy, MD, MPH and Victor W. Sidel, MD', 
+        id: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3076402/", 
+        type: 'Article'},
+
+        {title: 'The Water Crisis: A health emergency', 
+        body: "This article from Water.org highlights how the water crisis is a health emergency. It discusses how nearly 1 million people die each year from water, sanitation, and hygiene-related diseases which could be reduced with access to safe water or sanitation.", 
+        author: 'Water.org', 
+        id: 5, 
+        type: 'Article'},
     ]);
 
     const [selectedMaterial, setSelectedMaterial] = useState(null);
+    const [searchQuery, setSearchQuery] = useState("");
 
   const handleMaterialClick = (material) => {
     setSelectedMaterial(material);
@@ -44,6 +68,10 @@ const Education = () => {
   };
 
     const MaterialPopup = ({ material }) => {
+      const handleReadOriginalPost = () => {
+        window.location.href = material.id;
+      };
+
       return (
         <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-70 flex items-center justify-center">
           <div className="bg-white p-6 rounded-lg max-w-md">
@@ -61,9 +89,9 @@ const Education = () => {
             >
               Close
             </Button>
-            <Link to={`/original-post/${material.id}`} className="text-blue-500 mt-2 block">
-              Read Original Post
-            </Link>
+            <button className="text-blue-500 mt-2 block" onClick={handleReadOriginalPost}>
+               Read Original Post
+            </button>
           </div>
         </div>
       );
@@ -84,14 +112,13 @@ const Education = () => {
                   variant="h1"
                   color="white"
                   className="mb-4 text-3xl md:text-4xl lg:text-4xl">
-                  Water outage in Penang!
+                  Water outage in Kota Bharu!
                 </Typography>
                 <Typography 
                   variant="paragraph"
                   color="white"
                   className="mb-12 opacity-80">
-                  Penang faces water outage crisis, impacting residents with shortages. Urgent measures needed for immediate relief and long-term water security.
-                  and renews..... <Link to="/" className="justify-center mt-4 rounded-xl custom-read-more-width flex transition duration-500 hover:font-bold hover:bg-blue-500">Read More</Link>
+                  Kota Bharu faces water outage crisis, impacting residents with shortages. Urgent measures needed for immediate relief and long-term water security.<Link to="/" className="justify-center mt-4 rounded-xl custom-read-more-width flex transition duration-500 hover:font-bold hover:bg-blue-500">Read More</Link>
                 </Typography>
                 
               </div>  
@@ -109,19 +136,14 @@ const Education = () => {
                   variant="h1"
                   color="white"
                   className="mb-4 text-3xl md:text-4xl lg:text-4xl">
-                  Water News
+                  Save Water Now
                 </Typography>
                 <Typography 
                   variant="paragraph"
                   color="white"
                   className="mb-12 opacity-80">
-                  It is not so much for its beauty that the forest makes a claim
-                  upon men&apos;s hearts, as for that subtle something, that quality
-                  of air that emanation from old trees, that so wonderfully changes
-                  and renews a weary spirit. It is not so much for its beauty that the forest makes a claim
-                  upon men&apos;s hearts, as for that subtle something, that quality
-                  of air that emanation from old trees, that so wonderfully changes
-                  and renews......<Link to="/" className="justify-center mt-4 rounded-xl custom-read-more-width flex transition duration-500 hover:font-bold hover:bg-blue-500">Read More</Link>
+                    Kota Bharu is currently scheduled to face a water crisis. Remember to start saving water from today to avoid any unwanted difficulties.
+                <Link to="/" className="justify-center mt-4 rounded-xl custom-read-more-width flex transition duration-500 hover:font-bold hover:bg-blue-500">Read More</Link>
                 </Typography>
               </div>
             </div>
@@ -138,19 +160,15 @@ const Education = () => {
                   variant="h1"
                   color="white"
                   className="mb-4 text-3xl md:text-4xl lg:text-4xl">
-                  Water News 2
+                  Scheduled Water Interruption in Kampung Penambang
                 </Typography>
                 <Typography 
                   variant="paragraph"
                   color="white"
                   className="mb-12 opacity-80">
-                  It is not so much for its beauty that the forest makes a claim
-                  upon men&apos;s hearts, as for that subtle something, that quality
-                  of air that emanation from old trees, that so wonderfully changes
-                  and renews a weary spirit. It is not so much for its beauty that the forest makes a claim
-                  upon men&apos;s hearts, as for that subtle something, that quality
-                  of air that emanation from old trees, that so wonderfully changes
-                  and renews.....<Link to="/" className="justify-center mt-4 rounded-xl custom-read-more-width flex transition duration-500 hover:font-bold hover:bg-blue-500">Read More</Link>
+                  Kampung Penambang is set to face a water supply interruption starting from 28th January 2024 to 30th January 2024. 
+                  Make all necessary preparations to face this crisis such as saving water for necessary use.
+                  <Link to="/" className="justify-center mt-4 rounded-xl custom-read-more-width flex transition duration-500 hover:font-bold hover:bg-blue-500">Read More</Link>
                 </Typography>
               </div>
             </div>
@@ -158,6 +176,11 @@ const Education = () => {
         </Carousel>
       );
   }
+
+    // Filter materials based on the searchQuery
+    const filteredMaterials = materials.filter((material) =>
+    material.title.toLowerCase().includes(searchQuery.toLowerCase())
+  );
 
   return (
     <div className='bg-gradient-to-b from-[#0A2236] to-[#15436E] w-full px-20 py-6 justify-between min-=h-screen gap-2'>
@@ -171,18 +194,11 @@ const Education = () => {
           <input
             type="text"
             placeholder="Search..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
             className="mt-6 border border-gray-300 bg-transparent h-10 py-5 px-4 pr-5 custom-search-bar-width rounded-lg text-sm text-white focus:outline-none"
           />
-          <button type="submit" className="mt-6 absolute p-2.5 ms-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-            <svg className="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-              <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
-            </svg>
-            <span className="sr-only">Search</span>
-          </button>
 
-          <div className='custom-bookmark-bar-width h-1/2 justify-start mt-4 rounded-lg border border-gray-300 p-4'>
-          {/* Bookmark bar */}
-        </div>
 
         </div>
 
@@ -203,14 +219,18 @@ const Education = () => {
           <div className="ml-4">
             <h2 className="text-white font-black text-5xl static">Educational Materials</h2>
             <div className="space-y-5">
-              {materials.map((material) => (
+              {filteredMaterials.map((material) => (
                 <div
                   className="p-4 pl-1 mb-5 border-b border-[#15436E] rounded-lg text-white hover:shadow-xl cursor-pointer"
                   key={material.id}
                   onClick={() => handleMaterialClick(material)}
                 >
-                  <h2 className="text-blue-200 mb-2 text-2xl transition duration-500 hover:font-bold hover:text-3xl">{material.title}</h2>
-                  <p className="text-xs">{material.type} | {material.author}</p>
+                  <h2 className="text-blue-200 mb-2 text-2xl transition duration-500 hover:font-bold hover:text-3xl">
+                    {material.title}
+                  </h2>
+                  <p className="text-xs">
+                    {material.type} | {material.author}
+                  </p>
                 </div>
               ))}
             </div>
