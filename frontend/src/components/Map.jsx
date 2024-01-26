@@ -13,7 +13,7 @@ const Map = () => {
 
   useEffect(() => {
     loader.load().then(async () => {
-      const center = { lat: 5.2632, lng: 100.4846 };
+      const center = { lat: 5.1151, lng: 101.8892 };
 
       const { Map } = await google.maps.importLibrary('maps');
       const {AdvancedMarkerElement} = await google.maps.importLibrary("marker");
