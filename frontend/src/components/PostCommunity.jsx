@@ -134,7 +134,7 @@ addComment = () => {
                         <button
                         className='border rounded-full flex items-center px-2 bg-blue-500 text-white'
                         onClick={() => this.handleDownvote(posts.postId)}>
-                        <BiDownvote className='mr-2'/> {posts.downvote}
+                        <BiDownvote className='mr-2'/> 
                         </button>
           </div>
       </div>
