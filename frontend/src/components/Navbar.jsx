@@ -216,7 +216,7 @@ const Navbar = () =>{
 
                 {/* Pop-up menu on Report Button click */}
                 {showReportMenu && (
-          <div className='fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black/80 bg-opacity-50'>
+          <div className='fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black/80 bg-opacity-50 z-[99]'>
             <div className='bg-blue-300 p-8 rounded-md'>
               <div className='flex justify-between mb-4'>
                 <h2 className="text-2xl font-bold text-black underline">Report</h2>
