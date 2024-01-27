@@ -7,7 +7,8 @@ import { BiUpvote, BiDownvote } from "react-icons/bi";
 
 export class PostCommunity extends Component {
     state = {
-        posts: null
+        posts: null,
+        selectedPost: null
     }
 
     componentDidMount() {
@@ -24,6 +25,22 @@ export class PostCommunity extends Component {
           })
           .catch(err => console.log(err));
   }
+
+    // click on post pop-up
+    handlePostClick = (postId) => {
+      axios.get(`http://localhost:5000/testingfirebase-3e0f7/us-central1/api/post/${postId}`)
+          .then(res => {
+              console.log("Response data:", res.data);
+              this.setState({
+                  selectedPost: res.data
+              });
+          })
+          .catch(err => console.log(err));
+  }
+
+    handleClosePopup = () => {
+        this.setState({ selectedPost: null });
+    }
 
     // utk update number of upvotes
     updatePostState = (postId, newUpvoteCount) => {
@@ -67,7 +84,7 @@ export class PostCommunity extends Component {
           </div>
           <p className='mb-2'> {posts.body}</p>
           <div className='flex gap-2'>
-          <button className='border rounded-full flex items-center px-2 bg-blue-500 text-white'>
+          <button className='border rounded-full flex items-center px-2 bg-blue-500 text-white' onClick={() => this.handlePostClick(posts.postId)}>
                             <FaRegComments className='mr-2'/> {posts.comments}
                         </button>
                         <button
@@ -84,12 +101,29 @@ export class PostCommunity extends Component {
       </div>
     )) : <p>loading...</p>
 
+    
     return (
-      <div className='flex flex-col'>
-         {postFinder}
+      <div className='flex flex-col items-center justify-center bg-blue-500 w-full px-20 py-6 min-h-screen gap-2'>
+                  {/* Post Finder */}
+                  <div className="custom-article-section-width custom-article-section-margin-left p-4 overflow-y-auto h-screen flex-1 col-span-2" style={{ scrollbarWidth: 'thin' }}>
+                      {postFinder}
+                  </div>
+
+
+          {/* Pop-up menu */}
+          {this.state.selectedPost && (
+              <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50">
+                  <div className="bg-white p-4 rounded-lg">
+                      <p>{this.state.selectedPost.body}</p>
+                      <div className="flex justify-end mt-4">
+                          <button onClick={this.handleClosePopup}>Close</button>
+                      </div>
+                  </div>
+              </div>
+          )}
       </div>
-    )
-  }
+  );
+}
 }
 
-export default PostCommunity
+export default PostCommunity;
