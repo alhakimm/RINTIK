@@ -266,7 +266,9 @@ const Navbar = () =>{
                   value={reportForm.category}
                   onChange={handleInputChange}
                   className='w-full border-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'
+                  defaultValue=""
                 >
+                  <option value="" disabled hidden>Select category</option>
                   <option value="Dirty Water">Dirty Water</option>
                   <option value="Raised Water Level">Raised Water Level</option>
                   <option value="Water Quality">Water Quality</option>
@@ -281,7 +283,9 @@ const Navbar = () =>{
                     value={reportForm.priority}
                     onChange={handleInputChange}
                     className='w-full border-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'
+                    defaultValue="" 
                   >
+                    <option value="" disabled hidden>Select urgency</option>
                     <option value="Low Urgency">Low Urgency</option>
                     <option value="High Urgency">High Urgency</option>
                   </select>
