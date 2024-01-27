@@ -51,6 +51,29 @@ export class PostCommunity extends Component {
       .catch(err => console.log(err));
 }
 
+addComment = () => {
+  const postId = this.state.selectedPost.postId;
+  const newCommentBody = document.getElementById('newComment').value.trim();
+
+  if (newCommentBody === '') {
+      alert('Comment must not be empty');
+      return;
+  }
+
+  axios.post(`http://localhost:5000/testingfirebase-3e0f7/us-central1/api/post/${postId}/comment`, { body: newCommentBody })
+      .then(res => {
+          console.log(res.data);
+          // Update state to reflect the new comment
+          this.setState(prevState => ({
+              selectedPost: {
+                  ...prevState.selectedPost,
+                  comments: prevState.selectedPost.comments ? [...prevState.selectedPost.comments, res.data] : [res.data]
+              }
+          }));
+      })
+      .catch(err => console.log(err));
+}
+
     handleClosePopup = () => {
         this.setState({ selectedPost: null });
     }
@@ -125,22 +148,31 @@ export class PostCommunity extends Component {
 
           {/* Pop-up menu */}
           {this.state.selectedPost && (
-              <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50">
-                  <div className="bg-white p-4 rounded-lg">
-                      <p>{this.state.selectedPost.body}</p>
-                      {this.state.selectedPost.comments && this.state.selectedPost.comments.map(comment => (
-                            <p key={comment.id}>{comment.body}</p>
-                        ))}
-                        <div>
-                          <input type="text" name="newComment" id="newComment" placeholder="Add a comment..." />
-                          <button onClick={()=>this.addComment()} >Submit</button>
+            <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50">
+                <div className="bg-white p-4 rounded-lg flex flex-col">
+                    <p>{this.state.selectedPost.body}</p>
+
+                    {this.state.selectedPost.comments && this.state.selectedPost.comments.map(comment => (
+
+                        <div key={comment.id} className="comment w-full gap-4">
+                          <div className='flex gap-4'>
+                            <p>{comment.username}</p>
+                            <p>{new Date(comment.createdAt._seconds * 1000).toLocaleDateString()}</p>
+                          </div>
+                            <p>{comment.body}</p>
                         </div>
-                        <div className="flex justify-end mt-4">
-                            <button onClick={this.handleClosePopup}>Close</button>
-                        </div>
+
+                    ))}
+                    <div>
+                        <input type="text" name="newComment" id="newComment" placeholder="Add a comment..." />
+                        <button onClick={()=>this.addComment()} >Submit</button>
+                    </div>
+                    <div className="flex justify-end mt-4">
+                        <button onClick={this.handleClosePopup}>Close</button>
                     </div>
                 </div>
-            )}
+            </div>
+        )}
         </div>
     );
 }
