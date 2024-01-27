@@ -60,7 +60,7 @@ const Map = () => {
         const marker = new google.maps.Marker({
           position: { lat: data.location._latitude, lng: data.location._longitude },
           map: map,
-          title: "Penang"
+          title: "Kota Bharu"
         });
 
         const infoWindow = new google.maps.InfoWindow({
