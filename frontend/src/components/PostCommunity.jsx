@@ -3,6 +3,8 @@ import axios from 'axios'
 import { IoPersonCircleSharp } from "react-icons/io5";
 import { FaRegComments } from "react-icons/fa";
 import { BiUpvote, BiDownvote } from "react-icons/bi";
+import { IoIosSend } from "react-icons/io";
+import { IoClose } from "react-icons/io5";
 
 
 export class PostCommunity extends Component {
@@ -149,35 +151,46 @@ addComment = () => {
 
           {/* Pop-up menu */}
           {this.state.selectedPost && (
-            <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50">
-                <div className="bg-white p-4 rounded-lg flex flex-col">
-                    <div>
-                    <p>{this.state.selectedPost.username}</p>
-                    <p>{this.state.selectedPost.body}</p>
+            <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black/80 z-[99]">
+                <div className="bg-white p-4 rounded-lg flex flex-col max-w-[40%] min-w-[40%]">
+                <div className=' mb-4'>
+                    <div className='flex justify-between'>
+                    <p className='font-bold text-2xl'>{this.state.selectedPost.username}</p>
+                    <button onClick={this.handleClosePopup}><IoClose size={30} /></button>
                     </div>
-
-                
-                    {this.state.selectedPost.comments && this.state.selectedPost.comments.map(comment => (
-
-                        <div key={comment.id} className="comment w-full gap-4">
-                          <div className='flex gap-4'>
-                            <p>{comment.username}</p>
-                            <p>{new Date(comment.createdAt._seconds * 1000).toLocaleDateString()}</p>
-                          </div>
-                            <p>{comment.body}</p>
-                        </div>
-
-                    ))}
-                    <div>
-                        <input type="text" name="newComment" id="newComment" placeholder="Add a comment..." />
-                        <button onClick={()=>this.addComment()} >Submit</button>
-                    </div>
-                    <div className="flex justify-end mt-4">
-                        <button onClick={this.handleClosePopup}>Close</button>
-                    </div>
+                    <p className='mb-4'>{this.state.selectedPost.body}</p>
                 </div>
-            </div>
-        )}
+                <p className='font-semibold mb-2'>Comments</p>
+
+                <div className=" w-full max-h-[50vh] overflow-y-auto mb-4">
+                    {this.state.selectedPost.comments && this.state.selectedPost.comments.map(comment => (
+                    <div key={comment.id} className="max-h-[50%]">
+                        <div className='flex mb-4'>
+                        <IoPersonCircleSharp size={30} className='mr-4 text-blue-300'/>
+                        <div className='flex flex-col gap-2 bg-blue-300 rounded-lg p-2'>
+                            <div className='flex gap-4 items-center'>
+                            <p className='font-bold'>{comment.username}</p>
+                            <p className='text-sm'>{new Date(comment.createdAt._seconds * 1000).toLocaleDateString()}</p>
+                            </div>
+                            <div className='text-wrap break-all'>
+                            <p className='whitespace-pre-line'>{comment.body}</p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    ))}
+                </div>
+
+      <div className='bg-blue-300 mt-4 flex items-center w-full rounded-md p-2'>    
+        <IoPersonCircleSharp size={20} className='mr-4 text-black'/>
+        <div className='w-full flex gap-2'>
+          <input className='w-full' type="text" name="newComment" id="newComment" placeholder="Add a comment..." />
+          <button onClick={()=>this.addComment()} ><IoIosSend /></button>
+        </div>
+      </div>
+    </div>
+  </div>
+)}
         </div>
     );
 }
