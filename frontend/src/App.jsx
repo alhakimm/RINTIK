@@ -30,7 +30,7 @@ if(token){
   const decodedToken = jwtDecode(token);
   console.log(decodedToken)
   console.log(Date.now())
-  if(decodedToken.exp * 1000 < Date.now()){
+  if(decodedToken.exp * 1000 < Date.now() || localStorage == null){
     localStorage.removeItem('FBIdToken')
     delete axios.defaults.headers.common['Authorization']
     window.location.href = '/';
