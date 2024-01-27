@@ -139,7 +139,7 @@ const Alert = () => {
             <div className='bg-blue-300 p-8 rounded-md'>
               <div className='flex justify-between mb-4'>
                 <h2 className="text-2xl font-bold text-black underline">Report</h2>
-                <button className="text-xl text-black" onClick={handleAlertClick}>
+                <button className="text-xl text-black" onClick={handleClosePopup}>
                   <RiCloseFill />
                 </button>
               </div>
