@@ -25,7 +25,8 @@ exports.addReports = functions.https.onRequest((req, res) => {
         location : req.body.location,
         description : req.body.description,
         category : req.body.category,
-        priority : req.body.priority
+        priority : req.body.priority,
+        status : req.body.status
     };
 
     

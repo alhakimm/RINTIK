@@ -31,6 +31,7 @@ const Navbar = () =>{
       description: "",
       category: "",
       priority: "",
+      status: "Received",
     });
 
     const handleReportButtonClick = () => {
@@ -47,19 +48,23 @@ const Navbar = () =>{
 
     const handleReportSubmit = () => {
       if (
-        reportForm.name.trim() === '' ||
-        reportForm.location.trim() === '' ||
-        reportForm.description.trim() === '' ||
-        reportForm.category.trim() === '' ||
-        reportForm.priority.trim() === ''
+          reportForm.name.trim() === '' ||
+          reportForm.location.trim() === '' ||
+          reportForm.description.trim() === '' ||
+          reportForm.category.trim() === '' ||
+          reportForm.priority.trim() === ''
       ) {
-        // Display an error message or take appropriate action
-        alert('Please fill in all required fields.');
-        return;
+          alert('Please fill in all required fields.');
+          return;
       }
 
+      const reportData = {
+          ...reportForm,
+          status: 'Received', // Adding status field with value "Received"
+      };
+
       axios
-        .post('http://localhost:5000/testingfirebase-3e0f7/us-central1/addReports', reportForm)
+        .post('http://localhost:5000/testingfirebase-3e0f7/us-central1/addReports', reportData)
         .then(response => {
           console.log(response.data);
           setShowReportMenu(false);
