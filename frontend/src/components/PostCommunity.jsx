@@ -123,19 +123,23 @@ addComment = () => {
           </div>
           <p className='mb-2'> {posts.body}</p>
           <div className='flex gap-2'>
-          <button className='border rounded-full flex items-center px-2 bg-blue-500 text-white' onClick={() => this.handlePostClick(posts.postId)}>
-                            <FaRegComments className='mr-2'/>{posts.comments}
-                        </button>
-                        <button
-                            className='border rounded-full flex items-center px-2 bg-blue-500 text-white'
+                <button className='border rounded-full flex items-center px-2 bg-blue-500 text-white' onClick={() => this.handlePostClick(posts.postId)}>
+                    <FaRegComments className='mr-2'/>{posts.comments}
+                </button>
+                <div className='flex bg-blue-500 rounded-full text-white'>
+                    <button
+                            className='border-none outline-none rounded-full flex items-center px-2 bg-blue-500 text-white'
                             onClick={() => this.handleUpvote(posts.postId)}>
-                            <BiUpvote className='mr-2'/> {posts.upvote}
-                        </button>
-                        <button
-                        className='border rounded-full flex items-center px-2 bg-blue-500 text-white'
+                            <BiUpvote/> 
+                    </button>
+                    {posts.upvote}
+                    <button
+                        className='border-none outline-none rounded-full flex items-center px-2 bg-blue-500 text-white'
                         onClick={() => this.handleDownvote(posts.postId)}>
-                        <BiDownvote className='mr-2'/> 
-                        </button>
+                        <BiDownvote/>
+                    </button>
+                </div>
+                        
           </div>
       </div>
     )) : <p>loading...</p>
