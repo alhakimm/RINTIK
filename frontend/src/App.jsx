@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import {jwtDecode} from 'jwt-decode';
+import axios from "axios";
 
 //components
 import Community from "./components/Community";
@@ -11,6 +12,7 @@ import Map from "./components/Map";
 import Login from "./components/login";
 import Signup from "./components/Signup";
 import AuthRoute from './util/AuthRoute';
+import ReportMap from './components/ReportMap'
 
 //redux
 import { Provider } from "react-redux";
@@ -61,6 +63,9 @@ function App() {
           </Route>
           <Route path="/map">
             <Map />
+          </Route>
+          <Route path="/reportmap">
+            <ReportMap />
           </Route>
           {/* <Route path="/report">
             <Report />

@@ -9,6 +9,16 @@ import ReportModal from './ReportModal';
 import PropTypes from 'prop-types'
 import { RiCloseFill } from "react-icons/ri";
 
+//report map
+// import React, { useEffect, useState } from 'react';
+// import { Loader } from '@googlemaps/js-api-loader';
+// import axios from 'axios';
+
+// const loader = new Loader({
+//     apiKey: "AIzaSyAhwyYYo1bwoO7KLKs_oMV3Tg9viOVE40A",
+//     version: 'weekly',
+//   });
+
 const Navbar = () =>{
 
     // const [displayMessage, setDisplayMessage] = useState(false);
@@ -140,6 +150,8 @@ const Navbar = () =>{
       
     // } 
     // console.log(image)
+
+    
 
     return(
         <nav className='p-5 flex items-center max-w-600 mx-auto border-b border-solid border-gray-300 bg-white'>
@@ -278,6 +290,13 @@ const Navbar = () =>{
                   Submit Report
                 </button>
             </div>
+            {/* <div className='bg-blue-300 p-8 rounded-md'>
+             <div className='flex justify-between mb-4'>
+              <script>
+                
+              </script>
+             </div>
+            </div> */}
 
           </div>
         )}

@@ -35,7 +35,7 @@ exports.signup = (req, res) => {
         // .createCustomToken(newUser.username)
         .then((data) => {
             userId = data.user.uid;
-            // console.log(userId);
+            console.log(userId);
             return data.user.getIdToken();
         })
         .then((idToken) => {
