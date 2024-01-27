@@ -131,6 +131,10 @@ export class PostCommunity extends Component {
                       {this.state.selectedPost.comments && this.state.selectedPost.comments.map(comment => (
                             <p key={comment.id}>{comment.body}</p>
                         ))}
+                        <div>
+                          <input type="text" name="newComment" id="newComment" placeholder="Add a comment..." />
+                          <button onClick={()=>this.addComment()} >Submit</button>
+                        </div>
                         <div className="flex justify-end mt-4">
                             <button onClick={this.handleClosePopup}>Close</button>
                         </div>
