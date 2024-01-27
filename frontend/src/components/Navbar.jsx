@@ -8,6 +8,7 @@ import { Link, useLocation } from "react-router-dom";
 import ReportModal from './ReportModal';
 import PropTypes from 'prop-types'
 import { RiCloseFill } from "react-icons/ri";
+import { CgPin } from "react-icons/cg";
 
 //report map
 // import React, { useEffect, useState } from 'react';
@@ -340,20 +341,34 @@ const Navbar = () =>{
                                       {/* Pop-up for Report History */}
                                       {showReportHistory && (
                                         <div className='fixed top-0 left-0 w-full h-full flex items-center justify-center bg-gray-800 bg-opacity-50'>
-                                          <div className='bg-white p-8 rounded-md'>
+                                          <div className='bg-blue-300 p-8 rounded-xl max-w-[30%] min-w-[30%]'>
                                             {selectedReport ? (
                                               <div>
-                                                <h2>Report Details</h2>
-                                                <p>Category: {selectedReport.category}</p>
-                                                <p>Description: {selectedReport.description}</p>
-                                                <p>Location: {selectedReport.location}</p>
-                                                <p>Priority: {selectedReport.priority}</p>
-                                                <p>Status: {selectedReport.status}</p>
-                                                <button onClick={() => setSelectedReport(null)}>Back to Report List</button>
+                                                <div className='flex justify-between mb-4'>
+                                                  <h2 className='text-2xl font-bold underline'>Report Details</h2>
+                                                  <button onClick={() => setSelectedReport(null)}><RiCloseFill size={25} /></button>
+                                                </div>
+                                                <div className='bg-white rounded-xl p-4'>
+                                                  <div className='flex items-center justify-between'>
+                                                    <p className='text-xl font-bold underline'>{selectedReport.category}</p>
+                                                    <p className='font-bold text-green-800'>{selectedReport.status}</p>
+                                                  </div>                                           
+                                                  <p className='text-sm'>Priority: {selectedReport.priority}</p>       
+                                                  <p className='py-6 font-semibold'>{selectedReport.description}</p>
+                                                  <p className='flex items-center font-thin text-sm'><CgPin className="relative mr-1" />{selectedReport.location}</p>
+                                                  
+                                                  
+                                                </div>
+                                                
+                                                
                                               </div>
                                             ) : (
                                               <div>
-                                                <h2>Report History</h2>
+                                                <div className='flex justify-between'>
+                                                  <h2 className='font-bold text-xl'>Report History</h2>
+                                                  <button onClick={() => setShowReportHistory(false)}><RiCloseFill size={25} /></button>
+                                                </div>
+                                                
                                                 {isLoading ? (
                                                   <p>Loading report history...</p>
                                                 ) : error ? (
@@ -362,15 +377,17 @@ const Navbar = () =>{
                                                   <ul>
                                                     {reportList.map((report) => (
                                                       <li key={report.id}>
-                                                        <button onClick={() => handleReportClick(report)}>
+                                                        <button className='bg-white my-2 w-full rounded-md p-2' onClick={() => handleReportClick(report)}>
                                                           Report
                                                         </button>
                                                       </li>
                                                     ))}
                                                   </ul>
                                                 )}
-                                                <button onClick={() => setShowReportHistory(false)}>Close</button>
+                                                
                                               </div>
+                                             
+
                                             )}
                                           </div>
                                         </div>
