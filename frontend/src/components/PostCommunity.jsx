@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import { IoPersonCircleSharp } from "react-icons/io5";
 import { FaRegComments } from "react-icons/fa";
-import { BiUpvote } from "react-icons/bi";
+import { BiUpvote, BiDownvote } from "react-icons/bi";
 
 
 export class PostCommunity extends Component {
@@ -25,23 +25,37 @@ export class PostCommunity extends Component {
           .catch(err => console.log(err));
   }
 
- // untuk upvote
-  handleUpvote = (postId) => {
-    axios.post(`http://localhost:5000/testingfirebase-3e0f7/us-central1/api/post/${postId}/upvote`)
-        .then(res => {
-            console.log(res.data);
+    // utk update number of upvotes
+    updatePostState = (postId, newUpvoteCount) => {
+      this.setState(prevState => ({
+          posts: prevState.posts.map(post => {
+              if (post.postId === postId) {
+                  return { ...post, upvote: newUpvoteCount };
+              }
+              return post;
+          })
+      }));
+  }
 
-            this.setState(prevState => ({
-                posts: prevState.posts.map(post => {
-                    if (post.postId === postId) {
-                        return { ...post, upvote: res.data.upvote };
-                    }
-                    return post;
-                })
-            }));
-        })
-        .catch(err => console.log(err));
-}
+    // untuk upvote
+    handleUpvote = (postId) => {
+      axios.post(`http://localhost:5000/testingfirebase-3e0f7/us-central1/api/post/${postId}/upvote`)
+          .then(res => {
+              console.log(res.data);
+              this.updatePostState(postId, res.data.upvote);
+          })
+          .catch(err => console.log(err));
+  }
+
+      // untuk downvote
+      handleDownvote = (postId) => {
+        axios.delete(`http://localhost:5000/testingfirebase-3e0f7/us-central1/api/post/${postId}/unupvote`)
+            .then(res => {
+                console.log(res.data);
+                this.updatePostState(postId, res.data.upvote);
+            })
+            .catch(err => console.log(err));
+    }
 
   render() {
     let postFinder = this.state.posts ? (
@@ -60,6 +74,11 @@ export class PostCommunity extends Component {
                             className='border rounded-full flex items-center px-2 bg-blue-500 text-white'
                             onClick={() => this.handleUpvote(posts.postId)}>
                             <BiUpvote className='mr-2'/> {posts.upvote}
+                        </button>
+                        <button
+                        className='border rounded-full flex items-center px-2 bg-blue-500 text-white'
+                        onClick={() => this.handleDownvote(posts.postId)}>
+                        <BiDownvote className='mr-2'/> {posts.downvote}
                         </button>
           </div>
       </div>
