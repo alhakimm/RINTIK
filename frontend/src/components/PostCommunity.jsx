@@ -26,7 +26,7 @@ export class PostCommunity extends Component {
   }
 
  // untuk upvote
-  handleUpvote = (postId, upvoted) => {
+  handleUpvote = (postId) => {
     axios.post(`http://localhost:5000/testingfirebase-3e0f7/us-central1/api/post/${postId}/upvote`)
         .then(res => {
             console.log(res.data);
