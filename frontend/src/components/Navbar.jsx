@@ -311,7 +311,8 @@ const Navbar = () =>{
                 <IoPersonCircleSharp size={45} onClick={handleProfile}/>
                 {
                     profile ? (
-                        <div className='fixed bottom-0 right-0 z-[99] bg-blue-900 h-full w-[30%]'>
+                      <div className='fixed top-0 left-0 w-full h-full flex items-center justify-center bg-gray-800 bg-opacity-50 z-[80]'>
+                        <div className='fixed bottom-0 right-0 z-[99] bg-blue-900 h-full w-[30%] '>
                             <div className='p-12 pt-16 flex flex-col items-center'>
                             <div className='w-[75%] flex justify-center items-center rounded-3xl shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200' onClick={handleEditProfile}>
                                 Edit Profile Pic
@@ -401,7 +402,7 @@ const Navbar = () =>{
                                 </button>
                             </div>
                         </div>
-                       
+                     </div>  
                     )
                     : (
                         ''
