@@ -2,13 +2,21 @@ const functions = require("firebase-functions/v2");
 const { db } = require('../util/admin');
 const firebaseConfig = require('../util/firebaseConfig');
 const firebase = require('firebase/compat/app');
+const {GeoPoint} = require('firebase-admin/firestore')
 
 firebase.initializeApp(firebaseConfig);
 
 exports.getReports = functions.https.onRequest((req, res) => {
+    // let reportData = {}
+    console.log(req.user.username)
     db
-        .collection('reports')
-        .get()    
+        .collection(`reports`)
+        .where('username', '==', req.user.username)
+        .get()
+        // .then(doc => {
+        //     reportData = doc.data()
+        //     reportData.id = 
+        // }) 
         .then(data => {
             let reports = []
             data.forEach(doc => {
@@ -20,9 +28,10 @@ exports.getReports = functions.https.onRequest((req, res) => {
 });
 
 exports.addReports = functions.https.onRequest((req, res) => {
+    const geoPoint = new GeoPoint(req.body.lat, req.body.lng)
     const newReports = {
-        name : req.body.name,
-        location : req.body.location,
+        username : req.user.username,
+        location: geoPoint,
         description : req.body.description,
         category : req.body.category,
         priority : req.body.priority,
