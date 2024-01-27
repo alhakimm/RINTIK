@@ -39,8 +39,9 @@ const Navbar = () =>{
     // Submit Report
     const [showReportMenu, setShowReportMenu] = useState(false); // for showing the report menu
     const [reportForm, setReportForm] = useState({
-      name: "",
-      location: "",
+      // name: "",
+      lat: "",
+      lng: "",
       description: "",
       category: "",
       priority: "",
@@ -61,8 +62,9 @@ const Navbar = () =>{
 
     const handleReportSubmit = () => {
       if (
-          reportForm.name.trim() === '' ||
-          reportForm.location.trim() === '' ||
+          // reportForm.name.trim() === '' ||
+          reportForm.lat.trim() === '' ||
+          reportForm.lng.trim() === '' ||
           reportForm.description.trim() === '' ||
           reportForm.category.trim() === '' ||
           reportForm.priority.trim() === ''
@@ -77,7 +79,7 @@ const Navbar = () =>{
       };
 
       axios
-        .post('http://localhost:5000/testingfirebase-3e0f7/us-central1/addReports', reportData)
+        .post('http://localhost:5000/testingfirebase-3e0f7/us-central1/api/reportProblem', reportData)
         .then(response => {
           console.log(response.data);
           setShowReportMenu(false);
@@ -226,7 +228,7 @@ const Navbar = () =>{
               </div>
                   
 
-                <div className="mb-4 flex gap-2">
+                {/* <div className="mb-4 flex gap-2">
                   <label htmlFor="name">Name:</label>
                   <input
                     type="text"
@@ -236,14 +238,25 @@ const Navbar = () =>{
                     onChange={handleInputChange}
                     className='w-full resize-none border-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'
                   />
+                </div> */}
+                <div className="mb-4 flex gap-2">
+                  <label htmlFor="lat">latitude:</label>
+                  <input
+                    type="number"
+                    id="lat"
+                    name="lat"
+                    value={reportForm.lat}
+                    onChange={handleInputChange}
+                    className='w-full resize-none border-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'
+                  />
                 </div>
                 <div className="mb-4 flex gap-2">
-                  <label htmlFor="location">Location:</label>
+                  <label htmlFor="lng">longitude:</label>
                   <input
-                    type="text"
-                    id="location"
-                    name="location"
-                    value={reportForm.location}
+                    type="number"
+                    id="lng"
+                    name="lng"
+                    value={reportForm.lng}
                     onChange={handleInputChange}
                     className='w-full resize-none border-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'
                   />

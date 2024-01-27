@@ -28,10 +28,13 @@ exports.getReports = functions.https.onRequest((req, res) => {
 });
 
 exports.addReports = functions.https.onRequest((req, res) => {
-    const geoPoint = new GeoPoint(req.body.lat, req.body.lng)
+    // const geoPoint = new GeoPoint(req.body.lat, req.body.lng)
+    console.log("lat: " + req.body.lat)
     const newReports = {
         username : req.user.username,
-        location: geoPoint,
+        // location: geoPoint,
+        lat: req.body.lat,
+        lng: req.body.lng,
         description : req.body.description,
         category : req.body.category,
         priority : req.body.priority,
