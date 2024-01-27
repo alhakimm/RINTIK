@@ -124,7 +124,7 @@ addComment = () => {
           <p className='mb-2'> {posts.body}</p>
           <div className='flex gap-2'>
           <button className='border rounded-full flex items-center px-2 bg-blue-500 text-white' onClick={() => this.handlePostClick(posts.postId)}>
-                            <FaRegComments className='mr-2'/>
+                            <FaRegComments className='mr-2'/>{posts.comments}
                         </button>
                         <button
                             className='border rounded-full flex items-center px-2 bg-blue-500 text-white'
