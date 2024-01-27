@@ -7,9 +7,10 @@ const useFetch = (url) =>{
     const [data,setData] = useState(null);
     const [isLoading,setIsLoading] = useState(true);
     const [error,setError] = useState(null);
+    // console.log("header: " + axios.defaults.headers.common['Authorization'])
 
     useEffect(() => {
-        fetch(url)
+        fetch(url, {headers: {Authorization: localStorage.FBIdToken}})
             .then(response => {
                 console.log(response);
                 if (!response.ok){
