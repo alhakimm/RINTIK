@@ -38,8 +38,8 @@ app.post('/articles', initializeArticles);  //initialise articles
 //app.get('/plumbers', getPlumbers);
 
 //reports route
-app.get('/reports', getReports);
-app.post('/reportProblem', addReports);
+app.get('/reports', FBAuth, getReports);
+app.post('/reportProblem', FBAuth, addReports);
 
 //map route
 app.get('/viewMap', viewMap);

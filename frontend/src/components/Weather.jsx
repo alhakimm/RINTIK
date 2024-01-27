@@ -3,6 +3,8 @@ import { FaTemperatureThreeQuarters } from "react-icons/fa6";
 import { WiHumidity } from "react-icons/wi";
 import { FaWind } from "react-icons/fa";
 import { GiWindsock } from "react-icons/gi";
+import { TbSunMoon } from "react-icons/tb";
+import { TiWeatherPartlySunny } from "react-icons/ti";
 
 const Weather = () => {
   const [weatherData, setWeatherData] = useState(null);
@@ -52,7 +54,7 @@ const Weather = () => {
   }, []);
 
   return (
-    <div className="h-1/4 bg-blue-300">
+    <div className="bg-blue-300 rounded-xl">
       {error ? (
         <p>Error fetching weather data: {error}</p>
       ) : (
@@ -68,9 +70,9 @@ const Weather = () => {
                 <div className='bg-blue-100 rounded-2xl min-w-[80px] flex flex-col items-center p-2'><FaWind size={30}/> {weatherData.wind_speed_10m}km/h</div>
                 <div className='bg-blue-100 rounded-2xl min-w-[80px] flex flex-col items-center p-2'><GiWindsock size={30} /> {weatherData.wind_direction_10m}°</div>
               </div>
-              <div>
-                <p>Weather: {weatherCondition}</p>
-                <p>Time of Day: {dayCycle}</p>
+              <div className='flex flex-col gap-2'>
+                <p className='flex items-center font-bold text-xl gap-4'><TiWeatherPartlySunny size={40} />{weatherCondition}</p>
+                <p className='flex items-center font-bold text-xl gap-4'><TbSunMoon size={40} />{dayCycle}</p>
               </div>
               
             </div>
