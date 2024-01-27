@@ -33,6 +33,8 @@ const Navbar = () =>{
     // const closeModal = () => {
     //   setShowModal(false);
     // };
+    axios.defaults.headers.common['Authorization'] = localStorage.FBIdToken
+    console.log("header: " + axios.defaults.headers.common['Authorization'])
 
     // Submit Report
     const [showReportMenu, setShowReportMenu] = useState(false); // for showing the report menu

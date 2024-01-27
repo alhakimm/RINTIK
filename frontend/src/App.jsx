@@ -22,7 +22,9 @@ import { Provider } from "react-redux";
 // import Report from "./components/Report";
 
 let authenticated;
+
 const token = localStorage.FBIdToken;
+
 console.log(token)
 if(token){
   const decodedToken = jwtDecode(token);
