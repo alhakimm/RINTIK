@@ -5,7 +5,7 @@ const app = express();
 
 const FBAuth = require('./util/FBAuth');
 
-const {getAllPosts, writePost, getPost, commentOnPost, upvotePost, unUpvotePost, deletePost} = require('./handlers/posts');
+const {getAllPosts, writePost, getPost, commentOnPost, upvotePost, unUpvotePost, deletePost, getPostComments} = require('./handlers/posts');
 const {signup, login, uploadImage, addUserDetails, getUserProfile/*, getUserDetails*/} = require('./handlers/users');
 const {getPlumbers, /*regPlumbers*/} = require('./handlers/plumber');
 const {getReports, addReports} = require('./handlers/report')
@@ -20,7 +20,7 @@ app.delete('/post/:postId', FBAuth, deletePost)
 app.post('/post/:postId/upvote', FBAuth, upvotePost);
 app.delete('/post/:postId/unupvote', FBAuth, unUpvotePost);
 app.post('/post/:postId/comment', FBAuth, commentOnPost);
-
+app.get('/post/:postId/comments', getPostComments);
 
 //users route
 app.post('/signup', signup);

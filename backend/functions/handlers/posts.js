@@ -78,6 +78,22 @@ exports.getPost = (req, res) => {
         })
 }
 
+exports.getPostComments = (req, res) => {
+    let commentsData = [];
+
+    db.collection('comments').orderBy('createdAt', 'desc').where('postId', '==', req.params.postId).get()
+        .then(data => {
+            data.forEach(doc => {
+                commentsData.push(doc.data());
+            });
+            return res.json(commentsData);
+        })
+        .catch(err => {
+            console.error(err);
+            return res.status(500).json({ error: err.code });
+        });
+}
+
 exports.commentOnPost = (req, res) => {
     if (req.body.body.trim() == '') return res.status(400).json({comment: 'must not be empty'});
 

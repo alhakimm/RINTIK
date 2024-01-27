@@ -36,7 +36,20 @@ export class PostCommunity extends Component {
               });
           })
           .catch(err => console.log(err));
-  }
+          
+      // Fetch comments for the post
+      axios.get(`http://localhost:5000/testingfirebase-3e0f7/us-central1/api/post/${postId}/comments`)
+      .then(res => {
+          console.log("Comments data:", res.data);
+          this.setState(prevState => ({
+              selectedPost: {
+                  ...prevState.selectedPost,
+                  comments: res.data
+              }
+          }));
+      })
+      .catch(err => console.log(err));
+}
 
     handleClosePopup = () => {
         this.setState({ selectedPost: null });
@@ -85,7 +98,7 @@ export class PostCommunity extends Component {
           <p className='mb-2'> {posts.body}</p>
           <div className='flex gap-2'>
           <button className='border rounded-full flex items-center px-2 bg-blue-500 text-white' onClick={() => this.handlePostClick(posts.postId)}>
-                            <FaRegComments className='mr-2'/> {posts.comments}
+                            <FaRegComments className='mr-2'/>
                         </button>
                         <button
                             className='border rounded-full flex items-center px-2 bg-blue-500 text-white'
@@ -103,7 +116,7 @@ export class PostCommunity extends Component {
 
     
     return (
-      <div className='flex flex-col items-center justify-center bg-blue-500 w-full px-20 py-6 min-h-screen gap-2'>
+      <div className='flex flex-col items-center justify-center bg-blue-500 w-full min-h-screen gap-2'>
                   {/* Post Finder */}
                   <div className="custom-article-section-width custom-article-section-margin-left p-4 overflow-y-auto h-screen flex-1 col-span-2" style={{ scrollbarWidth: 'thin' }}>
                       {postFinder}
@@ -115,14 +128,17 @@ export class PostCommunity extends Component {
               <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50">
                   <div className="bg-white p-4 rounded-lg">
                       <p>{this.state.selectedPost.body}</p>
-                      <div className="flex justify-end mt-4">
-                          <button onClick={this.handleClosePopup}>Close</button>
-                      </div>
-                  </div>
-              </div>
-          )}
-      </div>
-  );
+                      {this.state.selectedPost.comments && this.state.selectedPost.comments.map(comment => (
+                            <p key={comment.id}>{comment.body}</p>
+                        ))}
+                        <div className="flex justify-end mt-4">
+                            <button onClick={this.handleClosePopup}>Close</button>
+                        </div>
+                    </div>
+                </div>
+            )}
+        </div>
+    );
 }
 }
 
