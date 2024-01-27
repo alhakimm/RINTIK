@@ -14,7 +14,7 @@ import AuthRoute from './util/AuthRoute';
 
 //redux
 import { Provider } from "react-redux";
-import store from './redux/store';
+// import store from './redux/store';
 // import { logOutUser, getUserData } from "./redux/actions/userAction";
 
 // import Report from "./components/Report";
