@@ -148,7 +148,7 @@ addComment = () => {
     return (
       <div className='flex flex-col items-center justify-center bg-blue-500 w-full min-h-screen gap-2'>
                   {/* Post Finder */}
-                  <div className="custom-article-section-width custom-article-section-margin-left p-4 overflow-y-auto h-screen flex-1 col-span-2" style={{ scrollbarWidth: 'thin' }}>
+                  <div className="custom-article-section-width custom-article-section-margin-left overflow-y-auto h-screen flex-1 col-span-2" style={{ scrollbarWidth: 'thin' }}>
                       {postFinder}
                   </div>
 
