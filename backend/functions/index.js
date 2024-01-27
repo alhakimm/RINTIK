@@ -38,7 +38,7 @@ app.post('/articles', initializeArticles);  //initialise articles
 //app.get('/plumbers', getPlumbers);
 
 //reports route
-app.get('/reports',  getReports);
+app.get('/reports', FBAuth, getReports);
 app.post('/reportProblem', FBAuth, addReports);
 
 //map route

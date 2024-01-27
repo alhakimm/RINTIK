@@ -88,7 +88,7 @@ const Navbar = () =>{
     };
 
     // Report History, getReports
-    const {data: reportList, isLoading, error} = useFetch("http://localhost:5000/testingfirebase-3e0f7/us-central1/getReports");
+    const {data: reportList, isLoading, error} = useFetch("http://localhost:5000/testingfirebase-3e0f7/us-central1/api/reports");
 
     const [showReportHistory, setShowReportHistory] = useState(false); // when selecting viewhistorybutton
     const [selectedReport, setSelectedReport] = useState(null); // for when selecting a report in popup menu
