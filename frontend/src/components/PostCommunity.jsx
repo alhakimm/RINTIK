@@ -70,6 +70,7 @@ addComment = () => {
                   comments: prevState.selectedPost.comments ? [...prevState.selectedPost.comments, res.data] : [res.data]
               }
           }));
+          this.handleClosePopup(null)
       })
       .catch(err => console.log(err));
 }
