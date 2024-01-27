@@ -151,8 +151,12 @@ addComment = () => {
           {this.state.selectedPost && (
             <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50">
                 <div className="bg-white p-4 rounded-lg flex flex-col">
+                    <div>
+                    <p>{this.state.selectedPost.username}</p>
                     <p>{this.state.selectedPost.body}</p>
+                    </div>
 
+                
                     {this.state.selectedPost.comments && this.state.selectedPost.comments.map(comment => (
 
                         <div key={comment.id} className="comment w-full gap-4">
