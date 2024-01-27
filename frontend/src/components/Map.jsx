@@ -82,7 +82,7 @@ return (
   <div>
     <div className='flex flex-col items-center justify-center py-4'>
       <h1 className='font-bold text-xl text-blue-500 underline'>Clean Water Sources</h1>
-      <p>here is the place that have the clean water sources. You can know the address by clicking on the marker provided</p>
+      <p>Places with Clean Water Sources provided below</p>
     </div>
     <div id="map" style={{ height: '1000px', width: '100%' }}>Map</div>;
   </div>
