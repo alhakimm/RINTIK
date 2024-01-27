@@ -1,13 +1,13 @@
 import { Button } from '@material-tailwind/react';
 import React, { Component } from 'react'
-// import axios from 'axios';
+import axios from 'axios';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import { withRouter } from 'react-router'
 import PropTypes from 'prop-types'
 
 //redux
 import { connect } from 'react-redux';
-import { loginUser } from '../redux/actions/userAction';
+import { getUserData, setAuthorizationHeader } from '../util/Functions';
 
 // import ReactDOM from 'react-dom'
 
@@ -30,7 +30,24 @@ class Login extends Component {
             email: this.state.email,
             password: this.state.password
         }
-        this.props.loginUser(userData, this.props.history)
+        // this.props.loginUser(userData, this.props.history)   //redux
+        axios.post('http://localhost:5000/testingfirebase-3e0f7/us-central1/api/login', userData)
+         .then(res => {
+            console.log(res.data)
+            
+            setAuthorizationHeader(res.data)
+            getUserData()
+            // dispatch({type: CLEAR_ERRORS})
+            this.props.history.push('/community')
+         })
+         .catch(err => {
+            console.log(err.response.data)
+            alert("Email " + err.response.data.email +"        "+ "Password " + err.response.data.password)
+            // dispatch({
+            //     type: SET_ERRORS,
+            //     payload: err.response.data
+            // })
+         })
     }
     handleChange = (event) => {
         this.setState({
@@ -81,13 +98,13 @@ class Login extends Component {
 //     UI: PropTypes.object.isRequired
 // }
 
-const mapStateToProps = (state) => ({
-    user: state.user,
-    UI: state.UI
-})
+// const mapStateToProps = (state) => ({
+//     user: state.user,
+//     UI: state.UI
+// })
 
-const mapActionsToProps = {
-    loginUser
-}
+// const mapActionsToProps = {
+//     loginUser
+// }
 
 export default (withRouter(Login));

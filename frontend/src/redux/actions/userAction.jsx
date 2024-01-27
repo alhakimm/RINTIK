@@ -35,10 +35,10 @@ export const getUserData = () => (dispatch) => {
             .catch(err => console.log(err))
 }
 
-export const logOutUser = () => {
-    localStorage.removeItem('FBIdToken')
-    delete axios.defaults.headers.common['Authorization']
-}
+// export const logOutUser = () => {
+//     localStorage.removeItem('FBIdToken')
+//     delete axios.defaults.headers.common['Authorization']
+// }
 
 const setAuthorizationHeader = (token) => {
     localStorage.setItem('FBIdToken', `Bearer ${token}`)

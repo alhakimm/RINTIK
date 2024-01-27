@@ -14,8 +14,8 @@ import AuthRoute from './util/AuthRoute';
 
 //redux
 import { Provider } from "react-redux";
-// import store from './redux/store';
-import { logOutUser, getUserData } from "./redux/actions/userAction";
+import store from './redux/store';
+// import { logOutUser, getUserData } from "./redux/actions/userAction";
 
 // import Report from "./components/Report";
 
@@ -30,6 +30,7 @@ if(token){
     localStorage.removeItem('FBIdToken')
     delete axios.defaults.headers.common['Authorization']
     window.location.href = '/';
+    authenticated = false;
   } else {
     authenticated = true;
   }
@@ -43,10 +44,10 @@ function App() {
       <div>
         <Navbar />
         <Switch>
-          <Route exact path="/" component={Login} >
+          <Route exact path="/" component={Login} authenticated = {authenticated}>
             <Login />
           </Route>
-          <Route path="/signup" component={Signup}  >
+          <Route path="/signup" component={Signup} authenticated = {authenticated}>
             <Signup />
           </Route>
           <Route path="/community">
@@ -68,7 +69,7 @@ function App() {
       </div>
     </Router>
 
-    //  </Provider>
+      // </Provider>
     
   );
 }
