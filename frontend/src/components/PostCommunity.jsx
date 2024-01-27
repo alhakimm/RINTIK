@@ -25,16 +25,16 @@ export class PostCommunity extends Component {
           .catch(err => console.log(err));
   }
 
-  // untuk upvote tapi xjadi babi
-  handleUpvote = (postId) => {
-    axios.post(`http://localhost:5000/testingfirebase-3e0f7/us-central1/api/posts/upvotePost/${postId}`)
+ // untuk upvote
+  handleUpvote = (postId, upvoted) => {
+    axios.post(`http://localhost:5000/testingfirebase-3e0f7/us-central1/api/post/${postId}/upvote`)
         .then(res => {
             console.log(res.data);
 
             this.setState(prevState => ({
                 posts: prevState.posts.map(post => {
                     if (post.postId === postId) {
-                        return { ...post, upvote: res.data.upvoteCount };
+                        return { ...post, upvote: res.data.upvote };
                     }
                     return post;
                 })

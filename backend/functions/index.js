@@ -17,8 +17,8 @@ app.get('/posts', getAllPosts);
 app.post('/post', FBAuth, writePost);
 app.get('/post/:postId', getPost);
 app.delete('/post/:postId', FBAuth, deletePost)
-app.get('/post/:postId/upvote', FBAuth, upvotePost);
-app.get('/post/:postId/unupvote', FBAuth, unUpvotePost);
+app.post('/post/:postId/upvote', FBAuth, upvotePost);
+app.delete('/post/:postId/unupvote', FBAuth, unUpvotePost);
 app.post('/post/:postId/comment', FBAuth, commentOnPost);
 
 

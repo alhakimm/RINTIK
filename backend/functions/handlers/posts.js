@@ -122,7 +122,7 @@ exports.upvotePost =  (req, res) => {
                 postData = doc.data();
                 postData.postId = doc.id;
 
-                return upvoteDocument.get();
+                return upvoteDoc.get();
             } else {
                 return res.status(404).json({error: 'post not found'});
             }
@@ -134,8 +134,8 @@ exports.upvotePost =  (req, res) => {
                     username: req.user.username
                 })
                 .then(() => {
-                    postData.upvoteCount++; 
-                    return postDocument.update({upvoteCount: postData.upvoteCount});
+                    postData.upvote ++; 
+                    return postDocument.update({upvote: postData.upvote});
                 })
                 .then(() => {
                     return res.json(postData);
@@ -164,7 +164,7 @@ postDocument.get()
             postData = doc.data();
             postData.postId = doc.id;
 
-            return upvoteDocument.get();
+            return upvoteDoc.get();
         } else {
             return res.status(404).json({error: 'post not found'});
         }
@@ -176,8 +176,8 @@ postDocument.get()
         } else{
             return db.doc(`/upvote/${data.docs[0].id}`).delete()
                 .then(() => {
-                    postData.upvoteCount--;
-                    return postDocument.update({upvoteCount: postData.upvoteCount})
+                    postData.upvote--;
+                    return postDocument.update({upvote: postData.upvote})
                 })
                 .then(() => {
                     res.json(postData)
