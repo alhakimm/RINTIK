@@ -184,10 +184,8 @@ const handleReportSubmit = () => {
 };
 
 return (
-  <><div>
-    {/* <div><h1>Report Map</h1></div> */}
-    <div id="map" style={{ height: '1000px', width: '70%' }}>Map</div>;
-  </div>
+  <div className='flex items-center justify-center bg-blue-500 w-full h-screen'>
+  
     {/* <div className="mb-4 flex gap-2">
       <label htmlFor="lat">latitude:</label>
       <input
@@ -208,52 +206,62 @@ return (
         onChange={handleInputChange}
         className='w-full resize-none border-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500' />
     </div> */}
-    <div className="mb-4 flex flex-col gap-2">
-      <label htmlFor="description">Description:</label>
-      <textarea
-        id="description"
-        name="description"
-        value={reportForm.description}
-        onChange={handleInputChange}
-        className='w-full resize-none border-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'
-      ></textarea>
-    </div><div className="mb-4 flex gap-2">
-      <label htmlFor="category">Category:</label>
-      <select
-        id="category"
-        name="category"
-        value={reportForm.category}
-        onChange={handleInputChange}
-        className='w-full border-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'
-        defaultValue=""
+    <div className='border p-8 w-96 h-96 bg-white flex flex-col justify-center gap-4'>
+      <div className="mb-4 flex flex-col gap-2">
+        <p className='text-2xl font-bold underline text-red-500'>Report</p>
+        <label htmlFor="description" >Description:</label>
+        <textarea
+          id="description"
+          name="description"
+          value={reportForm.description}
+          onChange={handleInputChange}
+          className='w-full resize-none border-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'
+        ></textarea>
+      </div><div className="mb-4 flex gap-2">
+        <label htmlFor="category">Category:</label>
+        <select
+          id="category"
+          name="category"
+          value={reportForm.category}
+          onChange={handleInputChange}
+          className='w-full border-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'
+          defaultValue=""
+        >
+          <option value="" disabled hidden>Select category</option>
+          <option value="Dirty Water">Dirty Water</option>
+          <option value="Raised Water Level">Raised Water Level</option>
+          <option value="Water Quality">Water Quality</option>
+          <option value="Water Shortage">Water Shortage</option>
+        </select>
+      </div><div className="mb-4 flex gap-2">
+        <label htmlFor="priority">Priority:</label>
+        <select
+          id="priority"
+          name="priority"
+          value={reportForm.priority}
+          onChange={handleInputChange}
+          className='w-full border-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'
+          defaultValue=""
+        >
+          <option value="" disabled hidden>Select urgency</option>
+          <option value="Low Urgency">Low Urgency</option>
+          <option value="High Urgency">High Urgency</option>
+        </select>
+      </div><button
+        className='px-4 py-2 bg-[#BA1200] text-white rounded-md w-full'
+        onClick={handleReportSubmit}
       >
-        <option value="" disabled hidden>Select category</option>
-        <option value="Dirty Water">Dirty Water</option>
-        <option value="Raised Water Level">Raised Water Level</option>
-        <option value="Water Quality">Water Quality</option>
-        <option value="Water Shortage">Water Shortage</option>
-      </select>
-    </div><div className="mb-4 flex gap-2">
-      <label htmlFor="priority">Priority:</label>
-      <select
-        id="priority"
-        name="priority"
-        value={reportForm.priority}
-        onChange={handleInputChange}
-        className='w-full border-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'
-        defaultValue=""
-      >
-        <option value="" disabled hidden>Select urgency</option>
-        <option value="Low Urgency">Low Urgency</option>
-        <option value="High Urgency">High Urgency</option>
-      </select>
-    </div><button
-      className='px-4 py-2 bg-[#BA1200] text-white rounded-md w-full'
-      onClick={handleReportSubmit}
-    >
-      Submit Report
-    </button></>
+        Submit Report
+      </button>
+    </div>
+    <div>
+      {/* <div><h1>Report Map</h1></div> */}
+      <div id="map" className='h-96 w-96'>Map</div>
+    </div>
 
+    
+  </div>
+  
 
     
 )
