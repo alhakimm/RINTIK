@@ -13,7 +13,7 @@ const Map = () => {
 
   useEffect(() => {
     loader.load().then(async () => {
-      const center = { lat: 5.6151, lng: 102.1892 };
+      const center = { lat: 6.137307, lng: 102.24092 };
 
       // const { Map } = await google.maps.importLibrary('maps');
       const { google } = window;
@@ -21,7 +21,7 @@ const Map = () => {
       
       var map = new google.maps.Map(document.getElementById('map'), {
         center: center,
-        zoom: 10,
+        zoom: 15,
         mapId: "Rintik Map",
 
         // styles: [
