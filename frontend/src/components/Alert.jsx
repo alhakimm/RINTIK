@@ -51,7 +51,7 @@ const Alert = () => {
 
     const AlertPopup = ({ alert }) => {
         return (
-                <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-70 flex items-center justify-center">
+                <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-80 flex items-center justify-center z-[99]">
                   <div className="bg-white p-3 rounded-lg max-w-md">
                     <Typography variant="h1" color="textPrimary" className="text-2xl mb-4 font-bold border-b border-black pb-2">
                         {alert.title}
@@ -111,9 +111,6 @@ const Alert = () => {
                             {alert.date} 
                         </p>
                     </div>
-                    <div>
-                        <p>&gt;</p>
-                    </div>        
                 </div>
               ))}
             </div>
