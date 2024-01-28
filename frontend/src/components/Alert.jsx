@@ -56,7 +56,7 @@ const Alert = () => {
                     <Typography variant="h1" color="textPrimary" className="text-2xl mb-4 font-bold border-b border-black pb-2">
                         {alert.title}
                     </Typography>
-                    <div className="bg-blue-300 rounded-lg p-4 mb-4">
+                    <div className="bg-red-300 rounded-lg p-4 mb-4">
                         <div className="flex justify-between border-b border-black pb-2 mb-4">
                             <div>
                                 <Typography variant="paragraph" color="textPrimary" className="mb-2 font-bold">
