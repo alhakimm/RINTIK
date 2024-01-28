@@ -4,11 +4,13 @@ import useFetch from "./useFetch";
 import { IoPersonCircleSharp } from "react-icons/io5"
 import logo from '../assets/logo.png';
 import axios from 'axios';
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useHistory } from "react-router-dom";
 import ReportModal from './ReportModal';
 import PropTypes from 'prop-types'
 import { RiCloseFill } from "react-icons/ri";
 import { CgPin } from "react-icons/cg";
+// import { useHistory } from 'react-router-dom'
+
 
 //report map
 // import React, { useEffect, useState } from 'react';
@@ -33,6 +35,8 @@ const Navbar = () =>{
     // const closeModal = () => {
     //   setShowModal(false);
     // };
+    const history = useHistory()
+
     axios.defaults.headers.common['Authorization'] = localStorage.FBIdToken
     console.log("header: " + axios.defaults.headers.common['Authorization'])
 
@@ -49,7 +53,8 @@ const Navbar = () =>{
     });
 
     const handleReportButtonClick = () => {
-      setShowReportMenu(!showReportMenu);
+      // setShowReportMenu(!showReportMenu);
+      history.push('/reportmap') 
     };
   
     const handleInputChange = (e) => {

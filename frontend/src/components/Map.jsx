@@ -13,7 +13,7 @@ const Map = () => {
 
   useEffect(() => {
     loader.load().then(async () => {
-      const center = { lat: 5.1151, lng: 101.8892 };
+      const center = { lat: 5.6151, lng: 102.1892 };
 
       // const { Map } = await google.maps.importLibrary('maps');
       const { google } = window;
