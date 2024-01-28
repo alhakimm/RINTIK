@@ -334,7 +334,7 @@ const Navbar = () =>{
                 {
                     profile ? (
                       <div className='fixed top-0 left-0 w-full h-full flex items-center justify-center bg-gray-800 bg-opacity-50 z-[80]'>
-                        <div className='fixed bottom-0 right-0 z-[99] bg-blue-900 h-full w-[30%] '>
+                        <div className='fixed bottom-0 right-0 z-[99] bg-blue-900 h-full w-[20%] '>
                             <div className='p-12 pt-16 flex flex-col items-center'>
 
                             {/* end popup for edit profile pic */}
@@ -407,7 +407,7 @@ const Navbar = () =>{
                                       {/* end pop-up for report history */}
                                     </div>
                                 <button className="absolute top-2 right-2 text-xl text-white" onClick={handleProfile}>
-                                    close
+                                <RiCloseFill size={50} />
                                 </button>
                             </div>
                         </div>
