@@ -31,13 +31,13 @@ class Signup extends Component {
         }
         axios.post('http://localhost:5000/testingfirebase-3e0f7/us-central1/api/signup', newUserData)
          .then(res => {
-            console.log(res.data)
-            localStorage.setItem('FBIdToken', `Bearer ${res.data}`)
-            console.log(localStorage)
+            console.log("raw from baeckend" + res.data)
+            // localStorage.setItem('FBIdToken', `Bearer ${res.data}`)
+            console.log("localStorage" + localStorage)
             this.setState({
                 loading: false
             });
-            this.props.history.push('/community')
+            this.props.history.push('/')
          })
          .catch(err => {
             console.log(err.response.data)
