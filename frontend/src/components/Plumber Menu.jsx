@@ -199,7 +199,7 @@ const PlumberMenu = () =>{
                 Email: {selectedPlumber.email}
               </Typography>
             </div>
-            <Button onClick={closeContactPopup}>Close</Button>
+            <Button color="blue" onClick={closeContactPopup}>Close</Button>
           </div>
         </div>
       )}
