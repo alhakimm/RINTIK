@@ -43,7 +43,7 @@ const Navbar = () =>{
     // Submit Report
     const [showReportMenu, setShowReportMenu] = useState(false); // for showing the report menu
     const [reportForm, setReportForm] = useState({
-      // name: "",
+      location: "",
       lat: "",
       lng: "",
       description: "",
@@ -67,7 +67,7 @@ const Navbar = () =>{
 
     const handleReportSubmit = () => {
       if (
-          // reportForm.name.trim() === '' ||
+          reportForm.location.trim() === '' ||
           reportForm.lat.trim() === '' ||
           reportForm.lng.trim() === '' ||
           reportForm.description.trim() === '' ||

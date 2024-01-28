@@ -127,6 +127,7 @@ const ReportMap = () => {
 const [showReportMenu, setShowReportMenu] = useState(false); // for showing the report menu
 const [reportForm, setReportForm] = useState({
   // name: "",
+  location: "",
   lat: localStorage.lat,
   lng: localStorage.lng,
   description: "",
@@ -151,7 +152,7 @@ const handleReportSubmit = () => {
   if (
       // reportForm.name.trim() === '' ||
       // reportForm.lat.trim() === '' ||
-      // reportForm.lng.trim() === '' ||
+      reportForm.location.trim() === '' ||
       !reportForm.lat  ||
       !reportForm.lng  ||
       reportForm.description.trim() === '' ||
@@ -195,20 +196,21 @@ return (
         value={reportForm.lat}
         onChange={handleInputChange}
         className='w-full resize-none border-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500' />
-    </div>
-    <div className="mb-4 flex gap-2">
-      <label htmlFor="lng">longitude:</label>
-      <input
-        type="number"
-        id="lng"
-        name="lng"
-        value={reportForm.lng}
-        onChange={handleInputChange}
-        className='w-full resize-none border-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500' />
-    </div> */}
+    </div>*/}
+    
     <div className='border p-8 w-96 h-96 bg-white flex flex-col justify-center gap-4'>
       <div className="mb-4 flex flex-col gap-2">
         <p className='text-2xl font-bold underline text-red-500'>Report</p>
+        {/* <div className="mb-4 flex gap-2"> */}
+        <label htmlFor="location">Location:</label>
+        <input
+          type="text"
+          id="location"
+          name="location"
+          value={reportForm.location}
+          onChange={handleInputChange}
+          className='w-full resize-none border-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500' />
+      {/* </div>  */}
         <label htmlFor="description" >Description:</label>
         <textarea
           id="description"
