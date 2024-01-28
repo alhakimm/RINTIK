@@ -60,8 +60,9 @@ const Weather = () => {
       ) : (
         weatherData && (
           <div className='p-4'>
-            <div className='flex flex-col gap-4'>
-              {/* <h2>{weatherData.condition}</h2> */}
+            {/* <h2>{weatherData.condition}</h2> */}
+            {/* <div className='flex flex-col gap-4'>
+              
               <div className='flex justify-center gap-4'>
                 <div className='bg-blue-100 rounded-2xl min-w-[80px] flex flex-col items-center p-2'><FaTemperatureThreeQuarters size={30}/> {weatherData.temperature_2m}°C</div>
                 <div className='bg-blue-100 rounded-2xl min-w-[80px] flex flex-col items-center p-2'><WiHumidity size={30} /> {weatherData.relative_humidity_2m}%</div>
@@ -74,9 +75,26 @@ const Weather = () => {
                 <p className='flex items-center font-bold text-xl gap-4'><TiWeatherPartlySunny size={40} />{weatherCondition}</p>
                 <p className='flex items-center font-bold text-xl gap-4'><TbSunMoon size={40} />{dayCycle}</p>
               </div>
-              
+            </div> */}
+
+            <div className='flex flex-col w-full items-center justify-center'>
+                <div className='flex items-center gap-4 mb-2'>
+                  <div>
+                    <TiWeatherPartlySunny size={40} />
+                  </div>
+                  <div>
+                    <p className='text-3xl flex font-bold'>{weatherData.temperature_2m}<span className='text-sm'>°C</span></p>
+                  </div>
+                </div>
+                  <div>
+                    <p>humidity: {weatherData.relative_humidity_2m}% </p>
+                    <p>wind speed: {weatherData.wind_speed_10m}km/h </p>
+                    <p>wind direction: {weatherData.wind_direction_10m}° </p>
+                  </div>
+              </div>
             </div>
-          </div>
+
+            
           
         )
       )}
