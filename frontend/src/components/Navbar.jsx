@@ -222,7 +222,7 @@ const Navbar = () =>{
         </button>
 
                 {/* Pop-up menu on Report Button click */}
-                {showReportMenu && (
+                {/* {showReportMenu && (
           <div className='fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black/80 bg-opacity-50 z-[99]'>
             <div className='bg-blue-300 p-8 rounded-md'>
               <div className='flex justify-between mb-4'>
@@ -233,7 +233,7 @@ const Navbar = () =>{
               </div>
                   
 
-                {/* <div className="mb-4 flex gap-2">
+                <div className="mb-4 flex gap-2">
                   <label htmlFor="name">Name:</label>
                   <input
                     type="text"
@@ -243,7 +243,7 @@ const Navbar = () =>{
                     onChange={handleInputChange}
                     className='w-full resize-none border-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'
                   />
-                </div> */}
+                </div>
                 <div className="mb-4 flex gap-2">
                   <label htmlFor="lat">latitude:</label>
                   <input
@@ -314,7 +314,7 @@ const Navbar = () =>{
                 >
                   Submit Report
                 </button>
-            </div>
+            </div> */}
             {/* <div className='bg-blue-300 p-8 rounded-md'>
              <div className='flex justify-between mb-4'>
               <script>
@@ -323,11 +323,11 @@ const Navbar = () =>{
              </div>
             </div> */}
 
-          </div>
-        )}
+          {/* </div> */}
+        {/* )} */}
 
             </div>
-            {/*END REPORT Button*/}
+            {/* END REPORT Button */}
 
             {/* start of profile */}
                 <IoPersonCircleSharp size={45} onClick={handleProfile}/>
