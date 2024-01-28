@@ -72,9 +72,14 @@ const Alert = () => {
                                 </Typography>
                             </div>
                         </div>
-                        <Typography variant="paragraph" color="textPrimary" className="mb-2 text-xl">
-                            Description: {alert.desc}
-                        </Typography>
+                        <div>
+                            <Typography variant="paragraph" color="textPrimary" className="mb-2 text-xl font-bold">
+                                Description
+                            </Typography>
+                            <Typography variant="paragraph" color="textPrimary" className="mb-2 text-xl">
+                                {alert.desc}
+                            </Typography>
+                        </div>
                     </div>
                     <Button color="blue" buttonType="link" onClick={handleClosePopup} ripple="dark">
                         Close
