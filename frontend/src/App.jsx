@@ -46,7 +46,7 @@ function App() {
     // <Provider store={store}>
       <Router>
       <div>
-        <Navbar />
+        
         <Switch>
           <Route exact path="/" component={Login} authenticated = {authenticated}>
             <Login />
@@ -55,18 +55,23 @@ function App() {
             <Signup />
           </Route>
           <Route path="/community">
+          <Navbar />
             <Community />
           </Route>
           <Route path="/education">
+          <Navbar />
             <Education />
           </Route>
           <Route path="/plumber">
+          <Navbar />
             <PlumberMenu />
           </Route>
           <Route path="/map">
+          <Navbar />
             <Map />
           </Route>
           <Route path="/reportmap">
+          <Navbar />
             <ReportMap />
           </Route>
           {/* <Route path="/report">

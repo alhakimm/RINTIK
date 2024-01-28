@@ -31,7 +31,7 @@ const ReportMap = () => {
 
   useEffect(() => {
     loader.load().then(async () => {
-      const center = { lat: 6.107307, lng: 102.24092 };
+      const center = { lat: 6.130007, lng: 102.24092 };
 
       // const { Map } = await google.maps.importLibrary('maps');
       const { google } = window;
