@@ -87,9 +87,9 @@ const Weather = () => {
                   </div>
                 </div>
                   <div>
-                    <p>humidity: {weatherData.relative_humidity_2m}% </p>
-                    <p>wind speed: {weatherData.wind_speed_10m}km/h </p>
-                    <p>wind direction: {weatherData.wind_direction_10m}° </p>
+                    <p>Humidity: {weatherData.relative_humidity_2m}% </p>
+                    <p>Wind Speed: {weatherData.wind_speed_10m}km/h </p>
+                    <p>Wind Direction: {weatherData.wind_direction_10m}° </p>
                   </div>
               </div>
             </div>

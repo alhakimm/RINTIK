@@ -51,23 +51,36 @@ const Alert = () => {
 
     const AlertPopup = ({ alert }) => {
         return (
-            <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-70 flex items-center justify-center">
-                <div className="bg-white p-6 rounded-lg max-w-md">
-                    <Typography variant="h1" color="black" className="text-2xl mb-4">
+                <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-70 flex items-center justify-center">
+                  <div className="bg-white p-3 rounded-lg max-w-md">
+                    <Typography variant="h1" color="textPrimary" className="text-2xl mb-4 font-bold border-b border-black pb-2">
                         {alert.title}
                     </Typography>
-                    <Typography variant="paragraph" color="black" className="mb-4">
-                        {alert.location}
-                    </Typography>
-                    <Typography variant="paragraph" color="black" className="mb-4">
-                        {alert.date}
-                    </Typography>
-                    <Typography variant="paragraph" color="black" className="mb-4">
-                        {alert.duration}
-                    </Typography>
-                    <Typography variant="paragraph" color="black" className="mb-4">
-                        {alert.desc}
-                    </Typography>
+                    <div className="bg-blue-300 rounded-lg p-4 mb-4">
+                        <div className="flex justify-between border-b border-black pb-2 mb-4">
+                            <div>
+                                <Typography variant="paragraph" color="textPrimary" className="mb-2 font-bold">
+                                    Location: {alert.location}
+                                </Typography>
+                                <Typography variant="paragraph" color="textPrimary" className="mb-2 font-bold">
+                                    Date: {alert.date}
+                                </Typography>
+                            </div>
+                            <div>
+                                <Typography variant="paragraph" color="textPrimary" className="mb-2 font-semibold">
+                                    Duration: {alert.duration}
+                                </Typography>
+                            </div>
+                        </div>
+                        <div>
+                            <Typography variant="paragraph" color="textPrimary" className="mb-2 text-xl font-bold">
+                                Description
+                            </Typography>
+                            <Typography variant="paragraph" color="textPrimary" className="mb-2 text-xl">
+                                {alert.desc}
+                            </Typography>
+                        </div>
+                    </div>
                     <Button color="blue" buttonType="link" onClick={handleClosePopup} ripple="dark">
                         Close
                     </Button>

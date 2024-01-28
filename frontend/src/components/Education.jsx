@@ -69,33 +69,30 @@ const Education = () => {
 
     const MaterialPopup = ({ material }) => {
       const handleReadOriginalPost = () => {
-        window.location.href = material.id;
+        window.open(material.id, '_blank');
       };
 
       return (
         <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-70 flex items-center justify-center">
-          <div className="bg-white p-6 rounded-lg max-w-md">
-            <Typography variant="h1" color="black" className="text-2xl mb-4">
-              {material.title}
-            </Typography>
-            <Typography variant="paragraph" color="black" className="mb-4">
-              {material.body}
-            </Typography>
-            <Button
-              color="blue"
-              buttonType="link"
-              onClick={handleClosePopup}
-              ripple="dark"
-            >
-              Close
-            </Button>
-            <button className="text-blue-500 mt-2 block" onClick={handleReadOriginalPost}>
-               Read Original Post
-            </button>
-          </div>
+            <div className="bg-white p-3 rounded-lg max-w-md">
+                <Typography variant="h1" color="textPrimary" className="text-2xl mb-4 font-bold border-b border-black pb-2">
+                    {material.title}
+                </Typography>
+                <Typography variant="paragraph" color="textPrimary" className="mb-4">
+                    {material.body}
+                </Typography>
+                <div className="flex justify-between">
+                    <Button color="blue" onClick={handleClosePopup} variant="contained">
+                        Close
+                    </Button>
+                    <Button className="text-blue-500 mt-2 block" onClick={handleReadOriginalPost} variant="contained" >
+                        Read Original Post
+                    </Button>
+                </div>
+            </div>
         </div>
-      );
-    };
+    );
+};
 
     const CarouselTransition = () =>{
       return (
