@@ -32,7 +32,7 @@ exports.addReports = functions.https.onRequest((req, res) => {
     console.log("lat: " + req.body.lat)
     const newReports = {
         username : req.user.username,
-        // location: geoPoint,
+        location: req.body.location,    
         lat: req.body.lat,
         lng: req.body.lng,
         description : req.body.description,
