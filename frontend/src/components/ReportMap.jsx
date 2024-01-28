@@ -174,7 +174,8 @@ const handleReportSubmit = () => {
     .then(response => {
       console.log(response.data);
       setShowReportMenu(false);
-      
+      localStorage.removeItem("lat")
+      localStorage.removeItem("lng")
       history.push('/community') 
     })
     .catch(error => {
