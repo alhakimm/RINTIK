@@ -23,6 +23,8 @@ const ReportMap = () => {
     // }
     const history = useHistory()
 
+    // const [showContent, setShowContent] = useState(false);
+    // const [content, setContent] = useState('');
     const [locations, setLocations] = useState();
     let marker
     console.log("1111" + marker)
@@ -67,7 +69,7 @@ const ReportMap = () => {
           });
         }
 
-          marker.addListener('click', () => {
+          // marker.addListener('click', () => {
             const content = `
               <div>
                 <strong>Location:</strong> Lat: ${lat}, Lng: ${lng}
@@ -76,9 +78,10 @@ const ReportMap = () => {
                 <button onclick="handleCancellation()">Cancel</button>
               </div>
             `;
-  
+
             infoWindow.setContent(content);
             infoWindow.open(map, marker);
+            // setShowContent(true);
   
             window.handleConfirmation = () => {
               infoWindow.close();
@@ -98,7 +101,7 @@ const ReportMap = () => {
               setReportForm({ ...reportForm, lat: "", lng: "" })
               console.log("33333" + marker)
             };
-          });
+          // });
           
     //       marker.addListener('click', () => {
     //         infoWindow.setContent(`<div><strong>Location:</strong> Lat: ${lat}, Lng: ${lng}</div>`)
